@@ -7,6 +7,12 @@ const navigation = [
   { name: 'Tokens', href: '/tokens' },
   { name: 'Icons', href: '/icons' },
   {
+    name: 'Tailwind',
+    children: [
+      { name: 'Sidebar', href: '/tailwind/sidebar' },
+    ],
+  },
+  {
     name: 'Components',
     children: [
       { name: 'Accordion', href: '/components/accordion' },

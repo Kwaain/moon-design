@@ -122,6 +122,7 @@ importers:
       postcss: 8.4.5
       react: 17.0.2
       react-dom: 17.0.2
+      react-frame-component: 5.2.1
       react-test-renderer: ^17.0.2
       styled-components: 5.2.1
       swr: ^1.0.1
@@ -156,6 +157,7 @@ importers:
       postcss: 8.4.5
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+      react-frame-component: 5.2.1_react-dom@17.0.2+react@17.0.2
       react-test-renderer: 17.0.2_react@17.0.2
       styled-components: 5.2.1_react-dom@17.0.2+react@17.0.2
       swr: 1.0.1_react@17.0.2
@@ -8454,6 +8456,17 @@ packages:
       use-sidecar: 1.0.5_react@17.0.2
     transitivePeerDependencies:
       - '@types/react'
+    dev: false
+
+  /react-frame-component/5.2.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-nrSh1OZuHlX69eWqJPiUkPT9S6/wxc4PpJV+vOQ4pHQQ8XmIsIT+utWT+nX32ZfANHZuKONA7JsWMUGT36CqaQ==}
+    peerDependencies:
+      prop-types: ^15.5.9
+      react: '>= 16.3'
+      react-dom: '>= 16.3'
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /react-is/16.10.2:
