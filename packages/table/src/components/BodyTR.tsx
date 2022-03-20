@@ -13,6 +13,7 @@ const BodyTR = styled.div<{
   hasParent?: boolean;
   isLastRow?: boolean;
   isLastNestedRow?: boolean;
+  isSelected?: boolean;
   backgroundColor?: ColorNames;
 }>(
   ({ theme, backgroundColor }) => ({
@@ -29,6 +30,7 @@ const BodyTR = styled.div<{
     hasParent,
     isLastNestedRow,
     isLastRow,
+    isSelected,
     depth = 0,
   }) => ({
     marginTop: withOffset ? rem(8) : rem(2),
@@ -116,6 +118,12 @@ const BodyTR = styled.div<{
             },
           },
         }
+      : {}),
+    ...(isSelected
+      ? {
+        position: 'relative',
+        zIndex: 4
+      }
       : {}),
   })
 );
