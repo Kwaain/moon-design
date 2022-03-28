@@ -13,7 +13,7 @@ import {
   Row,
   HeaderGroup,
   UseResizeColumnsColumnProps,
-  UseSortByColumnProps, useRowSelect,
+  UseSortByColumnProps,
 } from 'react-table';
 import { useSticky } from 'react-table-sticky';
 import Body from './components/Body';
@@ -89,7 +89,6 @@ const Table: React.FC<TableProps> = ({
     isSticky ? useSticky : undefined,
     isSorting ? useSortBy : undefined,
     useExpanded,
-    useRowSelect,
   ].filter((plugin) => !!plugin) as PluginHook<{}>[];
 
   const {
@@ -102,7 +101,6 @@ const Table: React.FC<TableProps> = ({
     visibleColumns,
     toggleAllRowsExpanded,
     rowSpanHeaders,
-    selectedFlatRows
   } = useTable(
     {
       columns,
@@ -113,7 +111,6 @@ const Table: React.FC<TableProps> = ({
   ) as TableInstance<object> & {
     toggleAllRowsExpanded: (isExpanded?: boolean) => void;
     rowSpanHeaders: RowSpanHeader[];
-    selectedFlatRows: any
   };
   const lastHeaderGroup = headerGroups[headerGroups.length - 1];
   const tableRef = useRef<HTMLDivElement>(null);
@@ -216,21 +213,21 @@ const Table: React.FC<TableProps> = ({
       <Body {...getTableBodyProps()}>
         {variant === 'calendar'
           ? renderSpanRows({
-              rows,
-              prepareRow,
-              getOnRowClickHandler,
-              evenRowBackgroundColor,
-              defaultRowBackgroundColor,
-              rowSpanHeaders,
-            })
+            rows,
+            prepareRow,
+            getOnRowClickHandler,
+            evenRowBackgroundColor,
+            defaultRowBackgroundColor,
+            rowSpanHeaders,
+          })
           : renderRows({
-              rows,
-              prepareRow,
-              getOnRowClickHandler,
-              evenRowBackgroundColor,
-              defaultRowBackgroundColor,
-              renderRowSubComponent,
-            })}
+            rows,
+            prepareRow,
+            getOnRowClickHandler,
+            evenRowBackgroundColor,
+            defaultRowBackgroundColor,
+            renderRowSubComponent,
+          })}
       </Body>
 
       {withFooter && (

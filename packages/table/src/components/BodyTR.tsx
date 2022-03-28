@@ -14,11 +14,26 @@ const BodyTR = styled.div<{
   isLastRow?: boolean;
   isLastNestedRow?: boolean;
   isSelected?: boolean;
+  customBackground?: boolean;
   backgroundColor?: ColorNames;
+  fontColor?: ColorNames;
 }>(
-  ({ theme, backgroundColor }) => ({
+  ({ theme, isSelected, backgroundColor, customBackground, fontColor }) => ({
     [TD]: {
-      backgroundColor: themed('color', backgroundColor)(theme),
+      color: isSelected
+        ? themed('color', 'goten.100')(theme)
+        : themed('color', fontColor ?? 'popo.100')(theme),
+      backgroundColor: isSelected && !customBackground
+        ? themed('color', 'piccolo.100')(theme)
+        : themed('color', backgroundColor)(theme),
+      borderTop: isSelected ? `${rem(1)} solid ${themed('color', 'popo.100')(theme)}` : 'none',
+      borderBottom: isSelected ? `${rem(1)} solid ${themed('color', 'popo.100')(theme)}` : 'none',
+      '&:first-child': {
+        borderLeft: isSelected ? `${rem(1)} solid ${themed('color', 'popo.100')(theme)}` : 'none',
+      },
+      '&:last-child': {
+        borderRight: isSelected ? `${rem(1)} solid ${themed('color', 'popo.100')(theme)}` : 'none',
+      },
     },
   }),
   ({
@@ -31,6 +46,7 @@ const BodyTR = styled.div<{
     isLastNestedRow,
     isLastRow,
     isSelected,
+    backgroundColor,
     depth = 0,
   }) => ({
     marginTop: withOffset ? rem(8) : rem(2),
@@ -118,12 +134,6 @@ const BodyTR = styled.div<{
             },
           },
         }
-      : {}),
-    ...(isSelected
-      ? {
-        position: 'relative',
-        zIndex: 4
-      }
       : {}),
   })
 );

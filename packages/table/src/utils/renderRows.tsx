@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { ColorNames } from '@heathmont/moon-themes';
 import { Cell, Row, UseExpandedRowProps } from 'react-table';
 import BodyTR from '../components/BodyTR';
-import SelectedTR from "../components/SelectedTR";
 import TD from '../components/TD';
 import { RowSubComponentProps } from '../Table';
 
@@ -26,7 +25,14 @@ const renderRows = ({
   renderRowSubComponent,
 }: RenderRowsProps) => {
   if (!rows) return;
-  return rows.map((row: Row<{ isSelected?: boolean }>, index: number) => {
+  return rows.map((
+    row: Row<{
+      isSelected?: boolean,
+      backgroundColor?: ColorNames,
+      fontColor?: ColorNames,
+    }>,
+    index: number
+  ) => {
     prepareRow(row);
     const rowProps = row.getRowProps();
     const onRowClickHandler = getOnRowClickHandler
@@ -39,41 +45,35 @@ const renderRows = ({
       nextRowItem && nextRowItem.id ? nextRowItem.id.split('.') : [];
 
     const mainRowIndex = Number(rowId[0]);
-    const backgroundColor =
-      mainRowIndex % 2 ? evenRowBackgroundColor : defaultRowBackgroundColor;
-
+    const backgroundColor = row.original?.backgroundColor
+      ? row.original?.backgroundColor : mainRowIndex % 2
+        ? evenRowBackgroundColor : defaultRowBackgroundColor;
+    const fontColor = row.original?.fontColor;
     const isLastNestedRow = rowId.length > nextRowId.length;
     const isLastRow = nextRowId.length === 0 || nextRowId.length === 1;
     const isSelected = row.original?.isSelected;
 
     const expandedRow = row as unknown as UseExpandedRowProps<{}>;
 
-    const cells = row.cells.map((cell: Cell<{}, any>) => (
-      <TD {...cell.getCellProps()}>{cell.render('Cell')}</TD>
-    ));
-    const propsBodyTR = {
-      ...rowProps,
-      depth: expandedRow.depth,
-      isExpanded: expandedRow.isExpanded,
-      hasChildren: expandedRow.canExpand,
-      hasParent: !!expandedRow.depth,
-      isLastNestedRow: isLastNestedRow,
-      isLastRow: isLastRow,
-      isSelected: isSelected,
-      backgroundColor: backgroundColor,
-      onClick: onRowClickHandler ? () => onRowClickHandler(row) : undefined
-    };
-
     return (
       <Fragment key={`${row.id}-${rowProps.key}`}>
-        <BodyTR { ...propsBodyTR }>
-          {cells}
-
-          {isSelected && <SelectedTR>
-            <BodyTR { ...propsBodyTR }>
-              {cells}
-            </BodyTR>
-          </SelectedTR>}
+        <BodyTR
+          {...rowProps}
+          depth={expandedRow.depth}
+          isExpanded={expandedRow.isExpanded}
+          hasChildren={expandedRow.canExpand}
+          hasParent={!!expandedRow.depth}
+          isLastNestedRow={isLastNestedRow}
+          isLastRow={isLastRow}
+          isSelected={isSelected}
+          customBackground={!!row.original?.backgroundColor}
+          backgroundColor={backgroundColor}
+          fontColor={fontColor}
+          onClick={onRowClickHandler ? () => onRowClickHandler(row) : undefined}
+        >
+          {row.cells.map((cell: Cell<{}, any>) => (
+            <TD {...cell.getCellProps()}>{cell.render('Cell')}</TD>
+          ))}
         </BodyTR>
 
         {expandedRow.isExpanded && !!renderRowSubComponent
