@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import { ColorNames } from '@heathmont/moon-themes';
 import {
   useTable,
@@ -57,8 +57,10 @@ export type TableProps<D extends object = {}> = {
   headerBackgroundColor?: ColorNames;
   isSticky?: boolean;
   isSorting?: boolean;
+  selectable?: boolean;
   renderRowSubComponent?: (props: RowSubComponentProps) => JSX.Element;
   getOnRowClickHandler?: (row: Row<D>) => (row: Row<D>) => void | (() => void);
+  getOnRowSelect?: () => (rows: Row<D>[]) => void | (() => void);
 };
 
 const Table: React.FC<TableProps> = ({
@@ -79,8 +81,10 @@ const Table: React.FC<TableProps> = ({
   headerBackgroundColor = 'goku.100',
   isSticky = true,
   isSorting = false,
+  selectable = false,
   renderRowSubComponent,
   getOnRowClickHandler = () => undefined,
+  getOnRowSelect = () => undefined
 }) => {
   const plugins = [
     layout === 'block' ? useBlockLayout : useFlexLayout,
@@ -115,13 +119,28 @@ const Table: React.FC<TableProps> = ({
   const lastHeaderGroup = headerGroups[headerGroups.length - 1];
   const tableRef = useRef<HTMLDivElement>(null);
   const footerRef = useRef<HTMLDivElement>(null);
+  const onRowSelectHandler = getOnRowSelect
+    ? getOnRowSelect()
+    : () => undefined;
 
   const { scrollState, handleScroll } = useScrollState(tableRef);
+  const [ selectedRows, setSelectedRows ] = useState<Row<{}>[]>([]);
 
   useEffect(() => {
     if (expandedByDefault === undefined || !data || !data.length) return;
     toggleAllRowsExpanded(expandedByDefault);
   }, [expandedByDefault, data, toggleAllRowsExpanded]);
+
+  useEffect(() => {
+    if (onRowSelectHandler) onRowSelectHandler(selectedRows);
+  }, [selectedRows]);
+
+  useEffect(() => {
+    setSelectedRows(rows?.length
+      ? rows.filter((row: Row<{ isSelected?: boolean }>) => {
+        return row.original?.isSelected;
+      }) : []);
+  }, []);
 
   const getHeaderRowWhenSorting = (column: HeaderGroup<object>) => {
     const sortingColumn = column as unknown as UseSortByColumnProps<object>;
@@ -224,9 +243,22 @@ const Table: React.FC<TableProps> = ({
             rows,
             prepareRow,
             getOnRowClickHandler,
+            getOnRowSelectHandler: (row) => () => {
+              let alreadySelectedRows = [...selectedRows];
+              const alreadySelectedRow = alreadySelectedRows.filter((selectedRow) => row.id === selectedRow.id)[0];
+
+              if (alreadySelectedRow) {
+                alreadySelectedRows = alreadySelectedRows.filter((selectedRow) => row.id !== selectedRow.id)
+              } else {
+                alreadySelectedRows.push(row);
+              }
+
+              setSelectedRows(alreadySelectedRows);
+            },
             evenRowBackgroundColor,
             defaultRowBackgroundColor,
             renderRowSubComponent,
+            selectable
           })}
       </Body>
 

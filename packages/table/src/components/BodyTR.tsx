@@ -25,15 +25,7 @@ const BodyTR = styled.div<{
         : themed('color', fontColor ?? 'popo.100')(theme),
       backgroundColor: isSelected && !customBackground
         ? themed('color', 'piccolo.100')(theme)
-        : themed('color', backgroundColor)(theme),
-      borderTop: isSelected ? `${rem(1)} solid ${themed('color', 'popo.100')(theme)}` : 'none',
-      borderBottom: isSelected ? `${rem(1)} solid ${themed('color', 'popo.100')(theme)}` : 'none',
-      '&:first-child': {
-        borderLeft: isSelected ? `${rem(1)} solid ${themed('color', 'popo.100')(theme)}` : 'none',
-      },
-      '&:last-child': {
-        borderRight: isSelected ? `${rem(1)} solid ${themed('color', 'popo.100')(theme)}` : 'none',
-      },
+        : themed('color', backgroundColor)(theme)
     },
   }),
   ({
@@ -50,6 +42,7 @@ const BodyTR = styled.div<{
     depth = 0,
   }) => ({
     marginTop: withOffset ? rem(8) : rem(2),
+    position: 'relative',
     '&:first-child': {
       marginTop: 0,
     },
@@ -134,7 +127,7 @@ const BodyTR = styled.div<{
             },
           },
         }
-      : {}),
+      : {})
   })
 );
 
