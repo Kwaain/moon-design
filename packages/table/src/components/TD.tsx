@@ -1,8 +1,9 @@
+import {rem} from "@heathmont/moon-utils";
 import styled from 'styled-components';
 
-const TD = styled.div(({ theme }) => ({
+const TD = styled.div<{ selectable?: boolean }>(({ theme, selectable }) => ({
   padding: theme.newTokens.space.small,
-  paddingLeft: theme.newTokens.space.twoxsmall,
+  paddingLeft: selectable ? theme.newTokens.space.small : theme.newTokens.space.twoxsmall,
   paddingRight: theme.newTokens.space.twoxsmall,
   color: theme.colorNew.bulma,
   position: 'relative',

@@ -82,7 +82,7 @@ const renderRows = ({
           fontColor={fontColor}
           onClick={onRowClickHandler ? () => onRowClickHandler(row) : undefined}
         >
-          {selectable && (<TD>
+          {selectable && (<TD selectable={true}>
             <CheckboxTR>
               <Checkbox
                 checked={isSelected}

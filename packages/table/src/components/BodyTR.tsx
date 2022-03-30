@@ -1,5 +1,6 @@
 import { ColorNames } from '@heathmont/moon-themes';
 import { rem, themed } from '@heathmont/moon-utils';
+import {lighten} from "polished";
 import tint from 'polished/lib/color/tint';
 import styled from 'styled-components';
 import TD from './TD';
@@ -21,10 +22,10 @@ const BodyTR = styled.div<{
   ({ theme, isSelected, backgroundColor, customBackground, fontColor }) => ({
     [TD]: {
       color: isSelected
-        ? themed('color', 'goten.100')(theme)
+        ? themed('color', 'popo.100')(theme)
         : themed('color', fontColor ?? 'popo.100')(theme),
       backgroundColor: isSelected && !customBackground
-        ? themed('color', 'piccolo.100')(theme)
+        ? tint(0.88, theme.colorNew.piccolo)
         : themed('color', backgroundColor)(theme)
     },
   }),
@@ -51,7 +52,7 @@ const BodyTR = styled.div<{
           '&:hover': {
             cursor: 'pointer',
             [TD]: {
-              backgroundColor: tint(0.75, theme.colorNew.piccolo),
+              backgroundColor: tint(0.88, theme.colorNew.piccolo)
             },
           },
         }

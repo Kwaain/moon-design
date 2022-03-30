@@ -29,7 +29,7 @@ const Footer = styled.div<{
   ({ selectable, headerBackgroundColor, theme }) => ({
     ...(selectable
       ? {
-        paddingLeft: rem(40),
+        paddingLeft: rem(46),
         backgroundColor: themed('color', headerBackgroundColor)(theme)
       } : {})
   })
