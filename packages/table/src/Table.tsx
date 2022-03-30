@@ -232,13 +232,14 @@ const Table: React.FC<TableProps> = ({
       <Body {...getTableBodyProps()}>
         {variant === 'calendar'
           ? renderSpanRows({
-            rows,
-            prepareRow,
-            getOnRowClickHandler,
-            evenRowBackgroundColor,
-            defaultRowBackgroundColor,
-            rowSpanHeaders,
-          })
+              rows,
+              prepareRow,
+              getOnRowClickHandler,
+              evenRowBackgroundColor,
+              defaultRowBackgroundColor,
+              rowSpanHeaders,
+              selectable
+            })
           : renderRows({
               rows,
               prepareRow,

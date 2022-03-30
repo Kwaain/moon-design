@@ -15,7 +15,7 @@ type RenderRowsProps<D extends object = {}> = {
   getOnRowClickHandler: (
     row: Row<D>
   ) => ((row: Row<D>) => void | (() => void)) | undefined;
-  getOnRowSelectHandler: (
+  getOnRowSelectHandler?: (
     row: Row<D>
   ) => ((row: Row<D>) => void | (() => void)) | undefined;
   renderRowSubComponent?: (props: RowSubComponentProps) => JSX.Element;
@@ -62,7 +62,7 @@ const renderRows = ({
     const fontColor = row.original?.fontColor;
     const isLastNestedRow = rowId.length > nextRowId.length;
     const isLastRow = nextRowId.length === 0 || nextRowId.length === 1;
-    const [isSelected, setSelected] = useState(row.original?.isSelected)
+    const [isSelected, setSelected] = useState(row.original?.isSelected);
 
     const expandedRow = row as unknown as UseExpandedRowProps<{}>;
 
