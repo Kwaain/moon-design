@@ -240,26 +240,27 @@ const Table: React.FC<TableProps> = ({
             rowSpanHeaders,
           })
           : renderRows({
-            rows,
-            prepareRow,
-            getOnRowClickHandler,
-            getOnRowSelectHandler: (row) => () => {
-              let alreadySelectedRows = [...selectedRows];
-              const alreadySelectedRow = alreadySelectedRows.filter((selectedRow) => row.id === selectedRow.id)[0];
+              rows,
+              prepareRow,
+              getOnRowClickHandler,
+              getOnRowSelectHandler: (row) => () => {
+                let alreadySelectedRows = [...selectedRows];
+                const alreadySelectedRow = alreadySelectedRows.filter((selectedRow) => row.id === selectedRow.id)[0];
 
-              if (alreadySelectedRow) {
-                alreadySelectedRows = alreadySelectedRows.filter((selectedRow) => row.id !== selectedRow.id)
-              } else {
-                alreadySelectedRows.push(row);
-              }
+                if (alreadySelectedRow) {
+                  alreadySelectedRows = alreadySelectedRows.filter((selectedRow) => row.id !== selectedRow.id)
+                } else {
+                  alreadySelectedRows.push(row);
+                }
 
-              setSelectedRows(alreadySelectedRows);
-            },
-            evenRowBackgroundColor,
-            defaultRowBackgroundColor,
-            renderRowSubComponent,
-            selectable
-          })}
+                setSelectedRows(alreadySelectedRows);
+              },
+              evenRowBackgroundColor,
+              defaultRowBackgroundColor,
+              renderRowSubComponent,
+              selectable
+            })
+        }
       </Body>
 
       {withFooter && (

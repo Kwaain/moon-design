@@ -19,7 +19,7 @@ type RenderRowsProps<D extends object = {}> = {
     row: Row<D>
   ) => ((row: Row<D>) => void | (() => void)) | undefined;
   renderRowSubComponent?: (props: RowSubComponentProps) => JSX.Element;
-  selectable: boolean
+  selectable: boolean;
 };
 
 const renderRows = ({
