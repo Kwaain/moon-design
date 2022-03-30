@@ -214,7 +214,7 @@ const Table: React.FC<TableProps> = ({
       evenRowBackgroundColor={evenRowBackgroundColor}
       headerBackgroundColor={headerBackgroundColor}
     >
-      <Header>
+      <Header selectable={selectable} headerBackgroundColor={headerBackgroundColor}>
         {headerGroups.map((headerGroup: HeaderGroup<object>) => (
           <HeaderTR {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column: HeaderGroup<object>) => {
@@ -263,7 +263,7 @@ const Table: React.FC<TableProps> = ({
       </Body>
 
       {withFooter && (
-        <Footer ref={footerRef}>
+        <Footer ref={footerRef} selectable={selectable} headerBackgroundColor={headerBackgroundColor}>
           {footerGroups.map((footerGroup: HeaderGroup<object>) => (
             <HeaderTR {...footerGroup.getHeaderGroupProps()}>
               {footerGroup.headers.map((column: HeaderGroup<object>) =>
