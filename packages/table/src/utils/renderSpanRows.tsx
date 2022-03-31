@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {Checkbox} from "@heathmont/moon-components";
+import {Checkbox} from '@heathmont/moon-components';
 import { ColorNames } from '@heathmont/moon-themes';
 import { Cell, Row } from 'react-table';
 import BodyTR from '../components/BodyTR';
-import CheckboxTR from "../components/CheckboxTR";
+import CheckboxTR from '../components/CheckboxTR';
 import TD from '../components/TD';
 import { RowSpanHeader } from '../hooks/useRowSpan';
 

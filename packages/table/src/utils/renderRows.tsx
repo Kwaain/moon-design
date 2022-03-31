@@ -1,9 +1,10 @@
 import React, {Fragment, useState} from 'react';
+import {Text, Tooltip} from '@heathmont/moon-components';
 import { Checkbox } from '@heathmont/moon-core';
 import { ColorNames } from '@heathmont/moon-themes';
 import { Cell, Row, UseExpandedRowProps } from 'react-table';
 import BodyTR from '../components/BodyTR';
-import CheckboxTR from "../components/CheckboxTR";
+import CheckboxTR from '../components/CheckboxTR';
 import TD from '../components/TD';
 import { RowSubComponentProps } from '../Table';
 
