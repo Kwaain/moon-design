@@ -1,6 +1,5 @@
 import { ColorNames } from '@heathmont/moon-themes';
 import { rem, themed } from '@heathmont/moon-utils';
-import {lighten} from "polished";
 import tint from 'polished/lib/color/tint';
 import styled from 'styled-components';
 import TD from './TD';
@@ -25,6 +24,9 @@ const BodyTR = styled.div<{
         ? themed('color', 'popo.100')(theme)
         : themed('color', fontColor ?? 'popo.100')(theme),
       backgroundColor: isSelected && !customBackground
+        ? tint(0.88, theme.colorNew.piccolo)
+        : themed('color', backgroundColor)(theme),
+      borderColor: isSelected && !customBackground
         ? tint(0.88, theme.colorNew.piccolo)
         : themed('color', backgroundColor)(theme)
     },
