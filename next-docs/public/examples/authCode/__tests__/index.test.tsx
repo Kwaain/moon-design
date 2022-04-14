@@ -6,9 +6,9 @@ import React from 'react';
 import { moonDesignLight, ThemeProvider } from '@heathmont/moon-themes';
 import renderer from 'react-test-renderer';
 import Default from '../Default';
-import FourChars from "../FourChars";
-import OnlyDigits from "../OnlyDigits";
-import ErrorState from "../ErrorState";
+import FourChars from '../FourChars';
+import OnlyDigits from '../OnlyDigits';
+import ErrorState from '../ErrorState';
 
 const renderWithTheme = (component: JSX.Element) => (
   <ThemeProvider theme={moonDesignLight}>{component}</ThemeProvider>
