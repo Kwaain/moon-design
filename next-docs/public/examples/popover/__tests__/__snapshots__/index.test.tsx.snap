@@ -9,12 +9,12 @@ Array [
     tabIndex={-1}
   >
     <button
-      className="sc-jlyluv kDUXDI"
+      className="sc-lgfUwS hOptU"
       size="small"
       variant="primary"
     >
       <div
-        className="sc-KiOns jUUphV"
+        className="sc-gzcill hRQqqm"
       >
         Toggle Popover
       </div>
@@ -32,52 +32,50 @@ Array [
           className="p-8 space-y-4"
         >
           <h3
-            className="sc-iXLiCy bSIDin"
-            color="bulma.100"
+            className="sc-iyOMks jEcEfQ"
             size={20}
           >
             Agents
           </h3>
           <p
-            className="sc-imZoBe gdAcXx"
-            color="bulma.100"
+            className="sc-khrHlC gHVvmC"
             size={14}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ex
           </p>
         </div>
         <div
-          className="sc-izgCsI brTuqm"
+          className="sc-iDRUQT jPUxLA"
           size="small"
         >
           <div
-            className="sc-kfZjQZ MzlAg"
+            className="sc-eZgkGA dOHkVX"
           >
             <div
-              className="sc-lfVKn iITTUc"
+              className="sc-futMm jlNZzW"
             >
               <button
-                className="sc-jlyluv cwEAlU"
+                className="sc-lgfUwS eFiAnI"
                 size="xsmall"
                 variant="primary"
               >
                 <div
-                  className="sc-KiOns jUUphV"
+                  className="sc-gzcill hRQqqm"
                 >
                   Button
                 </div>
               </button>
             </div>
             <div
-              className="sc-lfVKn iITTUc"
+              className="sc-futMm jlNZzW"
             >
               <button
-                className="sc-jlyluv wjfyW"
+                className="sc-lgfUwS ivPUNa"
                 size="xsmall"
                 variant="tertiary"
               >
                 <div
-                  className="sc-KiOns jUUphV"
+                  className="sc-gzcill hRQqqm"
                 >
                   Button
                 </div>
@@ -85,15 +83,15 @@ Array [
             </div>
           </div>
           <div
-            className="sc-lfVKn iITTUc"
+            className="sc-futMm jlNZzW"
           >
             <button
-              className="sc-jlyluv fWPeOC"
+              className="sc-lgfUwS daZTKW"
               size="xsmall"
               variant="secondary"
             >
               <div
-                className="sc-KiOns jUUphV"
+                className="sc-gzcill hRQqqm"
               >
                 Button
               </div>

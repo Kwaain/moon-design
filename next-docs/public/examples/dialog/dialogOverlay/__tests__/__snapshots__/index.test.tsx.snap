@@ -2,13 +2,13 @@
 
 exports[`Dialog Overlay renders 1`] = `
 <button
-  className="sc-NaKpO iBEgsd"
+  className="sc-jlyluv eiStKG"
   onClick={[Function]}
   size="small"
   variant="secondary"
 >
   <div
-    className="sc-jlyluv fhIgZ"
+    className="sc-KiOns jUUphV"
   >
     Open Dialog
   </div>

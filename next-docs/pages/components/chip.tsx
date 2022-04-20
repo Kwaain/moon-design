@@ -52,6 +52,7 @@ const PageChip = () => {
       <section className="mt-8">
         <Preview
           title="Sizes"
+          isGrayBg
           preview={<Sizes />}
           code={examples ? examples.Sizes : 'Loading'}
         />
@@ -60,6 +61,7 @@ const PageChip = () => {
       <section className="mt-8">
         <Preview
           title="Active State"
+          isGrayBg
           preview={<Active />}
           code={examples ? examples.Active : 'Loading'}
         />
@@ -68,6 +70,7 @@ const PageChip = () => {
       <section className="mt-8">
         <Preview
           title="IsStroke"
+          isGrayBg
           preview={<Stroke />}
           code={examples ? examples.Stroke : 'Loading'}
         />
@@ -76,6 +79,7 @@ const PageChip = () => {
       <section className="mt-8">
         <Preview
           title="Icons"
+          isGrayBg
           preview={<Icons />}
           code={examples ? examples.Icons : 'Loading'}
         />
@@ -84,6 +88,7 @@ const PageChip = () => {
       <section className="mt-8">
         <Preview
           title="Icons with isStroke"
+          isGrayBg
           preview={<WithStroke />}
           code={examples ? examples.WithStroke : 'Loading'}
         />
