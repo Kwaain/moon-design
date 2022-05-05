@@ -5,10 +5,11 @@ exports[`Tooltip renders 1`] = `
   className="flex gap-20"
 >
   <div
-    className="sc-bKOxAn dCRZCz"
+    className="sc-jSPclO jaTNkP"
   >
     <p
-      className="sc-MEQRl gxlZpr"
+      className="sc-khrHlC dXZelV"
+      color="bulma.100"
       size={14}
     >
       Text with font size 14

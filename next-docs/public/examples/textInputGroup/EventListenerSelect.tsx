@@ -74,14 +74,10 @@ const Example = () => {
         }}
       />
       <div>
-        <Label size="medium" backgroundColor="trunks.100">
-          Country: {country}
-        </Label>
+        <Label backgroundColor="trunks.100">Country: {country}</Label>
       </div>
       <div>
-        <Label size="medium" backgroundColor="trunks.100">
-          Vehicle: {vehicle}
-        </Label>
+        <Label backgroundColor="trunks.100">Vehicle: {vehicle}</Label>
       </div>
     </div>
   );

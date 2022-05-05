@@ -5,235 +5,235 @@ exports[`Carousel renders 1`] = `
   className="flex justify-around items-center w-full"
 >
   <div
-    className="sc-icOqvn gfcdXO"
+    className="sc-BIIkq jayyzK"
   >
     <div
-      className="sc-gaqsZu gXEWLA"
+      className="sc-doCyfw kmCkKL"
     >
       <ul
-        className="sc-jPVYhN sc-fXywWY fnMugc eOFqYR"
+        className="sc-jmhOSl sc-cbDwiu gZgwrc dSpUMR"
       >
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             0
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             1
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             2
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             3
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             4
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             5
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             6
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             7
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             8
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             9
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             10
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             11
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             12
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             13
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             14
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             15
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             16
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             17
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             18
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             19
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             20
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             21
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             22
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             23
           </div>
         </li>
         <li
-          className="sc-jdHRdX hWZVGv"
+          className="sc-hZiMVj ejLhix"
         >
           <div
-            className="sc-fAjPcg eXeQHQ"
+            className="sc-QzmmP fVJmri"
           >
             24
           </div>
@@ -252,235 +252,235 @@ exports[`Carousel renders RTL 1`] = `
     className="flex justify-around items-center w-full"
   >
     <div
-      className="sc-hoyuhS bXzXRK"
+      className="sc-dexYeb eEsCJl"
     >
       <div
-        className="sc-gaqsZu gXEWLA"
+        className="sc-doCyfw kmCkKL"
       >
         <ul
-          className="sc-jPVYhN sc-fXywWY fnMugc eOFqYR"
+          className="sc-jmhOSl sc-cbDwiu gZgwrc dSpUMR"
         >
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               24
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               23
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               22
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               21
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               20
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               19
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               18
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               17
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               16
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               15
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               14
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               13
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               12
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               11
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               10
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               9
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               8
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               7
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               6
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               5
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               4
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               3
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               2
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               1
             </div>
           </li>
           <li
-            className="sc-jdHRdX hWZVGv"
+            className="sc-hZiMVj ejLhix"
           >
             <div
-              className="sc-lXfUi bskoND"
+              className="sc-iwoqQi jmsVpd"
             >
               0
             </div>
@@ -497,16 +497,16 @@ exports[`Carousel renders visible index 1`] = `
   className="flex justify-around items-center w-full"
 >
   <div
-    className="sc-gaqsZu gXEWLA"
+    className="sc-doCyfw kmCkKL"
   >
     <ul
-      className="sc-jPVYhN sc-fXywWY rhfQk eOFqYR"
+      className="sc-jmhOSl sc-cbDwiu dTPDcw dSpUMR"
     >
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-chbKxp eMnDfR"
+          className="sc-LAAhi hbFqui"
         >
           -1
           , 
@@ -514,10 +514,10 @@ exports[`Carousel renders visible index 1`] = `
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-chbKxp eMnDfR"
+          className="sc-LAAhi hbFqui"
         >
           -1
           , 
@@ -525,10 +525,10 @@ exports[`Carousel renders visible index 1`] = `
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-chbKxp eMnDfR"
+          className="sc-LAAhi hbFqui"
         >
           -1
           , 
@@ -536,10 +536,10 @@ exports[`Carousel renders visible index 1`] = `
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-chbKxp eMnDfR"
+          className="sc-LAAhi hbFqui"
         >
           -1
           , 
@@ -547,10 +547,10 @@ exports[`Carousel renders visible index 1`] = `
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-chbKxp eMnDfR"
+          className="sc-LAAhi hbFqui"
         >
           -1
           , 
@@ -567,7 +567,7 @@ exports[`Carousel renders with Customized Arrows 1`] = `
   className="flex justify-around items-center w-full"
 >
   <div
-    className="sc-gaqsZu gXEWLA"
+    className="sc-doCyfw kmCkKL"
   >
     <button
       disabled={true}
@@ -576,229 +576,229 @@ exports[`Carousel renders with Customized Arrows 1`] = `
       Scroll to left
     </button>
     <ul
-      className="sc-jPVYhN sc-fXywWY fnMugc eOFqYR"
+      className="sc-jmhOSl sc-cbDwiu gZgwrc dSpUMR"
     >
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           0
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           1
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           2
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           3
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           4
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           5
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           6
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           7
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           8
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           9
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           10
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           11
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           12
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           13
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           14
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           15
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           16
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           17
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           18
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           19
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           20
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           21
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           22
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           23
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-hySdjw fQjQpI"
+          className="sc-bEeDdh dsGaRJ"
         >
           24
         </div>
@@ -819,52 +819,52 @@ exports[`Carousel renders with different Space 1`] = `
   className="flex justify-around items-center w-full"
 >
   <div
-    className="sc-gaqsZu gXEWLA"
+    className="sc-doCyfw kmCkKL"
   >
     <ul
-      className="sc-jPVYhN sc-fXywWY rhfQk eOFqYR"
+      className="sc-jmhOSl sc-cbDwiu dTPDcw dSpUMR"
     >
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-bWIbvL ffeErD"
+          className="sc-gVUVPo fjPzxC"
         >
           0
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-bWIbvL ffeErD"
+          className="sc-gVUVPo fjPzxC"
         >
           1
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-bWIbvL ffeErD"
+          className="sc-gVUVPo fjPzxC"
         >
           2
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-bWIbvL ffeErD"
+          className="sc-gVUVPo fjPzxC"
         >
           3
         </div>
       </li>
       <li
-        className="sc-jdHRdX hWZVGv"
+        className="sc-hZiMVj ejLhix"
       >
         <div
-          className="sc-bWIbvL ffeErD"
+          className="sc-gVUVPo fjPzxC"
         >
           4
         </div>

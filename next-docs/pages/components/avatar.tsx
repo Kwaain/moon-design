@@ -1,50 +1,37 @@
 import React from 'react';
+import { Heading, Text } from '@heathmont/moon-core';
 import Preview from '../../components/codePreview/Preview';
 import PropsTable from '../../components/PropsTable';
+import ActiveStatus from '../../public/examples/avatar/ActiveStatus';
 import Colours from '../../public/examples/avatar/Colours';
-import Fallbacks from '../../public/examples/avatar/Fallbacks';
-import Image from '../../public/examples/avatar/Image';
-import Letter from '../../public/examples/avatar/Letter';
-import Statuses from '../../public/examples/avatar/Statuses';
-import StatusPositions from '../../public/examples/avatar/StatusPositions';
+import Sizes from '../../public/examples/avatar/Sizes';
+import StatusOrigin from '../../public/examples/avatar/StatusOrigin';
+import Variants from '../../public/examples/avatar/Variants';
 import useExamples from '../../utils/useExamples';
 
 const PageAvatar = () => {
   const examples = useExamples('avatar');
   return (
     <>
-      <section className="mt-8">
-        <h1 className="text-5xl font-semibold">Avatar</h1>
-        <p className="text-lg mt-4">
-          Component for displaying user profile image or placeholder if no
-          image.
-        </p>
+      <section className="grid gap-4 mt-8">
+        <Heading as="h1" size={48}>
+          Avatar
+        </Heading>
+        <Text>
+          Avatars are used to represent an individual, a business, or a
+          celestial being when they interact with any Coingaming brand. While
+          they usually consist of an image, avatars are adaptable - letters or
+          object icons may sometimes be used as fallbacks.
+        </Text>
       </section>
 
-      {/* Image avatars */}
+      {/* Variants */}
       <section className="mt-8">
         <Preview
-          title="Image avatars"
-          preview={<Image />}
-          code={examples ? examples.Image : 'Loading'}
-        />
-      </section>
-
-      {/* Letter avatars */}
-      <section className="mt-8">
-        <Preview
-          title="Letter avatars"
-          preview={<Letter />}
-          code={examples ? examples.Letter : 'Loading'}
-        />
-      </section>
-
-      {/* Fallbacks */}
-      <section className="mt-8">
-        <Preview
-          title="Fallbacks"
-          preview={<Fallbacks />}
-          code={examples ? examples.Fallbacks : 'Loading'}
+          title="Variants"
+          isGrayBg
+          preview={<Variants />}
+          code={examples ? examples.Variants : 'Loading'}
         />
       </section>
 
@@ -52,35 +39,48 @@ const PageAvatar = () => {
       <section className="mt-8">
         <Preview
           title="Different colours"
+          isGrayBg
           preview={<Colours />}
           code={examples ? examples.Colours : 'Loading'}
         />
       </section>
 
-      {/* With status */}
+      {/* Different sizes */}
       <section className="mt-8">
         <Preview
-          title="With status"
-          preview={<Statuses />}
-          code={examples ? examples.Statuses : 'Loading'}
+          title="Different sizes"
+          isGrayBg
+          preview={<Sizes />}
+          code={examples ? examples.Sizes : 'Loading'}
         />
       </section>
 
-      {/* Status Position*/}
+      {/* Active status */}
       <section className="mt-8">
         <Preview
-          title="Status Position"
-          preview={<StatusPositions />}
-          code={examples ? examples.StatusPositions : 'Loading'}
+          title="Active status"
+          isGrayBg
+          preview={<ActiveStatus />}
+          code={examples ? examples.ActiveStatus : 'Loading'}
+        />
+      </section>
+
+      {/* Status Origin */}
+      <section className="mt-8">
+        <Preview
+          title="Status Origin"
+          isGrayBg
+          preview={<StatusOrigin />}
+          code={examples ? examples.StatusOrigin : 'Loading'}
         />
       </section>
 
       <PropsTable
-        title="Props for Avatar component"
+        title="Props"
         data={[
           {
             name: 'size',
-            type: 'xsmall | small | medium | large',
+            type: 'xsmall | small | medium | large | xlarge | twoxlarge',
             required: false,
             default: 'medium',
             description: 'Size for avatar',
@@ -90,7 +90,7 @@ const PageAvatar = () => {
             type: 'string | JSX.Element',
             required: false,
             default: '-',
-            description: 'Сapital letters of name',
+            description: 'Capital letters of name',
           },
           {
             name: 'imageUrl',
@@ -103,7 +103,7 @@ const PageAvatar = () => {
             name: 'statusOrigin',
             type: 'StatusOrigin',
             required: false,
-            default: '-',
+            default: 'bottom, right',
             description: 'Position for status indication',
           },
           {
@@ -111,41 +111,21 @@ const PageAvatar = () => {
             type: 'boolean',
             required: false,
             default: 'false',
-            description: 'Active/inactive state for status indication',
+            description: 'Active state for status indication',
           },
           {
             name: 'color',
             type: 'ColorProps',
             required: false,
-            default: '-',
+            default: 'bulma.100',
             description: 'Text color',
           },
           {
             name: 'backgroundColor',
             type: 'ColorProps',
             required: false,
-            default: '-',
+            default: 'gohan.100',
             description: 'Background color',
-          },
-        ]}
-      />
-
-      <PropsTable
-        title="StatusOrigin Prop"
-        data={[
-          {
-            name: 'vertical',
-            type: 'top | bottom',
-            required: true,
-            default: '-',
-            description: 'Vertical align for status indication',
-          },
-          {
-            name: 'horizontal',
-            type: 'left | right',
-            required: true,
-            default: '-',
-            description: 'Horizontal align for status indication',
           },
         ]}
       />

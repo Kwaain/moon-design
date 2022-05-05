@@ -1,5 +1,29 @@
 # Change Log
 
+## 8.5.0
+
+### Minor Changes
+
+- xs button, copy code, icons, caroseul arrows fix
+
+## 8.4.1
+
+### Patch Changes
+
+- Clubhouse icon fix
+
+## 8.4.0
+
+### Minor Changes
+
+- Clubhouse icon, lint, label, avatar, auth code, typography
+
+## 8.3.7
+
+### Patch Changes
+
+- Table Row Selection
+
 ## 8.3.6
 
 ### Patch Changes

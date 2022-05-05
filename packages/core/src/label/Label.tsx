@@ -1,24 +1,9 @@
 import React from 'react';
-import { ColorProps } from '@heathmont/moon-themes';
-import { rem } from '@heathmont/moon-utils';
-import styled from 'styled-components';
+import Size from '../private/enums/Size';
+import IconLeftWrapper from './styles/IconLeftWrapper';
+import IconRightWrapper from './styles/IconRightWrapper';
 import LabelContainer from './styles/LabelContainer';
-
-export type LabelProps = {
-  color?: ColorProps;
-  backgroundColor?: ColorProps;
-  iconLeft?: React.ReactElement;
-  iconRight?: React.ReactElement;
-  size?: 'small' | 'medium';
-};
-
-const IconRightWrapper = styled.span({
-  marginInlineStart: rem(4),
-});
-
-const IconLeftWrapper = styled.span({
-  marginInlineEnd: rem(4),
-});
+import type LabelProps from './private/types/LabelProps';
 
 const Label: React.FC<LabelProps> = ({
   children,
@@ -26,12 +11,20 @@ const Label: React.FC<LabelProps> = ({
   backgroundColor,
   iconLeft,
   iconRight,
-  size,
+  size = Size.XSMALL,
+  isUppercase = true,
 }) => (
-  <LabelContainer backgroundColor={backgroundColor} color={color} size={size}>
-    {iconLeft && <IconLeftWrapper>{iconLeft}</IconLeftWrapper>}
+  <LabelContainer
+    backgroundColor={backgroundColor}
+    color={color}
+    size={size}
+    isUppercase={isUppercase}
+    iconLeft={iconLeft}
+    iconRight={iconRight}
+  >
+    {iconLeft && <IconLeftWrapper size={size}>{iconLeft}</IconLeftWrapper>}
     {children}
-    {iconRight && <IconRightWrapper>{iconRight}</IconRightWrapper>}
+    {iconRight && <IconRightWrapper size={size}>{iconRight}</IconRightWrapper>}
   </LabelContainer>
 );
 

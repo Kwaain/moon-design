@@ -3,8 +3,8 @@ import { Heading, Text } from '@heathmont/moon-core';
 import Preview from '../../components/codePreview/Preview';
 import PropsTable from '../../components/PropsTable';
 import Checked from '../../public/examples/checkbox/Checked';
+import Default from '../../public/examples/checkbox/Default';
 import Disabled from '../../public/examples/checkbox/Disabled';
-import Example from '../../public/examples/checkbox/Example';
 import NoLabel from '../../public/examples/checkbox/NoLabel';
 import Readonly from '../../public/examples/checkbox/Readonly';
 import useExamples from '../../utils/useExamples';
@@ -34,8 +34,8 @@ export default function PageAccordion() {
         <Preview
           title="Checkbox"
           isGrayBg
-          preview={<Example />}
-          code={examples ? examples.Example : 'Loading'}
+          preview={<Default />}
+          code={examples ? examples.Default : 'Loading'}
         />
       </section>
 
@@ -45,7 +45,7 @@ export default function PageAccordion() {
           title="No label"
           isGrayBg
           preview={<NoLabel />}
-          code={examples ? examples.Example : 'Loading'}
+          code={examples ? examples.NoLabel : 'Loading'}
         />
       </section>
 
@@ -65,7 +65,7 @@ export default function PageAccordion() {
           title="Readonly"
           isGrayBg
           preview={<Readonly />}
-          code={examples ? examples.Disabled : 'Loading'}
+          code={examples ? examples.Readonly : 'Loading'}
         />
       </section>
 

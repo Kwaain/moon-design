@@ -1,5 +1,59 @@
 # @heathmont/moon-datepicker
 
+## 8.5.0
+
+### Minor Changes
+
+- xs button, copy code, icons, caroseul arrows fix
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @heathmont/moon-components@8.5.0
+  - @heathmont/moon-core@8.5.0
+  - @heathmont/moon-icons@8.5.0
+  - @heathmont/moon-themes@8.5.0
+  - @heathmont/moon-utils@8.5.0
+
+## 8.4.1
+
+### Patch Changes
+
+- Clubhouse icon fix
+- Updated dependencies [undefined]
+  - @heathmont/moon-components@8.4.1
+  - @heathmont/moon-core@8.4.1
+  - @heathmont/moon-icons@8.4.1
+  - @heathmont/moon-themes@8.4.1
+  - @heathmont/moon-utils@8.4.1
+
+## 8.4.0
+
+### Minor Changes
+
+- Clubhouse icon, lint, label, avatar, auth code, typography
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @heathmont/moon-components@8.4.0
+  - @heathmont/moon-core@8.4.0
+  - @heathmont/moon-icons@8.4.0
+  - @heathmont/moon-themes@8.4.0
+  - @heathmont/moon-utils@8.4.0
+
+## 8.3.7
+
+### Patch Changes
+
+- Table Row Selection
+- Updated dependencies [undefined]
+  - @heathmont/moon-components@8.3.7
+  - @heathmont/moon-core@8.3.7
+  - @heathmont/moon-icons@8.3.7
+  - @heathmont/moon-themes@8.3.7
+  - @heathmont/moon-utils@8.3.7
+
 ## 8.3.6
 
 ### Patch Changes

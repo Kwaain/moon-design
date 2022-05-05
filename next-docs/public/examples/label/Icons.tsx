@@ -5,27 +5,25 @@ import { ControlsClose, GenericInfo } from '@heathmont/moon-icons';
 const Example = () => (
   <div className="flex flex-col justify-around items-center w-full">
     <div className="flex justify-around items-center w-full mb-4">
-      <Label size="small">Small</Label>
-      <Label size="small" iconLeft={<GenericInfo />}>
-        Small
+      <Label size="twoxsmall" iconLeft={<GenericInfo />}>
+        Twoxsmall
       </Label>
-      <Label size="small" iconRight={<ControlsClose />}>
-        Small
+      <Label size="twoxsmall" iconRight={<ControlsClose />}>
+        Twoxsmall
       </Label>
       <Label
-        size="small"
+        size="twoxsmall"
         iconLeft={<GenericInfo />}
         iconRight={<ControlsClose />}
       >
-        Small
+        Twoxsmall
       </Label>
     </div>
     <div className="flex justify-around items-center w-full">
-      <Label>Medium</Label>
-      <Label iconLeft={<GenericInfo />}>Medium</Label>
-      <Label iconRight={<ControlsClose />}>Medium</Label>
+      <Label iconLeft={<GenericInfo />}>Xsmall</Label>
+      <Label iconRight={<ControlsClose />}>Xsmall</Label>
       <Label iconLeft={<GenericInfo />} iconRight={<ControlsClose />}>
-        Medium
+        Xsmall
       </Label>
     </div>
   </div>
