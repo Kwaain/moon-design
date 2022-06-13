@@ -4,13 +4,13 @@ import { Button } from '@heathmont/moon-core';
 import { MailEnvelope , ArrowsLeft, ShopCrypto } from '@heathmont/moon-icons';
 
 import Image from 'next/image';
-import BitcasinoLogo from "./private/bitcasino-logo";
-import explore1 from './private/explore-1.png';
-import explore2 from './private/explore-2.png';
-import gift from './private/gift.png';
-import handshake from './private/handshake.png';
-import promo from './private/promo.png';
-import support from './private/support.png';
+import BitcasinoLogo from "../private/bitcasino-logo";
+import explore1 from '../private/explore-1.png';
+import explore2 from '../private/explore-2.png';
+import gift from '../private/gift.png';
+import handshake from '../private/handshake.png';
+import promo from '../private/promo.png';
+import support from '../private/support.png';
 
 interface ExperienceCarousel {
   index?: number;
