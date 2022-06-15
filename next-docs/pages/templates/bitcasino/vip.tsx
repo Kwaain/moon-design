@@ -357,7 +357,7 @@ const Vip = () => {
 
 Vip.getLayout = function getLayout(page: ReactNode) {
   return (
-    <div className="w-full min-h-screen bg-gohan text-white">{page}</div>
+    <div className="w-full min-h-screen betadda-dark bg-gohan text-white">{page}</div>
   );
 };
 

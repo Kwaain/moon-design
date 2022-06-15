@@ -363,7 +363,7 @@ const Vip = () => {
         />
       </div>
       <div className='w-[870px] flex flex-col mx-12 sm:flex-row sm:py-20 sm:top-0 sm:items-center'>
-        <div className='flex flex-col max-w-full mt-6 sm:w-[600px] sm:justify-center '>
+        <div className='flex flex-col max-w-full mt-6 sm:mr-12 sm:w-[600px] sm:justify-center'>
           <p className='text-center text-moon-24 sm:text-left sm:text-moon-32 sm:font-semibold'>How to become a VIP ?</p>
           <p className='text-moon-16 text-center p-2 sm:text-left sm:pl-0 sm:opacity-80 sm:pt-[12px]'>
             Entry to this exclusive club is by invitation only. The best way
@@ -372,7 +372,7 @@ const Vip = () => {
           </p>
           <p className='text-moon-16 text-center px-3 pt-2 sm:text-left sm:pl-0 sm:opacity-80'>
             Think you have what it takes? Ready to take things to the next level?
-            <span className='text-raditz '> Don’t delay</span>
+            <span className='text-raditz'> Don’t delay</span>
           </p>
           <Button className='mt-6 mx-5 mb-4 rounded-full h-12 bg-[#49B356] sm:ml-0 sm:w-6/12 lg:w-[55%] md:w-full'>
             Create your account now!
