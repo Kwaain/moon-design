@@ -197,6 +197,18 @@ const Vip = () => {
     {
       text: 'I have been in love and hate relation- ship with Bitcasino.io for a good period of time and I must rephrase my self and it\'s mostly love and thanks to my host Mia, who is all ways there on behalf of casino as ...',
       name: 'Zyn*****'
+    },
+    {
+      text: 'I have been in love and hate relation- ship with Bitcasino.io for a good period of time and I must rephrase my self and it\'s mostly love and thanks to my host Mia, who is all ways there on behalf of casino as ...',
+      name: 'Zyn*****'
+    },
+    {
+      text: 'I have played at so many other online casinos and there is always something missing, either a rigged software or a very, very and I repeat very delayed payout. One of the things I love about Bitcasino.io is an instant payout ...',
+      name: 'Zyn*****'
+    },
+    {
+      text: 'I have been in love and hate relation- ship with Bitcasino.io for a good period of time and I must rephrase my self and it\'s mostly love and thanks to my host Mia, who is all ways there on behalf of casino as ...',
+      name: 'Zyn*****'
     }
   ];
   const Events = [
@@ -275,10 +287,10 @@ const Vip = () => {
             <div className='w-[70%] h-[50%] min-w-[630px] relative'>
               <Image src={item.heroImage} sizes={'100%'}/>
             </div>
-            <div className='w-[33%] h-[35%] min-w-[330px] sm:absolute sm:top-[-50px] sm:right-[15px] 2xl:translate-y-[-5%] sm:w-[35%] sm:h-[90%]'>
+            <div className='w-[33%] h-[30%] min-w-[330px] sm:absolute sm:top-[-50px] sm:right-[15px] 2xl:translate-y-[-5%] sm:w-[35%] sm:h-[80%]'>
               <Image src={item.backImage} sizes={'100%'} className='rounded-lg '/>
             </div>
-            <div className='flex flex-col min-w-[330px] rounded-[12px] bg-gohan z-10000 2xl:translate-y-[-5%] sm:absolute sm:top-[-25px] sm:right-[40px] sm:w-[35%] sm:h-[90%]'>
+            <div className='flex flex-col min-w-[330px] rounded-[12px] bg-gohan z-10000 2xl:translate-y-[-5%] sm:absolute sm:top-[-25px] sm:right-[40px] sm:w-[35%] sm:h-[80%]'>
               <div className='flex flex-row justify-between items-center m-6'>
                 <Image src={Detail} className='rotate-90'/>
                 <Image src={Detail} className='rotate-180'/>
@@ -308,10 +320,9 @@ const Vip = () => {
     </div>
     <div className='hidden mt-12 sm:block'>
       <p className='text-center pt-4 text-moon-32 font-semibold sm:pl-0'>Partnership</p>
-      <div className='md:pl-[10%]'>
+      <div className='w-[900px] mx-12 lg:w-[1150px]'>
         <Carousel
           scrollTo={0}
-          hideScrollbar={true}
           items={Partnership.map((item) => (<PartnershipItems
             title={item.title}
             text={item.text}
@@ -319,7 +330,7 @@ const Vip = () => {
           />))}
         />
       </div>
-      <div className='mt-12 md:pl-[10%]'>
+      <div className='mt-12 px-12'>
         <div className='flex flex-row items-center mt-6 mb-4 rounded-full h-8 bg-gohan md:w-[30%] sm:w-[40%] '>
           <div className='w-2/4 h-5/6 ml-0.5 rounded-full bg-goku'>
             <p className='text-moon-14 text-center text-raditz'>Football clubs</p>
@@ -329,46 +340,47 @@ const Vip = () => {
       </div>
     </div>
     <p className='text-moon-32 px-5 mt-12 text-center sm:pl-0 sm:px-0'>Here’s what our customers say about being a VIP</p>
-    <div className='w-full flex flex-row justify-center md:pl-[10%]'>
-      <Carousel
-        scrollTo={0}
-        hideScrollbar={true}
-        items={Testimonials.map((item) => (<div className='flex w-[272px] h-[344px] mr-4 mt-20 bg-gohan rounded-lg flex-col p-3'>
-          <div className='flex flex-row justify-between items-center'>
-            <Image src={Detail} className='rotate-90'/>
-            <Image src={Detail} className='rotate-180'/>
-          </div>
-          <div className='h-4/5 flex flex-col items-left xl:justify-end shrink basis-full'>
-            <div className='w-full list-disc text-moon-16 pl-4 sm:text-moon-14'>
-              {item.text}
+    <div className='w-full flex flex-col justify-center items-center'>
+      <div className='w-[870px] flex flex-row justify-center mx-12'>
+        <Carousel
+          scrollTo={0}
+          items={Testimonials.map((item) => (<div className='flex w-[272px] h-[344px] mr-1 mt-20 bg-gohan rounded-lg flex-col p-3'>
+            <div className='flex flex-row justify-between items-center'>
+              <Image src={Detail} className='rotate-90'/>
+              <Image src={Detail} className='rotate-180'/>
             </div>
-            <p className='pl-4 md:mt-12 sm:mt-1'> {item.name}</p>
-          </div>
-          <div className='flex flex-row m-2 justify-between items-center mb-0'>
-            <Image src={Detail}/>
-            <Image src={Detail} className='rotate-[260deg]'/>
-          </div>
-        </div>))}
-      />
-    </div>
-    <div className='flex flex-col px-8 mb-6 sm:flex-row sm:py-20 md:w-[70%] sm:top-0 sm:items-center xl:pl-[25%] md:pl-[5%] sm:pl-[10%]'>
-      <div className='flex flex-col max-w-full mt-6 sm:w-[600px] sm:justify-center '>
-        <p className='text-center text-moon-24 sm:text-left sm:text-moon-32 sm:font-semibold'>How to become a VIP ?</p>
-        <p className='text-moon-16 text-center p-2 sm:text-left sm:pl-0 sm:opacity-80 sm:pt-[12px]'>
-          Entry to this exclusive club is by invitation only. The best way
-          to get an invite is to keep on playing and we will alert you when you have reached the top tier of our
-          <span className='text-raditz'> Loyalty System</span>
-        </p>
-        <p className='text-moon-16 text-center px-3 pt-2 sm:text-left sm:pl-0 sm:opacity-80'>
-          Think you have what it takes? Ready to take things to the next level?
-          <span className='text-raditz '> Don’t delay</span>
-        </p>
-        <Button className='mt-6 mx-5 mb-4 rounded-full h-12 bg-[#49B356] sm:ml-0 sm:w-6/12 lg:w-[55%] md:w-full'>
-          Create your account now!
-        </Button>
+            <div className='h-4/5 flex flex-col items-left xl:justify-end shrink basis-full'>
+              <div className='w-full list-disc text-moon-16 pl-4 mb-8 sm:text-moon-14'>
+                {item.text}
+              </div>
+              <p className='pl-4'>{item.name}</p>
+            </div>
+            <div className='flex flex-row justify-between items-center mt-4'>
+              <Image src={Detail}/>
+              <Image src={Detail} className='rotate-[260deg]'/>
+            </div>
+          </div>))}
+        />
       </div>
-      <div className='hidden sm:inline'>
-        <Image src={MagicMan}/>
+      <div className='w-[870px] flex flex-col mx-12 sm:flex-row sm:py-20 sm:top-0 sm:items-center'>
+        <div className='flex flex-col max-w-full mt-6 sm:w-[600px] sm:justify-center '>
+          <p className='text-center text-moon-24 sm:text-left sm:text-moon-32 sm:font-semibold'>How to become a VIP ?</p>
+          <p className='text-moon-16 text-center p-2 sm:text-left sm:pl-0 sm:opacity-80 sm:pt-[12px]'>
+            Entry to this exclusive club is by invitation only. The best way
+            to get an invite is to keep on playing and we will alert you when you have reached the top tier of our
+            <span className='text-raditz'> Loyalty System</span>
+          </p>
+          <p className='text-moon-16 text-center px-3 pt-2 sm:text-left sm:pl-0 sm:opacity-80'>
+            Think you have what it takes? Ready to take things to the next level?
+            <span className='text-raditz '> Don’t delay</span>
+          </p>
+          <Button className='mt-6 mx-5 mb-4 rounded-full h-12 bg-[#49B356] sm:ml-0 sm:w-6/12 lg:w-[55%] md:w-full'>
+            Create your account now!
+          </Button>
+        </div>
+        <div className='hidden sm:inline'>
+          <Image src={MagicMan}/>
+        </div>
       </div>
     </div>
   </div>);
