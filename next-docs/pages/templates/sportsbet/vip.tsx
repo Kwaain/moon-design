@@ -94,7 +94,7 @@ const Vip = () => {
       text: ['From cashback to rebate, free spins, leaderboards, and more - we have you covered!'],
       link: {
         label: 'Learn more',
-        url: 'google.com'
+        url: 'https://google.com'
       }
     },
     {
@@ -103,7 +103,7 @@ const Vip = () => {
       text: ['Personalised attention from one of the individuals below, who will always go the extra mile to meet your gaming needs and desires.'],
       link: {
         label: 'Learn more',
-        url: 'google.com'
+        url: 'https://google.com'
       }
     },
     {
@@ -112,7 +112,7 @@ const Vip = () => {
       text: ['Wheather it’s Bali or the Adriatics coast, travel the world with Bitcasino'],
       link: {
         label: 'Learn more',
-        url: 'google.com'
+        url: 'https://google.com'
       }
     },
     {
@@ -121,7 +121,7 @@ const Vip = () => {
       text: ['From cashback to rebate, free spins, leaderboards, and more - we have you covered!'],
       link: {
         label: 'Learn more',
-        url: 'google.com'
+        url: 'https://google.com'
       }
     },
     {
@@ -130,7 +130,7 @@ const Vip = () => {
       text: ['Personalised attention from one of the individuals below, who will always go the extra mile to meet your gaming needs and desires.'],
       link: {
         label: 'Learn more',
-        url: 'google.com'
+        url: 'https://google.com'
       }
     },
     {
@@ -139,7 +139,7 @@ const Vip = () => {
       text: ['Wheather it’s Bali or the Adriatics coast, travel the world with Bitcasino'],
       link: {
         label: 'Learn more',
-        url: 'google.com'
+        url: 'https://google.com'
       }
     }
   ];
@@ -199,6 +199,28 @@ const Vip = () => {
       name: 'Zyn*****'
     }
   ];
+  const Events = [
+    {
+      heroImage: AdriaticSea,
+      backImage: BackPhoto,
+      title: 'Getaways in Adriatic Sea',
+      text: 'Entry to this exclusive club is by invitation only. The best way to get an invite is to keep on playing and we will alert you when you have reached the top tier of our Loyalty System.',
+      link: {
+        label: 'Learn more',
+        url: 'https:/google.com'
+      }
+    },
+    {
+      heroImage: AdriaticSea,
+      backImage: BackPhoto,
+      title: 'Another Awesome Event',
+      text: 'Entry to this exclusive club is by invitation only. The best way to get an invite is to keep on playing and we will alert you when you have reached the top tier of our Loyalty System.',
+      link: {
+        label: 'Learn more',
+        url: 'https:/google.com'
+      }
+    }
+  ];
 
   return (<div className='flex flex-col sm:px-[10%] sm:py-20 sm:w-full'>
     <div className='max-w-full sm:relative'>
@@ -235,8 +257,8 @@ const Vip = () => {
         />
       </div>
     </div>
-    <div className='md:pl-[10%] mb-0'>
-      <div className='flex flex-row justify-center items-center mt-6 mx-5 mb-4 rounded-full h-8 bg-gohan md:w-[30%] sm:w-[35%] '>
+    <div className='mx-12 mt-8'>
+      <div className='flex flex-row justify-center items-center -mb-16 rounded-full h-8 bg-gohan md:w-[30%] sm:w-[35%] '>
         <div className='w-[50%] h-[90%] ml-0.5 flex justify-center items-center rounded-full bg-goku'>
           <p className='text-moon-14 xl:text-moon-14 md:text-moon-12 text-center text-raditz sm:text-moon-10'>
             Past events
@@ -246,36 +268,39 @@ const Vip = () => {
           Upcoming events
         </p>
       </div>
-      <div className='hidden sm:block relative'>
-        <div className='w-[45%] h-[45%] relative'>
-          <Image src={AdriaticSea} sizes={'100%'}/>
-        </div>
-        <div className='w-[25%] h-[30%] sm:absolute sm:top-[-30px] sm:left-[38%] 2xl:translate-y-[-5%] sm:w-[25%] sm:h-[90%]'>
-          <Image src={BackPhoto} sizes={'100%'} className='rounded-lg '/>
-        </div>
-        <div className='flex flex-col sm:absolute rounded-[12px] bg-gohan z-10000 sm:top-[-10px] sm:left-[35%] 2xl:translate-y-[-5%] sm:w-[25%] sm:h-[90%]'>
-          <div className='flex flex-row justify-between items-center m-6'>
-            <Image src={Detail} className='rotate-90'/>
-            <Image src={Detail} className='rotate-180'/>
-          </div>
-          <div className='flex flex-col items-left px-10 xl:justify-end shrink basis-full sm:justify-center sm:items-center'>
-            <div>
-              <p className='md:text-left xl:text-moon-32 lg:text-moon-24 mb-4 sm:text-center'>
-                Getaways in Adriatic Sea
-              </p>
-              <p className='hidden xl:flex xl:text-moon-14 lg:text-moon-12 opacity-80 mb-4 xl'>
-                Entry to this exclusive club is by invitation only. The best way to get an
-                invite is to keep on playing and we will alert you when you have reached the top tier of our Loyalty
-                System.
-              </p>
-              <p className='text-raditz text-moon-14 md:text-left sm:text-center'>Learn more</p>
+      <div className='w-[900px] overflow-hidden px-1 lg:w-[1150px]'>
+        <Carousel
+          selectedIndex={0}
+          items={Events.map((item) => (<div className='min-w-[900px] mt-24 lg:min-w-[1150px] relative'>
+            <div className='w-[70%] h-[50%] min-w-[630px] relative'>
+              <Image src={item.heroImage} sizes={'100%'}/>
             </div>
-          </div>
-          <div className='flex flex-row m-6 justify-between items-center'>
-            <Image src={Detail}/>
-            <Image src={Detail} className='rotate-[260deg]'/>
-          </div>
-        </div>
+            <div className='w-[33%] h-[35%] min-w-[330px] sm:absolute sm:top-[-50px] sm:right-[15px] 2xl:translate-y-[-5%] sm:w-[35%] sm:h-[90%]'>
+              <Image src={item.backImage} sizes={'100%'} className='rounded-lg '/>
+            </div>
+            <div className='flex flex-col min-w-[330px] rounded-[12px] bg-gohan z-10000 2xl:translate-y-[-5%] sm:absolute sm:top-[-25px] sm:right-[40px] sm:w-[35%] sm:h-[90%]'>
+              <div className='flex flex-row justify-between items-center m-6'>
+                <Image src={Detail} className='rotate-90'/>
+                <Image src={Detail} className='rotate-180'/>
+              </div>
+              <div className='flex flex-col items-left px-10 xl:justify-end shrink basis-full sm:justify-center sm:items-center'>
+                <div>
+                  <p className='md:text-left xl:text-moon-32 lg:text-moon-24 mb-4 sm:text-center'>
+                    {item.title}
+                  </p>
+                  <p className='hidden xl:flex xl:text-moon-14 lg:text-moon-12 opacity-80 mb-4 xl'>
+                    {item.text}
+                  </p>
+                  <a href={item.link.url} className='text-raditz text-moon-14 md:text-left sm:text-center'>{item.link.label}</a>
+                </div>
+              </div>
+              <div className='flex flex-row m-6 justify-between items-center'>
+                <Image src={Detail}/>
+                <Image src={Detail} className='rotate-[260deg]'/>
+              </div>
+            </div>
+          </div>))}
+        />
       </div>
     </div>
     <div className='w-[100%] sm:hidden'>
