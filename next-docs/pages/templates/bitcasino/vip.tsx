@@ -4,13 +4,13 @@ import { Button } from '@heathmont/moon-core';
 import { MailEnvelope, ArrowsLeft, ShopCrypto } from '@heathmont/moon-icons';
 
 import Image from 'next/image';
-import BitcasinoLogo from './private/bitcasino-logo';
-import explore1 from './private/explore-1.png';
-import explore2 from './private/explore-2.png';
-import gift from './private/gift.png';
-import handshake from './private/handshake.png';
-import promo from './private/promo.png';
-import support from './private/support.png';
+import BitcasinoLogo from '../private/bitcasino-logo';
+import explore1 from '../private/explore-1.png';
+import explore2 from '../private/explore-2.png';
+import gift from '../private/gift.png';
+import handshake from '../private/handshake.png';
+import promo from '../private/promo.png';
+import support from '../private/support.png';
 
 interface ExperienceCarousel {
   index?: number;
@@ -47,13 +47,13 @@ const ExperienceCarouselItem = ({
     </div>
   );
 };
+
 const ExploreCarouselItem = ({
   items,
 }: {
   items: Array<{ image: any; title: string }>;
 }) => {
-  return (
-    <div className="w-full h-full flex p-6">
+  return (<div className="w-full h-full flex p-6">
       <div className="w-[168px] mr-3 flex flex-col items-stretch">
         <div className="h-16" />
         <div className="grow-1 mb-2 relative rounded-lg">
@@ -92,8 +92,7 @@ const ExploreCarouselItem = ({
         </div>
         <div className="h-16" />
       </div>
-    </div>
-  );
+    </div>);
 };
 
 const Vip = () => {
@@ -167,8 +166,7 @@ const Vip = () => {
     ],
   ];
 
-  return (
-    <div className="flex flex-col grow overflow-hidden">
+  return (<div className="flex flex-col grow overflow-hidden">
       <div className="fixed top-0 left-0 w-full flex items-center justify-center my-5 mx-4 z-10">
         <div className="absolute left-0">
           <ArrowsLeft fontSize="2rem" />
@@ -354,13 +352,12 @@ const Vip = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
 };
 
 Vip.getLayout = function getLayout(page: ReactNode) {
   return (
-    <div className="w-full min-h-screen bg-[#1A212A] text-white">{page}</div>
+    <div className="w-full min-h-screen bg-gohan text-white">{page}</div>
   );
 };
 
