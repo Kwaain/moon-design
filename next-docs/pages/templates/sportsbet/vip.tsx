@@ -21,6 +21,10 @@ interface VipItemProps {
   title: string;
   text: string[];
   icon: any;
+  link: {
+    label: string;
+    url: string;
+  }
 }
 
 interface Partnership {
@@ -29,7 +33,7 @@ interface Partnership {
   icon: any;
 }
 
-const VipItem = ({title, icon, text}: VipItemProps) => {
+const VipItem = ({title, icon, text, link}: VipItemProps) => {
   return (<div className='w-[272px] h-full bg-gohan rounded-lg flex flex-col p-3 lg:w-[368px]'>
       <div className='flex flex-row justify-between items-center mb-8'>
         <Image src={Detail} className='rotate-90'/>
@@ -40,12 +44,16 @@ const VipItem = ({title, icon, text}: VipItemProps) => {
           <Image src={icon} alt={title}/>
         </div>
         <p className='text-moon-20 text-center mb-4 px-3 w-full'>{title}</p>
-        <div className='w-full list-disc pl-4'>
+        <div className='w-full list-disc'>
           {text?.map((text: string) => (
             <p className="text-moon-14 w-full text-center">{text}</p>
           ))}
         </div>
       </div>
+      <a
+        href={link.url}
+        className='text-moon-14 text-raditz text-center mt-4 -mb-4 px-3 w-full'
+      >{link.label}</a>
       <div className='flex flex-row justify-between items-center mb-0'>
         <Image src={Detail}/>
         <Image src={Detail} className='rotate-[260deg]'/>
@@ -83,17 +91,56 @@ const Vip = () => {
     {
       icon: Star,
       title: 'Unique offers, rewards and VIP promotions',
-      text: ['From cashback to rebate, free spins, leaderboards, and more - we have you covered!']
+      text: ['From cashback to rebate, free spins, leaderboards, and more - we have you covered!'],
+      link: {
+        label: 'Learn more',
+        url: 'google.com'
+      }
     },
     {
       icon: Suit,
       title: 'VIP Manager',
-      text: ['Personalised attention from one of the individuals below, who will always go the extra mile to meet your gaming needs and desires.']
+      text: ['Personalised attention from one of the individuals below, who will always go the extra mile to meet your gaming needs and desires.'],
+      link: {
+        label: 'Learn more',
+        url: 'google.com'
+      }
     },
     {
       icon: Envelope,
       title: 'Invitations to prestigious events',
-      text: ['Wheather it’s Bali or the Adriatics coast, travel the world with Bitcasino']
+      text: ['Wheather it’s Bali or the Adriatics coast, travel the world with Bitcasino'],
+      link: {
+        label: 'Learn more',
+        url: 'google.com'
+      }
+    },
+    {
+      icon: Star,
+      title: 'Unique offers, rewards and VIP promotions',
+      text: ['From cashback to rebate, free spins, leaderboards, and more - we have you covered!'],
+      link: {
+        label: 'Learn more',
+        url: 'google.com'
+      }
+    },
+    {
+      icon: Suit,
+      title: 'VIP Manager',
+      text: ['Personalised attention from one of the individuals below, who will always go the extra mile to meet your gaming needs and desires.'],
+      link: {
+        label: 'Learn more',
+        url: 'google.com'
+      }
+    },
+    {
+      icon: Envelope,
+      title: 'Invitations to prestigious events',
+      text: ['Wheather it’s Bali or the Adriatics coast, travel the world with Bitcasino'],
+      link: {
+        label: 'Learn more',
+        url: 'google.com'
+      }
     }
   ];
   const Partnership = [
@@ -175,16 +222,18 @@ const Vip = () => {
         </div>
       </div>
     </div>
-    <div className='w-full flex flex-col max-w-[100vw] items-center justify-center mx-12 py-8 -mt-[60px]'>
-      <Carousel
-        scrollTo={0}
-        hideScrollbar={true}
-        items={VipClub.map((item) => (<VipItem
-          title={item.title}
-          text={item.text}
-          icon={item.icon}
-        />))}
-      />
+    <div className='w-full flex max-w-[100vw] items-center mx-12 py-8 -mt-[60px]'>
+      <div className='w-[900px] overflow-hidden px-1 lg:w-[1150px]'>
+        <Carousel
+          selectedIndex={0}
+          items={VipClub.map((item) => (<VipItem
+            title={item.title}
+            text={item.text}
+            icon={item.icon}
+            link={item.link}
+          />))}
+        />
+      </div>
     </div>
     <div className='md:pl-[10%] mb-0'>
       <div className='flex flex-row justify-center items-center mt-6 mx-5 mb-4 rounded-full h-8 bg-gohan md:w-[30%] sm:w-[35%] '>
