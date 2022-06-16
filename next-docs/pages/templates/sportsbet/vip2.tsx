@@ -6,11 +6,14 @@ import AdriaticSea from '../private/AdriaticSea.png';
 import Arsenal from '../private/Arsenal.png';
 import BackPhoto from '../private/BackPhoto.png';
 import VipLounge from '../private/Bitcasino_VIPlounge 1.png';
+import Croatia from '../private/croatia.png';
 import Detail from '../private/Detail.png';
 import Envelope from '../private/Envelope.png';
 import Flamengo from '../private/Flamengo.png';
 import MagicMan from '../private/magicman.png';
 import PastEvents from '../private/PastEvents.png';
+import Russia_2018 from '../private/russia-2018.png';
+import Russia2018 from '../private/russia2018.png';
 import SouthamptonFC from '../private/southamptonFC.png';
 import Star from '../private/Star.png';
 import Suit from '../private/Suit.png';
@@ -33,33 +36,6 @@ interface Partnership {
   icon: any;
 }
 
-// const VipItem = ({title, icon, text, link}: VipItemProps) => {
-//   return (<div className='w-[272px] h-full bg-gohan rounded-lg flex flex-col p-3 lg:w-[368px] sm:w-[400px] '>
-//       <div className='flex flex-row justify-between items-center mb-8'>
-//         <Image src={Detail} className='rotate-90'/>
-//         <Image src={Detail} className='rotate-180'/>
-//       </div>
-//       <div className='h-4/5 px-12'>
-//         <div className='flex items-center justify-center pt-3 pb-4'>
-//           <Image src={icon} alt={title}/>
-//         </div>
-//         <p className='text-moon-20 text-center mb-4 px-3 w-full'>{title}</p>
-//         <div className='w-full list-disc'>
-//           {text?.map((text: string) => (
-//             <p className="text-moon-14 w-full text-center">{text}</p>
-//           ))}
-//         </div>
-//       </div>
-//       <a
-//         href={link.url}
-//         className='text-moon-14 text-raditz text-center mt-4 -mb-4 px-3 w-full'
-//       >{link.label}</a>
-//       <div className='flex flex-row justify-between items-center mb-0'>
-//         <Image src={Detail}/>
-//         <Image src={Detail} className='rotate-[260deg]'/>
-//       </div>
-//     </div>);
-// };
 const VipItem = ({title, icon, text, link}: VipItemProps) => {
   return (<div className='w-[330px] h-full bg-[#1A212A] rounded-lg flex flex-col p-2 2xl:w-[390px] xl:w-[335px] lg:w-[400px]'>
       <div className='flex flex-row justify-between items-center mb-8'>
@@ -260,6 +236,23 @@ const Vip = () => {
     }
   ];
 
+  const EventsMobile = [
+    {
+      mainImage: Croatia,
+      leftImage: Russia2018,
+      rightImage: Russia_2018,
+      title: '16 photos',
+      text: 'Getaways in Adriatic Sea'
+    },
+     {
+      mainImage: Croatia,
+      leftImage: Russia2018,
+      rightImage: Russia_2018,
+      title: '16 photos',
+      text: 'Getaways in Adriatic Sea'
+    }
+  ]
+
   return (<div className='flex flex-col sm:px-[10%] sm:py-20 sm:w-full'>
     <div className='max-w-full sm:relative'>
       <div className='flex flex-col max-w-full px-12 mb-6 z-10000 left-12 bottom-16 sm:w-[500px] sm:mb-0 sm:pb-0 sm:mt-[5%] sm:absolute'>
@@ -282,22 +275,7 @@ const Vip = () => {
         </div>
       </div>
     </div>
-    {/* <div className='w-full flex max-w-[100vw] items-center mx-12 py-8 -mt-[60px]'>
-      <div className='overflow-hidden px-1 lg:w-[1150px] '>
-        <Carousel
-          selectedIndex={0}
-          hideScrollbar={true}
-          items={VipClub.map((item) => (<VipItem
-            title={item.title}
-            text={item.text}
-            icon={item.icon}
-            link={item.link}
-          />))}
-        />
-      </div>
-    </div> */}
-
-
+  
       <div className='w-full flex flex-col max-w-[100vw] overflow-hidden items-center justify-center py-8 px-6 sm:px-0 sm:py-0  sm:pl-0  '>
         <Carousel
           selectedIndex={0}
@@ -312,35 +290,35 @@ const Vip = () => {
       
     </div>
 
-    <div className='mx-12 mt-8'>
+    <div className=' mt-8'>
       <div className='flex flex-row justify-center items-center -mb-16 rounded-full h-8 bg-gohan md:w-[34%] sm:w-[50%] '>
         <div className='w-[50%] h-[90%] ml-0.5 flex justify-center items-center rounded-full bg-goku'>
-          <p className='text-moon-14 xl:text-moon-14 md:text-moon-12 text-center text-raditz sm:text-moon-10'>
+          <p className='text-moon-14 xl:text-moon-14 md:text-moon-12 text-center text-raditz sm:text-moon-10 cursor-pointer'>
             Past events
           </p>
         </div>
-        <p className='w-2/4 text-trunks text-moon-14 text-center xl:text-moon-14 md:text-moon-12 sm:text-moon-10'>
+        <p className='w-2/4 text-trunks text-moon-14 text-center xl:text-moon-14 md:text-moon-12 sm:text-moon-10 cursor-pointer'>
           Upcoming events
         </p>
       </div>
 
-      <div className=' hidden overflow-hidden px-1 lg:w-[1150px] sm:block '>
+      <div className=' hidden overflow-hidden  xl:w-[1050px] lg:w-[900px] md:block md:w-[100%] sm:block '>
         <Carousel
           selectedIndex={0}
           hideScrollbar={true}
-          items={Events.map((item) => (<div className='min-w-[900px] mt-24 lg:min-w-[1150px] relative'>
-            <div className='w-[70%] h-[50%] min-w-[630px] relative'>
-              <Image src={item.heroImage} sizes={'100%'}/>
-            </div>
-            <div className='w-[33%] h-[30%] min-w-[330px] sm:absolute sm:top-[-50px] sm:right-[15px] 2xl:translate-y-[-5%] sm:w-[35%] sm:h-[80%]'>
-              <Image src={item.backImage} sizes={'100%'} className='rounded-lg '/>
-            </div>
-            <div className='flex flex-col min-w-[330px] rounded-[12px] bg-gohan z-10000 2xl:translate-y-[-5%] sm:absolute sm:top-[-25px] sm:right-[40px] sm:w-[35%] sm:h-[80%]'>
-              <div className='flex flex-row justify-between items-center m-6'>
+          items={Events.map((item) => (<div className='w-[500px] mt-24 lg:min-w-[1050px] sm:min-w-[-5%] relative '>
+            <div className='lg:w-[80%] lg:h-[70%] sm:w-[55%] sm:h-[45%] '>
+               <Image src={item.heroImage} sizes={'100%'}/>
+             </div>
+             <div className=' 2xl:translate-y-[-5%] md:w-[30%] md:h-[100%] sm:absolute sm:top-[-30px] sm:right-[10%] '>
+               <Image src={item.backImage} sizes={'100%'} className='rounded-lg '/>
+             </div>
+             <div className='flex flex-col sm:absolute rounded-[12px] bg-[#1A212A] z-10000 lg:h-[70%] lg:w-[30%] sm:top-[-10px] sm:right-[15%] sm:h-[100%] sm:w-[35%]   2xl:translate-y-[-5%]   '>
+              <div className='flex flex-row justify-between items-center m-2'>
                 <Image src={Detail} className='rotate-90'/>
                 <Image src={Detail} className='rotate-180'/>
               </div>
-              <div className='flex flex-col items-left px-10 xl:justify-end shrink basis-full sm:justify-center sm:items-center'>
+              <div className='flex flex-col items-left px-10 xl:justify-end shrink basis-full sm:justify-center sm:items-center '>
                 <div>
                   <p className='md:text-left xl:text-moon-32 lg:text-moon-24 mb-4 sm:text-center'>
                     {item.title}
@@ -348,22 +326,41 @@ const Vip = () => {
                   <p className='hidden xl:flex xl:text-moon-14 lg:text-moon-12 opacity-80 mb-4 xl'>
                     {item.text}
                   </p>
-                  <a href={item.link.url} className='text-raditz text-moon-14 md:text-left sm:text-center'>{item.link.label}</a>
+                  <a href={item.link.url} className='text-[#D9BFA4] text-moon-14 md:text-left sm:text-center'>{item.link.label}</a>
                 </div>
               </div>
-              <div className='flex flex-row m-6 justify-between items-center'>
+              <div className='flex flex-row m-2 justify-between items-center'>
                 <Image src={Detail}/>
                 <Image src={Detail} className='rotate-[260deg]'/>
               </div>
             </div>
-          </div>))}
+         
+         </div>))}
         />
       </div>
+    </div>
 
-    </div>
     <div className='w-[100%] sm:hidden'>
-      <Image src={PastEvents} sizes={'100%'}/>
+      <Carousel 
+          selectedIndex={0}
+          hideScrollbar={true}
+          items={EventsMobile.map((item) => (<div className="overflow-hidden w-[100%] min-w-[400px] max-w-[400px] h-[100%] mt-12"> 
+              <div className="flex justify-between ">
+               <span className="mr-[5%] "> <Image src={item.leftImage}  className='rounded-r-xl' /></span>
+               <span className="relative"> 
+                <Image src={item.mainImage} className='rounded-xl'/> 
+                <span className="absolute left-[5%] bottom-8">
+                  <p className="text-moon-14 font-medium">{item.title}</p>
+                  <p className="text-moon-24 font-semibold"> {item.text}</p>
+                </span>
+                </span>
+               <span className="ml-[5%]">
+                <Image src={item.rightImage} className='rounded-l-xl'/> 
+              </span>
+              </div>
+          </div> ))}/>
     </div>
+
     <div className='hidden mt-12 sm:block'>
       <p className='text-center pt-4 text-moon-32 font-semibold sm:pl-0'>Partnership</p>
       <div className=' md:mx-12 xl:w-[100%] lg:w-[100%] sm:mx-0 mr-0'>
@@ -387,31 +384,7 @@ const Vip = () => {
       </div>
     </div>
     <p className='text-moon-32 px-5 mt-12 text-center sm:pl-0 sm:px-0'>Here’s what our customers say about being a VIP</p>
-    {/* <div className='w-full flex flex-col justify-center items-center md:w-[80%] md:ml-[10%]'>
-      <div className='md:w-[850px] flex flex-row justify-center mx-12'>
-        <Carousel
-          scrollTo={0}
-          hideScrollbar={true}
-          items={Testimonials.map((item) => (<div className='flex w-[272px] h-[344px] mr-1 mt-20 bg-gohan rounded-lg flex-col p-3'>
-            <div className='flex flex-row justify-between items-center'>
-              <Image src={Detail} className='rotate-90'/>
-              <Image src={Detail} className='rotate-180'/>
-            </div>
-            <div className='h-4/5 flex flex-col items-left xl:justify-end shrink basis-full'>
-              <div className='w-full list-disc text-moon-16 pl-4 mb-8 sm:text-moon-14'>
-                {item.text}
-              </div>
-              <p className='pl-4'>{item.name}</p>
-            </div>
-            <div className='flex flex-row justify-between items-center mt-4'>
-              <Image src={Detail}/>
-              <Image src={Detail} className='rotate-[260deg]'/>
-            </div>
-          </div>))}
-        />
-      </div>
-      </div> */}
-
+  
       <div className='w-[350] flex flex-col max-w-[100vw] items-center justify-center px-5 py-8 sm:pl-0 xl:pl-[10%] lg:pl-0 md:pl-0'>
         <Carousel
           scrollTo={0}
