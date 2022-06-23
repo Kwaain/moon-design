@@ -516,8 +516,12 @@ importers:
   workspaces/core:
     specifiers:
       '@heathmont/moon-icons-tw': workspace:^9.1.7
+      scroll-into-view-if-needed: 2.2.22
+      smooth-scroll-into-view-if-needed: 1.1.27
     dependencies:
       '@heathmont/moon-icons-tw': link:../icons
+      scroll-into-view-if-needed: 2.2.22
+      smooth-scroll-into-view-if-needed: 1.1.27
 
   workspaces/icons:
     specifiers:

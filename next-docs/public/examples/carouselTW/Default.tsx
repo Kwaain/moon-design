@@ -1,14 +1,30 @@
-import { Carousel } from '@heathmont/moon-components';
+import { Carousel } from '@heathmont/moon-core-tw';
+import { rem } from '@heathmont/moon-themes';
+import styled from 'styled-components';
+
+const ExampleContent = styled.div(({ theme: { color, newTokens } }) => ({
+  width: rem(320),
+  height: rem(192),
+  borderRadius: newTokens.borderRadius.surface.xsmall,
+  background: color.popo,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
 
 const Example = () => {
-  const items = Array.from({ length: 15 }, (index) => index);
+  const items = Array.from(Array(10).keys());
   return (
-    <Carousel
-      scrollTo={15}
-      items={items.map((item, index) => (
-        <div className='w-[280px] h-[320px] bg-gohan flex items-center justify-center rounded-md'>{index}</div>
-      ))}
-    />
+    <div className="h-60 w-9/12">
+      <Carousel 
+         items={items.map((item, index) => (
+          <ExampleContent>{index}</ExampleContent>
+        ))}
+        // step={1}
+        slidesOnly
+        scrollTo={5}
+      />
+    </div>
   );
 };
 
