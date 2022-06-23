@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Pagination } from '@heathmont/moon-core-tw';
+import { Pagination } from '@heathmont/moon-pagination-tw';
 
 const Example = () => {
   const [pageNumber, setPageNumber] = useState(1);

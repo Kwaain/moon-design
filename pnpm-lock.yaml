@@ -108,6 +108,7 @@ importers:
       '@heathmont/moon-draggabletable': workspace:^9.1.0
       '@heathmont/moon-icons': workspace:^9.1.0
       '@heathmont/moon-pagination': workspace:^9.1.0
+      '@heathmont/moon-pagination-tw': workspace:^9.1.0
       '@heathmont/moon-popover': workspace:^9.1.0
       '@heathmont/moon-select': workspace:^9.1.0
       '@heathmont/moon-sidebar': workspace:^9.1.0
@@ -157,6 +158,7 @@ importers:
       '@heathmont/moon-draggabletable': link:../packages/draggabletable
       '@heathmont/moon-icons': link:../packages/icons
       '@heathmont/moon-pagination': link:../packages/pagination
+      '@heathmont/moon-pagination-tw': link:../workspaces/pagination
       '@heathmont/moon-popover': link:../packages/popover
       '@heathmont/moon-select': link:../packages/select
       '@heathmont/moon-sidebar': link:../packages/sidebar
@@ -514,6 +516,9 @@ importers:
       '@types/lodash.has': 4.5.6
 
   workspaces/core:
+    specifiers: {}
+
+  workspaces/pagination:
     specifiers: {}
 
 packages:
@@ -4359,6 +4364,7 @@ packages:
 
   /bindings/1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     dev: true
@@ -6370,6 +6376,7 @@ packages:
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -9284,6 +9291,7 @@ packages:
 
   /nan/2.15.0:
     resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==}
+    requiresBuild: true
     dev: true
     optional: true
 

@@ -17,6 +17,7 @@
     "@heathmont/moon-charts": "workspace:^9.1.0",
     "@heathmont/moon-components": "workspace:^9.1.0",
     "@heathmont/moon-core-tw": "workspace:^9.1.0",
+    "@heathmont/moon-pagination-tw": "workspace:^9.1.0",
     "@heathmont/moon-core": "workspace:^9.1.0",
     "@heathmont/moon-datepicker": "workspace:^9.1.0",
     "@heathmont/moon-draggabletable": "workspace:^9.1.0",
