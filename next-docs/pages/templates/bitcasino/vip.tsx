@@ -140,11 +140,7 @@ const Vip = () => {
 
   return (
     <div className="w-full flex flex-col grow overflow-hidden p-5 sm:p-0">
-      <Header
-        height={30}
-        isScrolled={isScrolled}
-        logo={(<BitcasinoLogo />)}
-      />
+      <Header height={30} isScrolled={isScrolled} logo={<BitcasinoLogo />} />
       <Hero
         headline={
           <Headline
@@ -154,7 +150,7 @@ const Vip = () => {
         }
         subtitle={
           <Subtitle
-            classes="break-words items-center mt-3 sm:px-0 sm:text-left sm:text-[18px] sm:leading-6 md:text-[24px] md:leading-8"
+            classes="break-words items-center !pt-0 px-0 sm:text-left sm:text-[18px] sm:leading-6 md:text-[24px] md:leading-8"
             text=" Join the VIP Bitcasino Club - An exclusive world of crypto leaders
                 and high-rollers who dare to take risks and enjoy life to its
                 fullest."
@@ -165,7 +161,7 @@ const Vip = () => {
             variant="primary"
             width={124}
             height={48}
-            className="btn-primary py-3 px-4 gap-1 text-moon-16 rounded-moon-i-sm mx-3 my-6 sm:mx-0 sm:px-0 sm:self-start w-full sm:w-[124px] "
+            className="btn-primary py-3 px-4 gap-1 text-moon-16 font-semibold rounded-moon-i-sm mx-3 my-6 sm:mx-0 sm:px-0 sm:self-start w-full sm:w-[124px] "
           >
             Sign up now
           </Button>
@@ -174,35 +170,35 @@ const Vip = () => {
         heroImage={<Image src={KingKaka} objectFit="contain" />}
         bottomGradient="linear-gradient(180deg, rgba(36, 3, 63, 0)  0%, rgba(36, 3, 63, 0.55)  49.48%, #24033F 100%"
       />
-      <div className="flex flex-col items-center self-center mt-[264px] sm:mt-[124px]">
+      <div className="flex flex-col items-center self-center mt-[264px] pt-[96px] sm:pt-0 sm:mt-[124px]">
         <Experience
           title={
             <Title
               text="A VIP experience tailored to your liking"
               classes="
-              w-[380px] leading-10 mb-4 sm:mb-0 xl:w-[944px] sm:w-[600px] sm:leading-0 md:flex-wrap"
+              w-[380px] leading-10 sm:mb-0 xl:w-[944px] sm:w-[600px] sm:leading-0 md:flex-wrap"
             />
           }
           subtitle={
             <Subtitle
-              classes="w-[348px] p-5 lg:w-[700px] sm:w-[650px] sm:p-0 sm:pt-4"
+              classes="w-[348px] pt-0 px-5 pb-8 lg:w-[700px] sm:w-[650px] sm:p-0 sm:pb-[124px] "
               text="Enjoy exclusive bonuses and invites to prestigious events for free.
               Get all your indulgences taken care of."
             />
           }
           carouselItems={experienceItems}
         />
-        <div className="mt-[6] sm:mt-[70px] sm:px-8 md:mt-[120px] xl:mt-[200px]">
+        <div className="pt-[96px] sm:pt-0 sm:mt-[70px] sm:px-8 md:mt-[120px] xl:mt-[200px]">
           <Explore
             title={
               <Title
                 text="Explore the world in true VIP style!"
-                classes="mb-4 text-center leading-10 sm:pl-0 sm:leading-0 md:flex-wrap xl:text-left"
+                classes="text-center leading-10 sm:pl-0 sm:leading-0 md:flex-wrap xl:text-left"
               />
             }
             subtitle={
               <Subtitle
-                classes="text-center px-5 sm:px-0 xl:text-left"
+                classes="text-center px-5 !pt-0 sm:px-0 xl:text-left"
                 text="Enjoy life at its fullest and create great memories as a Bitcasino VIP. We’ll make your dreams come true with money-can't-buy  experiences you’ll never forget. At Bitcasino, we know how indulge you!"
               />
             }
@@ -213,12 +209,12 @@ const Vip = () => {
           title={
             <Title
               text="VIP runs in the family"
-              classes="mb-4 leading-10 sm:text-center md:text-left md:self-start lg:w-[510px]"
+              classes="mb-4 !p-3 !pb-0 leading-10 sm:text-center md:text-left md:self-start lg:w-[510px]"
             />
           }
           subtitle={
             <Subtitle
-              classes="text-center w-[348px] px-5 pb-[32px] sm:pb-0 sm:w-[100%] md:text-left md:self-start lg:w-[510px]"
+              classes="text-center !pt-0 w-[348px] px-5 pb-[32px] sm:pb-0 sm:w-[100%] md:text-left md:self-start lg:w-[510px]"
               text="From artists to visionaries, Bitcasino has the most talented individuals in our VIP club. Join our high profile group of crypto leaders and high-rollers!"
             />
           }
@@ -228,7 +224,7 @@ const Vip = () => {
           title={
             <Title
               text="Ready to step up the game?"
-              classes="mb-4 p-5 leading-10"
+              classes="mb-4 px-5 !pb-0 leading-10"
             />
           }
           subtitle={
@@ -236,7 +232,7 @@ const Vip = () => {
               text="Entry into our VIP Club is by invitation only. Get in touch with us
             to see what a tailored VIP package could look like for you. Join the
             family now!"
-              classes="w-[100%] mb-4 p-5"
+              classes="w-[100%] mb-8 !pt-0 px-5"
             />
           }
           handleSignup={() => console.log('SIGN UP clicked')}
@@ -251,16 +247,16 @@ const Vip = () => {
       </div>
       <div className="flex flex-col items-center h-full px-5 mt-16 sm:w-[100%] sm:mt-[124px] md:w-[90%] lg:self-center xxl:w-[1232px]">
         <div
-          className="flex flex-col items-center self-center w-full h-full px-5 mt-16"
+          className="flex flex-col items-center  self-center w-full h-full px-5 mt-16"
           style={{
             background: 'linear-gradient rgba(36, 3, 63, 0) 0% #24033F 100%',
           }}
         >
           <div className="flex flex-col lg:items-start">
-            <p className="text-[24px] text-bulma !text-left leading-8 font-semibold sm:px-3 sm:text-left">
+            <p className="text-[20px] text-bulma !text-left leading-8 font-semibold  sm:text-left">
               Enjoy BTC gaming at the best Bitcoin casino
             </p>
-            <p className="text-[18px] text-bulma opacity-60 !text-left !leading-8 my-2 sm:px-3 sm:text-left md:text-moon-16 lg:text-moon-16">
+            <p className="text-[16px] text-bulma opacity-60 !text-left !leading-8 my-2 sm:text-left md:text-moon-16 lg:text-moon-16">
               The future of gaming is here, we are the number one bitcoin casino
               in 2021 and into 2022. Our range of casino-slots consistently make
               the top ten across the bitcoin casino world. Read more.
