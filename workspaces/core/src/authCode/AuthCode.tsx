@@ -151,7 +151,7 @@ const AuthCode: React.FC<AuthCodeProps> = ({
     <Container dir={dir} errorState={!!errorMessage} stretch={stretch}>
       <div data-testid={testId}>
         {authCodeParts.map((value, i) => (
-          <InputWrapper key={`auth-code-input-${i}`}>
+          <InputWrapper key={`auth-code-input-${i}`} data-testid={`${testId}-input`}>
             <TextInput
               id={`auth-code-part-${i}`}
               key={`auth-code-part-${i}`}
@@ -159,6 +159,7 @@ const AuthCode: React.FC<AuthCodeProps> = ({
               placeholder={placeholder}
               dir={dir}
               ref={inputRefs[`${refPrefix}${i}`]}
+              data-testid={`${testId}-text`}
               onChange={(ev: any) => {
                 const newPrevCodeParts = [...fastTypingCode];
 
