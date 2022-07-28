@@ -17,6 +17,16 @@ const navigation = [
       { name: 'Avatar', href: '/core/avatar' },
       { name: 'Button', href: '/core/button' },
       { name: 'Breadcrumb', href: '/core/breadcrumb' },
+      {
+        name: 'Charts',
+        children: [
+          { name: 'Geo map', href: '/core/charts/geoMapChart' },
+          { name: 'Line', href: '/core/charts/lineChart' },
+          { name: 'Pie', href: '/core/charts/pieChart' },
+          { name: 'Table', href: '/core/charts/tableChart' },
+          { name: 'Vertical bar', href: '/core/charts/verticalBarChart' },
+        ],
+      },
       { name: 'Checkbox', href: '/core/checkbox' },
       { name: 'Chip', href: '/core/chip' },
       { name: 'Icons', href: '/core/icons' },
