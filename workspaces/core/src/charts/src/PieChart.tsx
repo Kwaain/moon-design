@@ -15,6 +15,7 @@ import { Header } from './private/Header';
 import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
 import { Tooltip } from './private/Tooltip';
+import { Props } from './private/types/PieChartProps';
 
 const ResponsiveContainerCustomized = styled(ResponsiveContainer)(
   ({ theme }) => ({
@@ -31,26 +32,6 @@ const ResponsiveContainerCustomized = styled(ResponsiveContainer)(
     },
   })
 );
-
-type Props = {
-  title: string;
-  data: {
-    label: string;
-    value: number;
-    color: ColorProps;
-    dataKey: string;
-  }[];
-  onUpdate?: () => void;
-  onShare?: () => void;
-  onExpand?: () => void;
-  isUpdating?: boolean;
-  hasUpdates?: boolean;
-  filter?: React.ReactNode;
-  height?: string | number;
-  icon?: React.ReactNode;
-  formatFn?: (props: { value: any; key: string }) => any;
-  loaderText?: string | React.ReactNode;
-};
 
 const PieChart: React.FC<Props> = ({
   title,

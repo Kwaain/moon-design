@@ -1,103 +1,62 @@
 import React from 'react';
-import { Loader } from '@heathmont/moon-core';
+import { Loader } from '@heathmont/moon-core-tw';
 import {
   ArrowsUpdate,
   GenericDownload,
   ControlsDiagonalsOutsight,
-} from '@heathmont/moon-icons';
-import { rem } from '@heathmont/moon-utils';
-import styled from 'styled-components';
+} from '@heathmont/moon-icons-tw';
+import { ContainerProps, ButtonProps, Props } from './types/PanelProps';
+import classNames from '../../../private/utils/classnames';
+import { rem } from '../../../../../../packages/icons/node_modules/@heathmont/moon-themes/lib';
 
-const Button = styled.button<{ hasUpdates?: boolean }>(
-  ({ hasUpdates, theme }) => ({
-    border: 'none',
-    background: 'none',
-    outline: 'none',
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-    width: rem(32),
-    height: rem(32),
-    padding: rem(8),
-    fontSize: rem(16),
-    color: theme.colorNew.trunks,
-    '&:before': {
-      content: "''",
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      top: 0,
-      left: 0,
-      transition: `${theme.newTokens.transition.default}`,
-      backgroundColor: theme.colorNew.piccolo,
-      borderRadius: theme.newTokens.borderRadius.surface.small,
-      opacity: 0,
-      transform: 'scale(0)',
-      transitionProperty: 'transform, opacity',
-    },
-    '&:hover, &:focus': {
-      color: theme.colorNew.piccolo,
-      '&:before': {
-        transform: 'scale(1)',
-        opacity: 0.1,
-      },
-    },
-    ...(hasUpdates && {
-      '&:after': {
-        content: '""',
-        position: 'absolute',
-        top: rem(4),
-        right: rem(4),
-        width: rem(4),
-        height: rem(4),
-        borderRadius: '50%',
-        background: theme.colorNew.piccolo,
-      },
-    }),
-  })
-);
+const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
+  return (
+    <button
+      className={classNames(
+        `border-none bg-none outline-none cursor-pointer flex text-center justify-center relative w-8 h-8 p-2 text-base color-trunks`,
+        `before:content-[''] before:absolute before:w-full before:h-full before:top-0 before:left-0`,
+        `before:ease-in-out before:duration-200 before:bg-piccolo before:rounded-md before:opacity-0 before:scale-0 before:transition-transform before:transition-opacity`,
+        `hover:color-piccolo focus:color-piccolo before:scale-100 before:opacity-10`,
+        hasUpdates
+          ? `after:content-[''] after:absolute after:top-1 after:right-1 after:w-1 after:h-1 after:rounded-lg after:bg-piccolo`
+          : '',
+        isActive ? `color-goten after:bg-goten ` : ``
+      )}
+    >
+      {children}
+    </button>
+  );
+};
 
-const Container = styled.div<{ isActive: boolean }>(({ theme, isActive }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  padding: rem(16),
-  color: isActive ? theme.colorNew.goten : theme.colorNew.bulma,
-  background: isActive ? theme.colorNew.piccolo : theme.colorNew.gohan,
-  borderRadius: rem(16),
-  width: '100%',
-  ...(isActive && {
-    [Button]: {
-      color: theme.colorNew.goten,
-      '&:after': {
-        background: theme.colorNew.goten,
-      },
-    },
-  }),
-}));
+const Container: React.FC<ContainerProps> = ({ isActive, children }) => {
+  return (
+    <button
+      className={classNames(
+        `flex flex-col p-4`,
+        isActive
+          ? 'color-goten bg-piccolo'
+          : 'color-bulma bg-gohan rounded-2xl w-full'
+      )}
+    >
+      {children}
+    </button>
+  );
+};
 
-const Header = styled.div({
-  display: 'grid',
-  flexShrink: 0,
-  gridTemplateColumns: 'auto 1fr auto auto',
-  gridColumnGap: rem(16),
-  minHeight: rem(24),
-});
+const Header = ({ children }) => {
+  return (
+    <div
+      className={classNames(`grid gap-4 shrink-0  grid-cols-4 min-h-[24px]`)}
+    >
+      {children}
+    </div>
+  );
+};
 
-const IconRefreshStyled = styled(ArrowsUpdate)({
-  transform: 'rotate(90deg)',
-});
-
-type Props = {
-  hasUpdates: boolean;
-  isUpdating: boolean;
-  onUpdate?: () => void;
-  onShare?: () => void;
-  onExpand?: () => void;
-  isActive?: boolean;
-  height?: string | number;
-  children?: React.ReactNode;
+const IconRefreshStyled = ({ ArrowsUpdate, children }) => {
+  return (
+    <ArrowsUpdate className={classNames(`rotate-90`)}>{children}</ArrowsUpdate>
+  );
 };
 
 export const Panel: React.FC<Props> = ({
@@ -110,7 +69,7 @@ export const Panel: React.FC<Props> = ({
   isUpdating,
   isActive = false,
 }) => (
-  <Container isActive={isActive} style={{ height }}>
+  <Container isActive={isActive} height={{ height }}>
     <Header>
       {onUpdate && (
         <Button

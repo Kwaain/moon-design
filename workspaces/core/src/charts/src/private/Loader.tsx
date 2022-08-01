@@ -1,37 +1,28 @@
 import React from 'react';
-import { Text } from '@heathmont/moon-core';
-import { ColorNames } from '@heathmont/moon-themes';
-import { rem } from '@heathmont/moon-utils';
-import styled from 'styled-components';
+import { Props } from './types/LoaderProps';
+import classNames from '../../../../../../next-docs/utils/classNames';
 
-const Title = styled(Text)({
-  marginTop: rem(16),
-});
-
-const Container = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '100%',
-  height: '100%',
-});
-
-type Props = {
-  icon: React.ReactNode;
-  title: string | React.ReactNode;
-  color?: ColorNames;
+const Title: React.FC = ({ children }) => {
+  return (
+    <p className={classNames(`text-trunks.100 text-sm mt-4`)}>{children}</p>
+  );
 };
 
-export const Loader: React.FC<Props> = ({
-  icon,
-  title,
-  color = 'trunks.100',
-}) => (
+const Container: React.FC = ({ children }) => {
+  return (
+    <div
+      className={classNames(
+        'flex flex-col items-center justify-center w-full h-full'
+      )}
+    >
+      {children}
+    </div>
+  );
+};
+
+export const Loader: React.FC<Props> = ({ icon, title }) => (
   <Container>
     {icon}
-    <Title size={14} color={color}>
-      {title}
-    </Title>
+    <Title>{title}</Title>
   </Container>
 );

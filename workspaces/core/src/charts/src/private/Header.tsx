@@ -1,39 +1,34 @@
 import React from 'react';
-import { Text } from '@heathmont/moon-core';
-import { rem } from '@heathmont/moon-utils';
-import styled from 'styled-components';
+import { Props, TitleProps, FilterWrapperProps } from './types/HeaderProps';
+import classNames from '../../../../../../next-docs/utils/classNames';
 
-const Title = styled(Text)(({ theme }) => ({
-  color: theme.colorNew.bulma,
-}));
+const Title: React.FC<TitleProps> = ({ children }) => {
+  return <p className={classNames(`text-bulma text-xl`)}>{children}</p>;
+};
 
-const IconWrapper = styled.div({
-  height: rem(40),
-});
-const FilterWrapper = styled.div({});
+const IconWrapper = ({ children }) => {
+  return <div className={classNames('h-10')}>{children}</div>;
+};
 
-const Container = styled.div<{ isActive: boolean }>(({ theme, isActive }) => ({
-  display: 'flex',
-  flexShrink: 0,
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  marginBottom: rem(16),
-  ...(isActive && {
-    [Title]: {
-      color: theme.colorNew.goten,
-    },
-    [`${FilterWrapper} button *`]: {
-      color: theme.colorNew.goten,
-    },
-  }),
-}));
+const FilterWrapper: React.FC<FilterWrapperProps> = ({
+  isActive,
+  children,
+}) => {
+  return (
+    <div className={classNames(isActive ? `color-goten` : ``)}>{children}</div>
+  );
+};
 
-type Props = {
-  icon: React.ReactNode;
-  title: string;
-  filter?: React.ReactNode;
-  isActive?: boolean;
+const Container = ({ children }) => {
+  return (
+    <div
+      className={classNames(
+        'flex shrink-0 flex-col items-center justify-content mb-4'
+      )}
+    >
+      {children}
+    </div>
+  );
 };
 
 export const Header: React.FC<Props> = ({
@@ -42,9 +37,9 @@ export const Header: React.FC<Props> = ({
   title,
   isActive = false,
 }) => (
-  <Container isActive={isActive}>
+  <Container>
     <IconWrapper>{icon}</IconWrapper>
-    <Title size={20}>{title}</Title>
-    <FilterWrapper>{filter}</FilterWrapper>
+    <Title isActive={isActive}>{title}</Title>
+    <FilterWrapper isActive={isActive}>{filter}</FilterWrapper>
   </Container>
 );

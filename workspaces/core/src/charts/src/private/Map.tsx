@@ -3,41 +3,22 @@ import { Text } from '@heathmont/moon-core';
 import { useTheme } from '@heathmont/moon-themes';
 import { themed } from '@heathmont/moon-utils';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-import styled from 'styled-components';
 import { TooltipWrapper, Item, ColorPreview } from './Tooltip';
 import worldMap from './World110m';
+import { MapData, MapProps } from './types/MapProps';
+import classNames from '../../../../../../next-docs/utils/classNames';
 
-const Container = styled.div({
-  position: 'relative',
-  width: '60%',
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-});
-
-type Props = {
-  data: {
-    label: string | React.ReactNode;
-    code: string;
-    value: number;
-    opacity: number;
-    color: string;
-  }[];
+const Container: React.FC = ({ children }) => {
+  return (
+    <div
+      className={classNames(
+        'relative w-3/5 h-full flex flex-col items-center justify-center'
+      )}
+    >
+      {children}
+    </div>
+  );
 };
-
-interface MapData {
-  label: string | React.ReactNode;
-  code: string;
-  value: number;
-  opacity: number;
-  color: string;
-}
-
-interface MapProps {
-  data: MapData[];
-}
 
 export const Map: React.FC<MapProps> = ({ data }) => {
   const theme = useTheme();

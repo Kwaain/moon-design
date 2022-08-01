@@ -6,6 +6,8 @@ import { Header } from './private/Header';
 import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
 import { Count, Table, Cell, TableItem, Value } from './private/Table';
+import { Props } from './private/types/TableChartProps';
+
 
 const CustomLoader = styled(Loader)({});
 
@@ -26,24 +28,6 @@ const Container = styled.div<{ isActive: boolean }>(({ theme, isActive }) => ({
     },
   }),
 }));
-
-type Props = {
-  title: string;
-  data: {
-    label: string | React.ReactNode;
-    value: number | string | React.ReactNode;
-  }[];
-  onUpdate?: () => void;
-  onShare?: () => void;
-  onExpand?: () => void;
-  isUpdating?: boolean;
-  hasUpdates?: boolean;
-  filter?: React.ReactNode;
-  height?: string | number;
-  icon?: React.ReactNode;
-  isActive?: boolean;
-  loaderText?: string | React.ReactNode;
-};
 
 const TableChart: React.FC<Props> = ({
   title,
