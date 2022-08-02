@@ -2,16 +2,21 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FilterDropdown } from '@heathmont/moon-components';
 import { Text } from '@heathmont/moon-core';
 import { ControlsChevronDown } from '@heathmont/moon-icons';
-import { rem } from '@heathmont/moon-utils';
 import { useClickAway, useKey } from 'react-use';
 import classNames from '../private/utils/classnames';
+import {
+  ContainerProps,
+  DropdownWrapperProps,
+  Props,
+} from './private/types/FilterProps';
+import { rem } from '../../../../../packages/icons/node_modules/@heathmont/moon-themes/lib';
 //check z-index on 35 line
 
 const Title = styled(Text)(({ theme }) => ({
   color: theme.colorNew.trunks,
 }));
 
-const Toggle = ({ isOpen, theme, children }) => {
+const Toggle: React.FC<ToggleProps> = ({ isOpen, theme, children }) => {
   return (
     <button
       className={classNames(
@@ -28,11 +33,14 @@ const Toggle = ({ isOpen, theme, children }) => {
   );
 };
 
-const Container = ({ children }) => {
+const Container: React.FC<ContainerProps> = ({ children }) => {
   return <div className={classNames('inline-block relative')}>{children}</div>;
 };
 
-const DropdownWrapper = ({ theme, children }) => {
+const DropdownWrapper: React.FC<DropdownWrapperProps> = ({
+  theme,
+  children,
+}) => {
   return (
     <div
       className={classNames(
@@ -43,16 +51,6 @@ const DropdownWrapper = ({ theme, children }) => {
       {children}
     </div>
   );
-};
-
-type ChildrenProps = {
-  setIsOpen: (isOpen: boolean) => void;
-};
-
-type Props = {
-  forceOpen?: boolean;
-  title: string;
-  children: (props: ChildrenProps) => React.ReactNode;
 };
 
 const Filter: React.FC<Props> = ({ forceOpen = false, title, children }) => {

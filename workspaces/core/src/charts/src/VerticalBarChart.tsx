@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTheme } from '../../../../../packages/icons/node_modules/@heathmont/moon-themes/lib';
 import { themed } from '../../../../../packages/components/node_modules/@heathmont/moon-utils/lib';
-import styled from 'styled-components';
 import ChartIcons from './ChartIcons';
 import { Header } from './private/Header';
 import { Loader } from './private/Loader';
@@ -9,13 +8,15 @@ import { Panel } from './private/Panel';
 import { getAxisPosition, getBarChartData } from './private/utils';
 import { VerticalBar } from './private/VerticalBar';
 import { Props } from './private/types/VerticalBarChartProps';
+import classNames from '../../../../../next-docs/utils/classNames';
 
-const Container = styled.div({
-  display: 'flex',
-  flexGrow: 1,
-  height: '100%',
-  overflow: 'hidden',
-});
+const Container: React.FC = ({ children }) => {
+  return (
+    <div className={classNames('flex grow h-full overflow-hidden')}>
+      {children}
+    </div>
+  );
+};
 
 const VerticalBarChart: React.FC<Props> = ({
   title,

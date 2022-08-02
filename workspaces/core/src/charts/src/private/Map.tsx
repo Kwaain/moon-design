@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Text } from '@heathmont/moon-core';
-import { useTheme } from '@heathmont/moon-themes';
-import { themed } from '@heathmont/moon-utils';
+import { useTheme } from '../../../../../../packages/icons/node_modules/@heathmont/moon-themes/lib';
+import { themed } from '../../../../../../packages/components/node_modules/@heathmont/moon-utils/lib';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import { TooltipWrapper, Item, ColorPreview } from './Tooltip';
 import worldMap from './World110m';

@@ -1,57 +1,50 @@
 import React from 'react';
 import { Text } from '@heathmont/moon-core';
-import { rem } from '@heathmont/moon-utils';
-import styled from 'styled-components';
+import { Props, ColorPreviewProps } from './types/TooltipProps';
+import classNames from '../../../../../../next-docs/utils/classNames';
 
-export const TooltipWrapper = styled.div(({ theme }) => ({
-  display: 'inline-block',
-  color: theme.colorNew.goten,
-  background: theme.colorNew.gohan,
-  fontSize: rem(12),
-  lineHeight: rem(16),
-  padding: rem(12),
-  borderRadius: rem(4),
-  position: 'relative',
-  boxShadow: theme.newTokens.boxShadow.large,
-  pointerEvents: 'none',
-}));
+export const TooltipWrapper: React.FC = ({ children }) => {
+  return (
+    <div
+      className={classNames(
+        'inline-block text-goten bg-goten text-xs leading-4 p-3 rounded relative shadow-lg pointer-events-none'
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 
-export const Item = styled.div(({ theme }) => ({
-  position: 'relative',
-  padding: `${rem(2)} 0 ${rem(2)} ${rem(16)}`,
-  color: theme.colorNew.trunks,
-}));
+export const Item: React.FC = ({ children }) => {
+  return (
+    <div className={classNames('relative py-0.5 pr-0 pl-4 text-trunks')}>
+      {children}
+    </div>
+  );
+};
 
-const Date = styled.div(({ theme }) => ({
-  padding: `${rem(2)} 0`,
-  color: theme.colorNew.trunks,
-}));
+export const Date: React.FC = ({ children }) => {
+  return (
+    <div className={classNames('relative py-0.5 px-0 text-trunks')}>
+      {children}
+    </div>
+  );
+};
 
-export const ColorPreview = styled.div({
-  width: rem(8),
-  height: rem(8),
-  borderRadius: '50%',
-  position: 'absolute',
-  top: '50%',
-  left: 0,
-  transform: 'translateY(-50%)',
-});
-
-type Props = {
-  payload?: {
-    name: string;
-    dataKey: string;
-    color: string;
-    value: any;
-    payload: {
-      date?: string;
-      label?: string;
-      fill?: string;
-      dataKey?: string;
-    };
-  }[];
-  active?: boolean;
-  formatFn: (props: { value: any; key: string }) => any;
+export const ColorPreview: React.FC<ColorPreviewProps> = ({
+  background,
+  children,
+}) => {
+  return (
+    <div
+      className={classNames(
+        'w-2 h-2 rounded-[50%] absolute top-2/4 left-0 -translate-x-1/2',
+        background ? `bg-${background}` : ''
+      )}
+    >
+      {children}
+    </div>
+  );
 };
 
 export const Tooltip: React.FC<Props> = ({ payload, active, formatFn }) => {
@@ -73,7 +66,7 @@ export const Tooltip: React.FC<Props> = ({ payload, active, formatFn }) => {
 
         return (
           <Item key={key}>
-            <ColorPreview style={{ background: color }} />
+            <ColorPreview background={color} />
             <Text size={12} as="span">
               {label}
             </Text>{' '}

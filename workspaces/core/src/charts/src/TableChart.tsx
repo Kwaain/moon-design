@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Transition } from 'react-transition-group';
 import styled from 'styled-components';
+import classNames from '../../../../../next-docs/utils/classNames';
 import ChartIcons from './ChartIcons';
 import { Header } from './private/Header';
 import { Loader } from './private/Loader';
@@ -10,6 +11,14 @@ import { Props } from './private/types/TableChartProps';
 
 
 const CustomLoader = styled(Loader)({});
+
+const Container: React.FC = ({ isActive, children }) => {
+  return (
+    <div className={classNames('flex grow h-full overflow-auto')}>
+      {children}
+    </div>
+  );
+};
 
 const Container = styled.div<{ isActive: boolean }>(({ theme, isActive }) => ({
   display: 'flex',

@@ -1,19 +1,31 @@
-import { rem } from '@heathmont/moon-utils';
 import styled from 'styled-components';
+import classNames from '../../../../../../next-docs/utils/classNames';
 
-export const Cell = styled.div<{
+export type CellProps = {
   wide?: boolean;
   align?: 'left' | 'center' | 'right';
   opacity?: number;
-}>(({ wide, align, theme, opacity = 1 }) => ({
-  padding: `${rem(4)} ${rem(8)}`,
-  width: wide ? '100%' : 'auto',
-  textAlign: align || 'left',
-  position: 'relative',
+};
+export const Cell: React.FC<CellProps> = ({
+  wide,
+  align,
   opacity,
-  transition: `opacity ${theme.newTokens.transition.slow}`,
-}));
-
+  children,
+}) => {
+  return (
+    <div
+      className={classNames(
+        'py-1 px-2 relative opacity-100',
+        'transition-[opacity] ease-in-out duration-600',
+        opacity ? `opacity-${opacity}` : 'opacity-100',
+        align ? `text-${align}` : 'text-left',
+        wide ? `w-full` : 'w-auto'
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 export const Table = styled.div<{ withAdditionalCell?: boolean }>(
   ({ withAdditionalCell }) => ({
     width: '100%',
@@ -54,23 +66,28 @@ export const Table = styled.div<{ withAdditionalCell?: boolean }>(
   })
 );
 
-export const TableItem = styled.div({
-  display: 'flex',
-  alignItems: 'center',
-  '& > *': {
-    marginLeft: rem(8),
-    '&:first-child': {
-      marginLeft: 0,
-    },
-  },
-});
+export const TableItem: React.FC = ({ children }) => {
+  return (
+    <div
+      className={classNames(
+        'flex items-center',
+        '[&>*]:ml-2',
+        '[&>:first-child]:ml-0'
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 
-export const Count = styled.span(({ theme }) => ({
-  fontSize: rem(12),
-  lineHeight: rem(20),
-  color: theme.colorNew.trunks,
-}));
+export const Count: React.FC = ({ children }) => {
+  return (
+    <span className={classNames('text-xs leading-5 text-trunks')}>
+      {children}
+    </span>
+  );
+};
 
-export const Value = styled.div({
-  whiteSpace: 'nowrap',
-});
+export const Value: React.FC = ({ children }) => {
+  return <div className={classNames('whitespace-nowrap')}>{children}</div>;
+};

@@ -1,78 +1,74 @@
 import React from 'react';
-import { ColorProps } from '@heathmont/moon-themes';
-import { rem, themed } from '@heathmont/moon-utils';
-import styled from 'styled-components';
+import { themed } from '../../../../../../packages/components/node_modules/@heathmont/moon-utils/lib';
+import classNames from '../../../../../../next-docs/utils/classNames';
+import { ButtonProps, Props } from './types/SelectorProps';
+import { ColorPreviewProps } from './types/SelectorProps';
 
-const Container = styled.div({
-  display: 'flex',
-  flexShrink: 0,
-  alignItems: 'center',
-  justifyContent: 'center',
-  marginBottom: rem(16),
-  overflowX: 'auto',
-});
+const Container: React.FC = ({ children }) => {
+  return (
+    <div
+      className={classNames(
+        'flex shrink-0 items-center justify-center mb-4 overflow-x-auto'
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 
-const List = styled.div({
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'flex-start',
-  maxWidth: '100%',
-});
+const List: React.FC = ({ children }) => {
+  return (
+    <div className={classNames('flex flex-row justify-start max-w-full')}>
+      {children}
+    </div>
+  );
+};
 
-const Button = styled.button<{ isActive?: boolean }>(({ theme, isActive }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  flexShrink: 0,
-  position: 'relative',
-  margin: `0 ${rem(8)}`,
-  padding: `${rem(8)} ${rem(16)} ${rem(8)} ${rem(32)}`,
-  cursor: 'pointer',
-  background: isActive ? theme.colorNew.goku : 'none',
-  borderRadius: rem(8),
-  border: 'none',
-  willChange: 'background',
-  transition: `background ${theme.newTokens.transition.default}`,
-  minWidth: rem(124),
-  '&:hover': {
-    background: theme.color.goku[80],
-  },
-  '&:active': {
-    background: theme.color.goku[40],
-  },
-}));
+const Button: React.FC<ButtonProps> = ({ isActive, children }) => {
+  return (
+    <button
+      className={classNames(
+        'flex flex-col shrink-0 relative my-0 mx-2 py-2 pl-8 pr-4 cursor-pointer',
+        'rounded-lg border-none will-change-[background] transition-[background] ease-in-out duration-400 min-w-[124px]',
+        'hover:bg-goku-80',
+        'active:bg-goku-40',
+        isActive ? 'bg-goku' : 'bg-none'
+      )}
+    >
+      {children}
+    </button>
+  );
+};
 
-const ColorPreview = styled.div<{ color?: ColorProps }>(({ theme, color }) => ({
-  width: rem(8),
-  height: rem(8),
-  background: color ? themed('color', color)(theme) : theme.colorNew.piccolo,
-  borderRadius: '50%',
-  position: 'absolute',
-  top: rem(14),
-  left: rem(14),
-}));
+const ColorPreview: React.FC<ColorPreviewProps> = ({
+  color,
+  theme,
+  children,
+}) => {
+  return (
+    <div
+      className={classNames(
+        'w-2 h-2 rounded-[50%] absolute top-3.5 left-3.5',
+        color ? themed('bg-', color)(theme) : 'bg-piccolo'
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 
-const Label = styled.div(({ theme }) => ({
-  fontSize: rem(12),
-  lineHeight: rem(24),
-  color: theme.colorNew.trunks,
-}));
+const Label: React.FC = ({ children }) => {
+  return (
+    <div className={classNames('text-xs leading-6 text-trunks')}>
+      {children}
+    </div>
+  );
+};
 
-const Value = styled.div(({ theme }) => ({
-  fontSize: rem(18),
-  lineHeight: rem(24),
-  color: theme.colorNew.bulma,
-}));
-
-type Props = {
-  onChange: (key: string, isActive: boolean) => void;
-  activeOptions: string[];
-  formatFn: (props: { value: string | number; key: string }) => any;
-  options: {
-    label: any;
-    dataKey: string;
-    value: string | number;
-    color: ColorProps;
-  }[];
+const Value: React.FC = ({ children }) => {
+  return (
+    <div className={classNames('text-lg leading-6 text-bulma')}>{children}</div>
+  );
 };
 
 export const Selector: React.FC<Props> = ({
