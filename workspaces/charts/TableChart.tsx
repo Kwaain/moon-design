@@ -9,7 +9,6 @@ import { Panel } from './private/Panel';
 import { Count, Table, Cell, TableItem, Value } from './private/Table';
 import { Props } from './private/types/TableChartProps';
 
-
 const CustomLoader = styled(Loader)({});
 
 const Container: React.FC = ({ isActive, children }) => {

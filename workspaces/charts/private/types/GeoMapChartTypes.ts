@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { ColorProps } from '../../../../../../../packages/icons/node_modules/@heathmont/moon-themes/lib';
 
 export type Props = {
@@ -7,7 +8,7 @@ export type Props = {
     code: string;
     dataKey: string;
     value: number;
-  }[];
+  }[] | ReactNode;
   onUpdate?: () => void;
   onShare?: () => void;
   onExpand?: () => void;

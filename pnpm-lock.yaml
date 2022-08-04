@@ -98,6 +98,8 @@ importers:
       '@heathmont/moon-accordion': workspace:^9.2.5
       '@heathmont/moon-assets': workspace:^9.2.5
       '@heathmont/moon-charts': workspace:^9.2.5
+      '@heathmont/moon-charts-tw': workspace:^9.2.5
+
       '@heathmont/moon-components': workspace:^9.2.5
       '@heathmont/moon-core': workspace:^9.2.5
       '@heathmont/moon-core-tw': workspace:^9.2.5
@@ -150,7 +152,7 @@ importers:
       '@heathmont/moon-accordion': link:../packages/accordion
       '@heathmont/moon-assets': link:../packages/assets
       '@heathmont/moon-charts': link:../packages/charts
-      '@heathmont/moon-charts-tw': link:../workspaces/core/src/charts
+      '@heathmont/moon-charts-tw': link:../workspaces/charts
       '@heathmont/moon-components': link:../packages/components
       '@heathmont/moon-core': link:../packages/core
       '@heathmont/moon-core-tw': link:../workspaces/core

@@ -16,7 +16,15 @@ import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
 import { Tooltip } from './private/Tooltip';
 import { Props } from './private/types/PieChartProps';
+import classNames from '../../../../../next-docs/utils/classNames';
 
+// const ResponsiveContainerCustomized = ({children}) => {
+//   return (
+//     <ResponsiveContainer className={classNames('h-full flex grow')}>
+// {children}
+//     </ResponsiveContainer>
+//   )
+// }
 const ResponsiveContainerCustomized = styled(ResponsiveContainer)(
   ({ theme }) => ({
     height: '100%',

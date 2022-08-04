@@ -1,5 +1,5 @@
 {
-  "name": "@heathmont/moon-charts",
+  "name": "@heathmont/moon-charts-tw",
   "sideEffects": false,
   "version": "9.2.5",
   "files": [
@@ -22,7 +22,7 @@
   "dependencies": {
     "@heathmont/moon-assets": "workspace:^9.2.5",
     "@heathmont/moon-components": "workspace:^9.2.5",
-    "@heathmont/moon-core": "workspace:^9.2.5",
+    "@heathmont/moon-core-tw": "workspace:^9.2.5",
     "@heathmont/moon-icons": "workspace:^9.2.5",
     "@heathmont/moon-themes": "workspace:^9.2.5",
     "@heathmont/moon-utils": "workspace:^9.2.5",

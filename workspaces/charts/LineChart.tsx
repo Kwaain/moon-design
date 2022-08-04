@@ -18,7 +18,11 @@ import { Panel } from './private/Panel';
 import { Selector } from './private/Selector';
 import { Tooltip } from './private/Tooltip';
 import { Props } from './private/types/LineChartProps';
+import classNames from '../../../../../next-docs/utils/classNames';
 
+// const ResponsiveContainerCustomized: React.FC = ({ children }) => {
+//   return <ResponsiveContainer className={classNames('h-full flex grow')}>{children}</ResponsiveContainer>;
+// };
 const ResponsiveContainerCustomized = styled(ResponsiveContainer)(
   ({ theme }) => ({
     height: '100%',

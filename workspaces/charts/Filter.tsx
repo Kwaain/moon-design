@@ -1,15 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FilterDropdown } from '@heathmont/moon-components';
 import { Text } from '@heathmont/moon-core';
-import { ControlsChevronDown } from '@heathmont/moon-icons';
+import { ControlsChevronDown } from '@heathmont/moon-icons-tw';
 import { useClickAway, useKey } from 'react-use';
-import classNames from '../private/utils/classnames';
 import {
   ContainerProps,
   DropdownWrapperProps,
   Props,
+  ToggleProps,
 } from './private/types/FilterProps';
 import { rem } from '../../../../../packages/icons/node_modules/@heathmont/moon-themes/lib';
+import classNames from '../../../../../next-docs/utils/classNames';
 //check z-index on 35 line
 
 const Title = styled(Text)(({ theme }) => ({
