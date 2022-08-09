@@ -1,8 +1,7 @@
-// @ts-nocheck
+//ts-nocheck
 import React from 'react';
 import { Filter, LineChart } from '@heathmont/moon-charts-tw';
 import { CheckboxMultiselect } from '@heathmont/moon-components';
-//TODO 3.
 
 const Example = () => {
   const options = [

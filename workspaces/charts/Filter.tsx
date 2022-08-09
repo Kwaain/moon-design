@@ -1,21 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FilterDropdown } from '@heathmont/moon-components';
-import { Text } from '@heathmont/moon-core';
-import { ControlsChevronDown } from '@heathmont/moon-icons-tw';
+import { ControlsChevronDown } from '@heathmont/moon-icons';
+import { rem } from '@heathmont/moon-themes';
 import { useClickAway, useKey } from 'react-use';
+import classNames from '../../next-docs/utils/classNames';
 import {
   ContainerProps,
   DropdownWrapperProps,
   Props,
   ToggleProps,
 } from './private/types/FilterProps';
-import { rem } from '../../../../../packages/icons/node_modules/@heathmont/moon-themes/lib';
-import classNames from '../../../../../next-docs/utils/classNames';
 //check z-index on 35 line
 
-const Title = styled(Text)(({ theme }) => ({
-  color: theme.colorNew.trunks,
-}));
+// const Title = styled(Text)(({ theme }) => ({
+//   color: theme.colorNew.trunks,
+// }));
 
 const Toggle: React.FC<ToggleProps> = ({ isOpen, theme, children }) => {
   return (
@@ -67,7 +66,9 @@ const Filter: React.FC<Props> = ({ forceOpen = false, title, children }) => {
   return (
     <Container ref={ref}>
       <Toggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
-        <Title size={14}>{title}</Title>
+        {/* <Title size={14}> */}
+          {title}
+          {/* </Title> */}
         <ControlsChevronDown fontSize={rem(24)} />
       </Toggle>
       {isOpen && (

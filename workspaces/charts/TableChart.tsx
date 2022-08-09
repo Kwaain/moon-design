@@ -1,7 +1,8 @@
+// @ts-nocheck
 import React, { useRef } from 'react';
 import { Transition } from 'react-transition-group';
 import styled from 'styled-components';
-import classNames from '../../../../../next-docs/utils/classNames';
+import classNames from '../../next-docs/utils/classNames';
 import ChartIcons from './ChartIcons';
 import { Header } from './private/Header';
 import { Loader } from './private/Loader';
@@ -19,23 +20,23 @@ const Container: React.FC = ({ isActive, children }) => {
   );
 };
 
-const Container = styled.div<{ isActive: boolean }>(({ theme, isActive }) => ({
-  display: 'flex',
-  flexGrow: 1,
-  height: '100%',
-  overflow: 'auto',
-  ...(isActive && {
-    'tr *': {
-      color: theme.colorNew.goten,
-    },
-    [`${CustomLoader} p`]: {
-      color: theme.colorNew.goten,
-    },
-    [`${Count}`]: {
-      color: theme.colorNew.goten,
-    },
-  }),
-}));
+// const Container = styled.div<{ isActive: boolean }>(({ theme, isActive }) => ({
+//   display: 'flex',
+//   flexGrow: 1,
+//   height: '100%',
+//   overflow: 'auto',
+//   ...(isActive && {
+//     'tr *': {
+//       color: theme.colorNew.goten,
+//     },
+//     [`${CustomLoader} p`]: {
+//       color: theme.colorNew.goten,
+//     },
+//     [`${Count}`]: {
+//       color: theme.colorNew.goten,
+//     },
+//   }),
+// }));
 
 const TableChart: React.FC<Props> = ({
   title,

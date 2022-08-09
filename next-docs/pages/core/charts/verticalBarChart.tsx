@@ -10,7 +10,7 @@ import NoData from '../../../public/examples/chartsTW/verticalChart/NoData';
 import useExamples from '../../../utils/useExamples';
 
 export default function PageVerticalBarChart() {
-  const examples = useExamples('chartsTW/verticalChart');
+  const examples = useExamples('chartsTW/verticalBarChart');
   return (
     <>
       <ComponentPageDescription title="Vertical bar">

@@ -1,5 +1,6 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
-import { ColorProps, useTheme } from '@heathmont/moon-themes';
+import {  useTheme } from '@heathmont/moon-themes';
 import { rem, themed } from '@heathmont/moon-utils';
 import {
   Pie,
@@ -16,7 +17,6 @@ import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
 import { Tooltip } from './private/Tooltip';
 import { Props } from './private/types/PieChartProps';
-import classNames from '../../../../../next-docs/utils/classNames';
 
 // const ResponsiveContainerCustomized = ({children}) => {
 //   return (

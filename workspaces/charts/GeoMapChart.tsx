@@ -1,15 +1,16 @@
+// @ts-nocheck
 import React from 'react';
-import { useTheme } from '../../../../../packages/icons/node_modules/@heathmont/moon-themes/lib';
-import { themed } from '../../../../../packages/components/node_modules/@heathmont/moon-utils/lib';
+import { useTheme } from '@heathmont/moon-themes';
+import { themed } from '@heathmont/moon-utils';
+import classNames from '../../next-docs/utils/classNames';
 import ChartIcons from './ChartIcons';
 import { Header } from './private/Header';
 import { Loader } from './private/Loader';
 import { Map } from './private/Map';
 import { Panel } from './private/Panel';
+import { Props } from './private/types/GeoMapChartTypes';
 import { getAxisPosition, getBarChartData } from './private/utils';
 import { VerticalBar } from './private/VerticalBar';
-import { Props } from './private/types/GeoMapChartTypes';
-import classNames from '../../../../../next-docs/utils/classNames';
 
 const Container: React.FC = ({ children }) => {
   return (

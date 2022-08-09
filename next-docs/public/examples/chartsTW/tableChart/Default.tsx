@@ -1,6 +1,5 @@
 // @ts-nocheck
 import React from 'react';
-import { Text } from '@heathmont/moon-core';
 //TODO 7.
 import {
   LogoBitcasinoShort,
@@ -12,6 +11,7 @@ import {
 //TODO 8.
 import { Filter, TableChart, ChartIcons } from '@heathmont/moon-charts-tw';
 import { Avatar, SingleItemSelect } from '@heathmont/moon-components';
+import { Text } from '@heathmont/moon-core';
 //TODO 9
 
 const Example = () => {
