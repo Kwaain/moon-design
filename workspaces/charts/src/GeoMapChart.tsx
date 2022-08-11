@@ -2,7 +2,6 @@
 import React from 'react';
 import { useTheme } from '@heathmont/moon-themes';
 import { themed } from '@heathmont/moon-utils';
-import classNames from '../../../next-docs/utils/classNames';
 import { Header } from '../private/Header';
 import { Loader } from '../private/Loader';
 import { Map } from '../private/Map';
@@ -11,6 +10,7 @@ import { Props } from '../private/types/GeoMapChartTypes';
 import { getAxisPosition, getBarChartData } from '../private/utils';
 import { VerticalBar } from '../private/VerticalBar';
 import ChartIcons from './ChartIcons';
+import classNames from "./private/classNames"
 
 const Container: React.FC = ({ children }) => {
   return (

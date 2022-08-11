@@ -11,13 +11,13 @@ import {
   YAxis,
 } from 'recharts';
 import styled from 'styled-components';
-import { Props } from '../types/LineChartProps';
 import ChartIcons from './ChartIcons';
 import { Header } from './private/Header';
 import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
 import { Selector } from './private/Selector';
 import { Tooltip } from './private/Tooltip';
+import { Props } from './private/types/LineChartProps';
 
 // const ResponsiveContainerCustomized: React.FC = ({ children }) => {
 //   return <ResponsiveContainer className={classNames('h-full flex grow')}>{children}</ResponsiveContainer>;
@@ -51,20 +51,20 @@ const LineChart: React.FC<Props> = ({
   axisWidth = 40,
   interval,
   icon = <ChartIcons.Line />,
-  formatFn = ({ value }) => value,
+  formatFn = ({ value } : any) => value,
   loaderText = 'No data',
 }) => {
   const theme = useTheme();
   const bgColor = themed('color', 'gohan.100')(theme);
   const initialActiveOptions = options
-    .filter(({ isActive }) => isActive)
-    .map(({ dataKey }) => dataKey);
+    .filter(({ isActive } : any) => isActive)
+    .map(({ dataKey } : {dataKey: any}) => dataKey);
   const [activeOptions, setActiveOptions] = useState(initialActiveOptions);
 
   const handleSelectorChange = (dataKey: string, isActive: boolean) => {
     const newActiveOptions = isActive
       ? [...activeOptions, dataKey]
-      : activeOptions.filter((option) => option !== dataKey);
+      : activeOptions.filter((option: any) => option !== dataKey);
 
     setActiveOptions(newActiveOptions);
 
@@ -134,9 +134,9 @@ const LineChart: React.FC<Props> = ({
                   }
                 />
 
-                {activeOptions.map((option) => {
+                {activeOptions.map((option : any) => {
                   const activeOption = options.find(
-                    ({ dataKey }) => dataKey === option
+                    ({ dataKey  } : {dataKey: any}) => dataKey === option
                   );
                   if (!activeOption) return null;
                   return (

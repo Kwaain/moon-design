@@ -1,6 +1,6 @@
 import React from 'react';
-import classNames from '../../../../next-docs/utils/classNames';
-import { Props } from '../types/LoaderProps';
+import classNames from "./classNames"
+import { Props } from './types/LoaderProps';
 
 const Title: React.FC = ({ children }) => {
   return (

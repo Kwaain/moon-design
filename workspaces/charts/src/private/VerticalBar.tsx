@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { Transition } from 'react-transition-group';
-import classNames from '../../../../next-docs/utils/classNames';
-import { Props } from '../types/VerticalBarProps';
+import classNames from './classNames';
 import { Cell, Count, Table, TableItem, Value } from './Table';
+import { Props } from './types/VerticalBarProps';
 
 export const Container: React.FC = ({ children }) => {
   return <div className={classNames('w-full h-full')}>{children}</div>;
@@ -67,9 +67,9 @@ export const VerticalBar: React.FC<Props> = ({ data, axisPosition }) => {
       <Table withAdditionalCell>
         {data.map(
           (
-            { label, value, opacity, percent, isNegative, color },
+            { label, value, opacity, percent, isNegative, color } ,
             index: number
-          ) => {
+          ) : any => {
             const percentWidth = percent < minWidth ? minWidth : percent;
 
             return (

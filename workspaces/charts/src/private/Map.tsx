@@ -3,8 +3,8 @@ import React, { useRef, useState } from 'react';
 import { useTheme } from '@heathmont/moon-themes';
 import { themed } from '@heathmont/moon-utils';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-import classNames from '../../../../next-docs/utils/classNames';
 import { MapData, MapProps } from '../types/MapProps';
+import classNames from './classNames';
 import { TooltipWrapper, Item, ColorPreview } from './Tooltip';
 import worldMap from './World110m';
 

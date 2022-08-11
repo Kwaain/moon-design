@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FilterDropdown } from '@heathmont/moon-components';
 import { ControlsChevronDown } from '@heathmont/moon-icons';
 import { useClickAway, useKey } from 'react-use';
-import classNames from '../../../next-docs/utils/classNames';
+import classNames from "./private/classNames"
 import {
   ContainerProps,
   DropdownWrapperProps,
   Props,
   ToggleProps,
-} from './types/FilterProps';
+} from './private/types/FilterProps';
 //check z-index on 35 line
 
 // const Title = styled(Text)(({ theme }) => ({

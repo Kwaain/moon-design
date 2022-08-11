@@ -1,6 +1,6 @@
 import React from 'react';
-import classNames from '../../../../next-docs/utils/classNames';
-import { Props, ColorPreviewProps } from '../types/TooltipProps';
+import classNames from './classNames';
+import { Props, ColorPreviewProps } from './types/TooltipProps';
 
 export const TooltipWrapper: React.FC = ({ children }) => {
   return (
@@ -54,7 +54,7 @@ export const Tooltip: React.FC<Props> = ({ payload, active, formatFn }) => {
   return (
     <TooltipWrapper>
       {date && <Date>{formatFn({ value: date, key: 'date' })}</Date>}
-      {payload.map((item) => {
+      {payload.map((item: any) => {
         const color = item.payload.fill || item.color;
         const label = item.payload.label || item.name;
         const key = item.payload.dataKey || item.dataKey;

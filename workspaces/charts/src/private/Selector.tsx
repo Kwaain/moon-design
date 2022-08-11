@@ -1,7 +1,7 @@
 import React from 'react';
 import { themed } from '@heathmont/moon-utils';
-import classNames from '../../../../next-docs/utils/classNames';
-import { ButtonProps, Props, ColorPreviewProps } from '../types/SelectorProps';
+import classNames from "./classNames"
+import { ButtonProps, Props, ColorPreviewProps } from './types/SelectorProps';
 
 const Container: React.FC = ({ children }) => {
   return (
@@ -78,7 +78,7 @@ export const Selector: React.FC<Props> = ({
 }) => (
   <Container>
     <List>
-      {options.map((option) => {
+      {options.map((option:any) => {
         const isActive = activeOptions.includes(option.dataKey);
         const value = formatFn({ value: option.value, key: option.dataKey });
 

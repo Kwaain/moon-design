@@ -1,6 +1,6 @@
 import React from 'react';
-import classNames from '../../../../next-docs/utils/classNames';
-import { Props, TitleProps, FilterWrapperProps } from '../types/HeaderProps';
+import classNames from "./classNames"
+import { Props, TitleProps, FilterWrapperProps } from './types/HeaderProps';
 
 const Title: React.FC<TitleProps> = ({ children }) => {
   return <p className={classNames(`text-bulma text-xl`)}>{children}</p>;

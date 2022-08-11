@@ -1,12 +1,12 @@
 import React from 'react';
 import { useTheme } from '@heathmont/moon-themes';
 import { themed } from '@heathmont/moon-utils';
-import classNames from '../../../next-docs/utils/classNames';
-import { Props } from '../types/VerticalBarChartProps';
 import ChartIcons from './ChartIcons';
+import classNames from './private/classNames';
 import { Header } from './private/Header';
 import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
+import { Props } from './private/types/VerticalBarChartProps';
 import { getAxisPosition, getBarChartData } from './private/utils';
 import { VerticalBar } from './private/VerticalBar';
 
@@ -31,7 +31,7 @@ const VerticalBarChart: React.FC<Props> = ({
   icon = <ChartIcons.Countries />,
   positiveColor = 'krillin.100',
   negativeColor = 'chiChi.100',
-  formatFn = ({ value }) => value,
+  formatFn = ({ value } : any) => value,
   loaderText = 'No data',
 }) => {
   const theme = useTheme();
@@ -57,7 +57,7 @@ const VerticalBarChart: React.FC<Props> = ({
         <Header icon={icon} title={title} filter={filter} />
         <Container>
           {isLoading ? (
-            <Loader icon={<ChartIcons.BarChartLoading />} title={loaderText} />
+            <Loader icon={ChartIcons} title={loaderText} />
           ) : (
             <VerticalBar
               axisPosition={getAxisPosition(data)}

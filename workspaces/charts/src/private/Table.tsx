@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import styled from 'styled-components';
-import classNames from '../../../../next-docs/utils/classNames';
+import classNames from './classNames';
 
 export type CellProps = {
   wide?: boolean;

@@ -2,10 +2,10 @@
 import React, { useRef } from 'react';
 import { Transition } from 'react-transition-group';
 import styled from 'styled-components';
-import classNames from '../../../next-docs/utils/classNames';
 import { Header } from '../private/Header';
 import { Props } from '../types/TableChartProps';
 import ChartIcons from './ChartIcons';
+import classNames from './private/classNames';
 import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
 import { Count, Table, Cell, TableItem, Value } from './private/Table';

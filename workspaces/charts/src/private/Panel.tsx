@@ -6,8 +6,8 @@ import {
   ControlsDiagonalsOutsight,
 } from '@heathmont/moon-icons';
 import { rem } from '@heathmont/moon-themes';
-import classNames from '../../../../next-docs/utils/classNames';
-import { ContainerProps, ButtonProps, Props } from '../types/PanelProps';
+import classNames from "./private/classNames"
+import { ContainerProps, ButtonProps, Props } from './types/PanelProps';
 
 const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
   return (

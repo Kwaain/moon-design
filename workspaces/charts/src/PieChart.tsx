@@ -10,12 +10,12 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import styled from 'styled-components';
-import { Props } from '../types/PieChartProps';
 import ChartIcons from './ChartIcons';
 import { Header } from './private/Header';
 import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
 import { Tooltip } from './private/Tooltip';
+import { Props } from './private/types/PieChartProps';
 
 // const ResponsiveContainerCustomized = ({children}) => {
 //   return (
@@ -51,7 +51,7 @@ const PieChart: React.FC<Props> = ({
   filter,
   height = 446,
   icon = <ChartIcons.Devices />,
-  formatFn = ({ value }) => value,
+  formatFn = ({ value } : any) => value,
   loaderText = 'No data',
 }) => {
   const theme = useTheme();
@@ -176,7 +176,7 @@ const PieChart: React.FC<Props> = ({
                 cornerRadius="100%"
                 onMouseEnter={onMouseEnter}
               >
-                {data.map((item, index) => (
+                {data.map((item: any, index: number)  => (
                   <Cell
                     // eslint-disable-next-line
                     key={`${index}-${item.value}`}
