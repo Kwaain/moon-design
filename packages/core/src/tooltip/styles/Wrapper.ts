@@ -1,16 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.div({
   position: 'relative',
   cursor: 'pointer',
   '& > div:nth-child(2)': {
-    display: 'none'
+    display: 'none',
   },
   '&:hover': {
     '& > div:nth-child(2)': {
-      display: 'flex'
+      display: 'flex',
     },
-  }
+  },
 });
 
 export default Wrapper;

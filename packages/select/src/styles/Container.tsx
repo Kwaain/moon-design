@@ -1,7 +1,7 @@
 import { ColorNew, ColorProps, SharedTheme } from '@heathmont/moon-themes';
 import { rem, themed } from '@heathmont/moon-utils';
 import styled from 'styled-components';
-import {OrientationType} from "../private/types/OrientationType";
+import { OrientationType } from '../private/types/OrientationType';
 
 interface Props {
   orientation?: OrientationType;

@@ -1,6 +1,6 @@
-import {CombinedPropType} from "./CombinedInputProps";
-import {TextInputGroupSize} from "./CombinedInputSize";
-import {OrientationType} from "./OrientationType";
+import { CombinedPropType } from './CombinedInputProps';
+import { TextInputGroupSize } from './CombinedInputSize';
+import { OrientationType } from './OrientationType';
 
 export interface TextInputGroupProps {
   orientation?: OrientationType;

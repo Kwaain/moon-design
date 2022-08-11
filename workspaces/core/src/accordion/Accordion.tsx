@@ -16,7 +16,7 @@ const Accordion = ({
   withButton = true,
   isContentInside = true,
   size = 'md',
-  backgroundColor = 'bg-gohan'
+  backgroundColor = 'bg-gohan',
 }: AccordionProps) => {
   const [isOpen, setIsOpen] = useState(openByDefault);
   function handleState() {

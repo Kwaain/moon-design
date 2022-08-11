@@ -17,8 +17,8 @@ const ElementLeftWrapper = styled.div({
   '& > svg': {
     width: rem(15),
     height: rem(15),
-    margin: rem(4.5)
-  }
+    margin: rem(4.5),
+  },
 });
 
 const CountWrapper = styled.span({
@@ -26,7 +26,7 @@ const CountWrapper = styled.span({
   width: rem(24),
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
 });
 
 const TabLink: React.FC<TabLinkProps> = ({
@@ -37,11 +37,7 @@ const TabLink: React.FC<TabLinkProps> = ({
   count,
   isTop,
 }) => (
-  <Container
-    size={size}
-    isTop={isTop}
-    href={href}
-  >
+  <Container size={size} isTop={isTop} href={href}>
     {elementLeft && <ElementLeftWrapper>{elementLeft}</ElementLeftWrapper>}
     {children}
     {count && <CountWrapper>{count}</CountWrapper>}

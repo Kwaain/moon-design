@@ -1,20 +1,23 @@
-import React, {ReactNode, useEffect, useState} from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { Switch } from '@heathmont/moon-core';
-import { Button , Accordion } from '@heathmont/moon-core-tw';
+import { Button, Accordion } from '@heathmont/moon-core-tw';
 
-import { ControlsChevronDown, ControlsChevronRight } from '@heathmont/moon-icons-tw';
+import {
+  ControlsChevronDown,
+  ControlsChevronRight,
+} from '@heathmont/moon-icons-tw';
 import Image from 'next/image';
-import CTA from "../../../components/templates/cta";
-import Experience from "../../../components/templates/experience";
-import Explore from "../../../components/templates/explore";
-import Family from "../../../components/templates/family";
-import Header from "../../../components/templates/header";
-import Headline from "../../../components/templates/headline";
-import Hero from "../../../components/templates/hero";
-import LayoutBitcasino from "../../../components/templates/layout-bitcasino";
-import Social from "../../../components/templates/social";
-import Subtitle from "../../../components/templates/subtitle";
-import Title from "../../../components/templates/title";
+import CTA from '../../../components/templates/cta';
+import Experience from '../../../components/templates/experience';
+import Explore from '../../../components/templates/explore';
+import Family from '../../../components/templates/family';
+import Header from '../../../components/templates/header';
+import Headline from '../../../components/templates/headline';
+import Hero from '../../../components/templates/hero';
+import LayoutBitcasino from '../../../components/templates/layout-bitcasino';
+import Social from '../../../components/templates/social';
+import Subtitle from '../../../components/templates/subtitle';
+import Title from '../../../components/templates/title';
 import icon18 from '../../../public/templates/bitcasino/18+icon.png';
 import awards1 from '../../../public/templates/bitcasino/awards1.png';
 import awards2 from '../../../public/templates/bitcasino/awards2.png';
@@ -66,15 +69,13 @@ const Vip = () => {
       points: [
         'Lucrative offers modelled just for you.',
         'Wager free rewards.',
-        'Weekly & monthly bonuses.'
+        'Weekly & monthly bonuses.',
       ],
     },
     {
       icon: limit,
       title: 'Highest bet limits in the industry',
-      points: [
-        'No limits to withdrawals and deposits!',
-      ],
+      points: ['No limits to withdrawals and deposits!'],
     },
     {
       icon: support,
@@ -131,20 +132,16 @@ const Vip = () => {
       setIsScrolled(window.scrollY >= 30);
     };
 
-    window.addEventListener("scroll", toggleHeaderBackground);
+    window.addEventListener('scroll', toggleHeaderBackground);
 
     return () => {
-      window.removeEventListener("scroll", toggleHeaderBackground);
-    }
+      window.removeEventListener('scroll', toggleHeaderBackground);
+    };
   }, []);
 
   return (
     <div className="w-full flex flex-col grow overflow-hidden p-5 sm:p-0">
-      <Header
-        height={30}
-        isScrolled={isScrolled}
-        logo={(<BitcasinoLogo />)}
-      />
+      <Header height={30} isScrolled={isScrolled} logo={<BitcasinoLogo />} />
       <Hero
         headline={
           <Headline
@@ -539,9 +536,11 @@ const Vip = () => {
 Vip.getLayout = function getLayout(page: ReactNode) {
   return (
     <LayoutBitcasino
-      sidebar={(<div className="w-full h-full p-5">
-        <BitcasinoLogo />
-      </div>)}
+      sidebar={
+        <div className="w-full h-full p-5">
+          <BitcasinoLogo />
+        </div>
+      }
     >
       <Vip />
     </LayoutBitcasino>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Subtitle = ({ text, classes }: { text: string; classes?: string }) => (
   <p

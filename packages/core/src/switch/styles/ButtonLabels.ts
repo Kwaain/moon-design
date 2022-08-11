@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const ButtonLabels = styled.span({
   width: '100%',
@@ -13,8 +13,8 @@ const ButtonLabels = styled.span({
     alignItems: 'center',
     justifyContent: 'center',
     width: '50%',
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 });
 
 export default ButtonLabels;

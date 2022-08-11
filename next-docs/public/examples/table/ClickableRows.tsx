@@ -97,7 +97,7 @@ const Example = () => {
       height={400}
       withFooter={true}
       getOnRowClickHandler={(row) => () => {
-        console.log(`You clicked row with ID - ${row.id}`)
+        console.log(`You clicked row with ID - ${row.id}`);
       }}
     />
   );

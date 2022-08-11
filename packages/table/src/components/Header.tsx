@@ -1,9 +1,9 @@
-import {rem, themed} from '@heathmont/moon-utils';
+import { rem, themed } from '@heathmont/moon-utils';
 import styled from 'styled-components';
 
 const Header = styled.div<{
-  headerBackgroundColor: string,
-  selectable?: boolean,
+  headerBackgroundColor: string;
+  selectable?: boolean;
 }>(
   {
     position: 'sticky',
@@ -13,9 +13,10 @@ const Header = styled.div<{
   ({ selectable, headerBackgroundColor, theme }) => ({
     ...(selectable
       ? {
-        paddingLeft: rem(46),
-        backgroundColor: themed('color', headerBackgroundColor)(theme)
-      } : {})
+          paddingLeft: rem(46),
+          backgroundColor: themed('color', headerBackgroundColor)(theme),
+        }
+      : {}),
   })
 );
 

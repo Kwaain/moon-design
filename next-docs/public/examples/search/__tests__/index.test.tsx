@@ -7,7 +7,7 @@ import { moonDesignLight, ThemeProvider } from '@heathmont/moon-themes';
 import renderer from 'react-test-renderer';
 import PreviewSearch from '../PreviewSearch';
 import PreviewSearchLoading from '../PreviewSearchLoading';
-import OmitResults from "../OmitResults";
+import OmitResults from '../OmitResults';
 
 const renderWithTheme = (component: JSX.Element) => (
   <ThemeProvider theme={moonDesignLight}>{component}</ThemeProvider>
@@ -27,9 +27,7 @@ xdescribe('Search', () => {
   });
 
   it('renders Without Results', () => {
-    const testRenderer = renderer.create(
-      renderWithTheme(<OmitResults />)
-    );
+    const testRenderer = renderer.create(renderWithTheme(<OmitResults />));
     expect(testRenderer.toJSON()).toMatchSnapshot();
   });
 });

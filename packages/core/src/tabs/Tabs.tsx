@@ -1,8 +1,8 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { rem, uniqueId } from '@heathmont/moon-utils';
 import SkipLink from './styles/SkipLink';
 import { Slider } from './styles/Slider';
-import Tab from "./styles/Tab";
+import Tab from './styles/Tab';
 import TabList from './styles/TabList';
 import TabNav from './styles/TabNav';
 
@@ -25,29 +25,37 @@ const Tabs: React.FC<TabsProps> = ({
   dir,
   isContainer,
   isSegmented,
-  isVertical
+  isVertical,
 }) => {
   const autoId = id || `nav-skip-${uniqueId()}`;
-  const listRef = useRef(null as HTMLUListElement | null)
+  const listRef = useRef(null as HTMLUListElement | null);
   const nonEmptyTabs = Array.isArray(items)
     ? items.filter((tab) => tab != null)
     : [];
-  const [sliderSize, setSliderSize] = useState('0px')
-  const [sliderOffset, setSliderOffset] = useState('0px')
-  const [selectedTabIndex, setSelectedTabIndex] = useState(-1)
+  const [sliderSize, setSliderSize] = useState('0px');
+  const [sliderOffset, setSliderOffset] = useState('0px');
+  const [selectedTabIndex, setSelectedTabIndex] = useState(-1);
 
-  const fillTabs = !!listRef?.current?.querySelectorAll('.tab-link-fill').length;
+  const fillTabs =
+    !!listRef?.current?.querySelectorAll('.tab-link-fill').length;
 
   useEffect(() => {
     if (listRef?.current) {
       const listRect = listRef.current.getBoundingClientRect();
-      const selectedElement = listRef.current.querySelectorAll('li')[selectedTabIndex];
+      const selectedElement =
+        listRef.current.querySelectorAll('li')[selectedTabIndex];
 
       if (selectedElement) {
         const elementRect = selectedElement.getBoundingClientRect();
 
-        setSliderSize(`${isVertical ? elementRect.height : elementRect.width}px`)
-        setSliderOffset(`${isVertical ? elementRect.y - listRect.y : elementRect.x - listRect.x}px`)
+        setSliderSize(
+          `${isVertical ? elementRect.height : elementRect.width}px`
+        );
+        setSliderOffset(
+          `${
+            isVertical ? elementRect.y - listRect.y : elementRect.x - listRect.x
+          }px`
+        );
       }
     }
   }, [selectedTabIndex]);
@@ -67,29 +75,34 @@ const Tabs: React.FC<TabsProps> = ({
         isSegmented={isSegmented}
         ref={listRef}
       >
-        {
-          Array.isArray(nonEmptyTabs) && nonEmptyTabs.map((tab, index) => {
+        {Array.isArray(nonEmptyTabs) &&
+          nonEmptyTabs.map((tab, index) => {
             const tabWithProps = React.cloneElement(tab, {
               isTop: isTop,
-              size: (!isSegmented && size === 'large') || (isSegmented && size === 'small') ? 'medium' : size,
+              size:
+                (!isSegmented && size === 'large') ||
+                (isSegmented && size === 'small')
+                  ? 'medium'
+                  : size,
             });
 
-            return <Tab
-              isSegmented={isSegmented}
-              isVertical={isVertical}
-              isTop={isTop}
-              key={`tab-${uniqueId()}`}
-              className={`${index === selectedTabIndex ? 'active' : ''}`}
-              onClick={() => {
-                setSelectedTabIndex(index)
-              }}
-            >
-              {tabWithProps}
-            </Tab>;
-          })
-        }
-        {
-          sliderSize !== '0px' && <Slider
+            return (
+              <Tab
+                isSegmented={isSegmented}
+                isVertical={isVertical}
+                isTop={isTop}
+                key={`tab-${uniqueId()}`}
+                className={`${index === selectedTabIndex ? 'active' : ''}`}
+                onClick={() => {
+                  setSelectedTabIndex(index);
+                }}
+              >
+                {tabWithProps}
+              </Tab>
+            );
+          })}
+        {sliderSize !== '0px' && (
+          <Slider
             isTop={isTop}
             isVertical={isVertical}
             isSegmented={isSegmented}
@@ -97,7 +110,7 @@ const Tabs: React.FC<TabsProps> = ({
             size={sliderSize}
             offset={sliderOffset}
           />
-        }
+        )}
       </TabList>
       <span id={autoId} />
     </TabNav>

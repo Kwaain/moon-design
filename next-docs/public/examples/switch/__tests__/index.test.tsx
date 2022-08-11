@@ -8,8 +8,8 @@ import renderer from 'react-test-renderer';
 import Default from '../Default';
 import Sizes from '../Sizes';
 import Theme from '../Theme';
-import Disabled from "../Disabled";
-import Buttons from "../Buttons";
+import Disabled from '../Disabled';
+import Buttons from '../Buttons';
 
 const renderWithTheme = (component: JSX.Element) => (
   <ThemeProvider theme={moonDesignLight}>{component}</ThemeProvider>
@@ -20,7 +20,6 @@ describe('Switch', () => {
     const testRenderer = renderer.create(renderWithTheme(<Default />));
     expect(testRenderer.toJSON()).toMatchSnapshot();
   });
-
 
   it('renders different Sizes', () => {
     const testRenderer = renderer.create(renderWithTheme(<Sizes />));

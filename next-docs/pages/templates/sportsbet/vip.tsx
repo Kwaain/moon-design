@@ -2,25 +2,25 @@ import React, { ReactNode, useEffect, useState } from 'react';
 import { Button, Accordion } from '@heathmont/moon-core-tw';
 import ControlsChevronDown from '@heathmont/moon-icons-tw/lib/icons/ControlsChevronDown';
 import Image from 'next/image';
-import CTA from "../../../components/templates/cta";
-import Experience from "../../../components/templates/experience";
-import Explore from "../../../components/templates/explore";
-import Family from "../../../components/templates/family";
-import Header from "../../../components/templates/header";
-import Headline from "../../../components/templates/headline";
-import Hero from "../../../components/templates/hero";
-import LayoutSportsbet from "../../../components/templates/layout-sportsbet";
-import Social from "../../../components/templates/social";
-import Subtitle from "../../../components/templates/subtitle";
-import Title from "../../../components/templates/title";
+import CTA from '../../../components/templates/cta';
+import Experience from '../../../components/templates/experience';
+import Explore from '../../../components/templates/explore';
+import Family from '../../../components/templates/family';
+import Header from '../../../components/templates/header';
+import Headline from '../../../components/templates/headline';
+import Hero from '../../../components/templates/hero';
+import LayoutSportsbet from '../../../components/templates/layout-sportsbet';
+import Social from '../../../components/templates/social';
+import Subtitle from '../../../components/templates/subtitle';
+import Title from '../../../components/templates/title';
 import image1 from '../../../public/templates/bitcasino/image1.png';
 import explore1 from '../../../public/templates/explore-1.png';
 import explore2 from '../../../public/templates/explore-2.png';
 import explore3 from '../../../public/templates/explore-3.png';
 import explore4 from '../../../public/templates/explore-4.png';
 import handshake from '../../../public/templates/handshake.png';
-import limit from "../../../public/templates/limits.png";
-import reward from "../../../public/templates/rewards.png";
+import limit from '../../../public/templates/limits.png';
+import reward from '../../../public/templates/rewards.png';
 import Plus18 from '../../../public/templates/sportsbet/18plus.png';
 import Award1 from '../../../public/templates/sportsbet/award1.png';
 import Award2 from '../../../public/templates/sportsbet/award2.png';
@@ -72,15 +72,13 @@ const Vip = () => {
       points: [
         'Lucrative offers modelled just for you.',
         'Wager free rewards.',
-        'Weekly & monthly bonuses.'
+        'Weekly & monthly bonuses.',
       ],
     },
     {
       icon: limit,
       title: 'Highest bet limits in the industry',
-      points: [
-        'No limits to withdrawals and deposits!',
-      ],
+      points: ['No limits to withdrawals and deposits!'],
     },
     {
       icon: support,
@@ -704,9 +702,11 @@ const Vip = () => {
 Vip.getLayout = function getLayout(page: ReactNode) {
   return (
     <LayoutSportsbet
-      sidebar={(<div className="w-full h-full p-5">
-        <Image src={SportsbetLogo} />
-      </div>)}
+      sidebar={
+        <div className="w-full h-full p-5">
+          <Image src={SportsbetLogo} />
+        </div>
+      }
     >
       <Vip />
     </LayoutSportsbet>

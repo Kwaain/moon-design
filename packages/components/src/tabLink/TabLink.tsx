@@ -46,7 +46,7 @@ const TabLink = styled.a<TabLinkProps>(({ theme, fullWidth }) => [
         transform: 'scaleX(1)',
       },
     },
-  }
+  },
 ]);
 
 export default TabLink;

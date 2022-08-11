@@ -114,12 +114,10 @@ const showHideIndicator = (
     : setRightIndicator(false);
   firstVisibleIndex > 0 ? setLeftIndicator(true) : setLeftIndicator(false);
   if (firstVisibleIndex === -1) {
-    itemRefs.length > 0 ?
-    setLeftIndicator(true) : setLeftIndicator(false)
+    itemRefs.length > 0 ? setLeftIndicator(true) : setLeftIndicator(false);
   }
   if (lastVisibleIndex === -1) {
-    itemRefs.length > 0 ?
-    setRightIndicator(true) : setRightIndicator(false)
+    itemRefs.length > 0 ? setRightIndicator(true) : setRightIndicator(false);
   }
 };
 
@@ -161,7 +159,8 @@ export const withHorizontalScroll = (options: Options): any => {
       observer.observe(item);
     });
 
-    return () => itemRefs.forEach((item) => {
+    return () =>
+      itemRefs.forEach((item) => {
         observer.unobserve(item);
       });
   }, []);

@@ -9,9 +9,7 @@ type Props = {
 const Container = styled.a<Props>(({ theme, size }) => ({
   display: 'flex',
   alignItems: 'center',
-  padding: size === 'small'
-    ? `${rem(4)} ${rem(8)}`
-    : `${rem(8)} ${rem(12)}`,
+  padding: size === 'small' ? `${rem(4)} ${rem(8)}` : `${rem(8)} ${rem(12)}`,
   position: 'relative',
   margin: 0,
   fontSize: rem(14),

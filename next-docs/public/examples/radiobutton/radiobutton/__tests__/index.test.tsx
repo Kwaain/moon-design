@@ -8,7 +8,7 @@ import renderer from 'react-test-renderer';
 import Default from '../Default';
 import Checked from '../Checked';
 import Disabled from '../Disabled';
-import NoLabel from "../NoLabel";
+import NoLabel from '../NoLabel';
 
 const renderWithTheme = (component: JSX.Element) => (
   <ThemeProvider theme={moonDesignLight}>{component}</ThemeProvider>

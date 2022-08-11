@@ -50,7 +50,7 @@ const colorNew = {
   bulma: '#ffffff',
   trunks: '#8781A0',
   goten: '#000000',
-  popo: '#FFFFFF'
+  popo: '#FFFFFF',
 };
 
 const onetouchDark: Theme = {

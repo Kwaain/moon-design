@@ -8,7 +8,7 @@ const renderWithTheme = (component: JSX.Element) => (
   <ThemeProvider theme={sportsbetDark}>{component}</ThemeProvider>
 );
 
-import { rem } from "@heathmont/moon-utils";
+import { rem } from '@heathmont/moon-utils';
 import Card from '../Card';
 
 describe('Card', () => {
@@ -41,7 +41,10 @@ describe('Card', () => {
     test('renders as front with backgroundIcon', () => {
       const card = create(
         renderWithTheme(
-          <Card template="front" backgroundIcon={<ShopCrypto fontSize={rem(16)}/>}>
+          <Card
+            template="front"
+            backgroundIcon={<ShopCrypto fontSize={rem(16)} />}
+          >
             <p>Some content</p>
           </Card>
         )

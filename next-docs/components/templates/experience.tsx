@@ -1,8 +1,8 @@
-import React, {ReactElement} from "react";
-import {Carousel} from "@heathmont/moon-components";
-import ChevronLeft from "../../pages/templates/icons/ChevronLeft";
-import ChevronRight from "../../pages/templates/icons/ChevronRight";
-import ExperienceCarouselItem from "./experience-carousel-item";
+import React, { ReactElement } from 'react';
+import { Carousel } from '@heathmont/moon-components';
+import ChevronLeft from '../../pages/templates/icons/ChevronLeft';
+import ChevronRight from '../../pages/templates/icons/ChevronRight';
+import ExperienceCarouselItem from './experience-carousel-item';
 
 export interface ExperienceCarousel {
   index?: number;
@@ -22,7 +22,7 @@ const Experience = ({
   title,
   subtitle,
   carouselItems = [],
-  carouselItemBackground = 'gohan'
+  carouselItemBackground = 'gohan',
 }: Props) => {
   return (
     <div className="flex flex-col items-center relative max-w-[100vw] -top-[30px] mb-8 sm:top-0 sm:mb-0 sm:w-[600px] lg:w-[640px] lg:pr-6 xl:w-[930px] 2xl:w-[1230px]">

@@ -67,7 +67,7 @@ const Example = () => {
         preview={<ContentOutsideSizes />}
         code={examples ? examples.ContentOutsideSizes : 'Loading'}
       />
-       <Preview
+      <Preview
         title="With background"
         preview={<Background />}
         code={examples ? examples.Background : 'Loading'}

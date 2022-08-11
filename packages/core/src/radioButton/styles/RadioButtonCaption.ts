@@ -1,4 +1,4 @@
-import {ColorValue, Theme} from "@heathmont/moon-themes";
+import { ColorValue, Theme } from '@heathmont/moon-themes';
 import styled from 'styled-components';
 
 type InputColors = {
@@ -15,24 +15,24 @@ type InputColors = {
 
 const inputColors =
   (key: keyof InputColors) =>
-    ({ color, colorNew }: Theme) => {
-      const themedColor: InputColors = {
-        label: colorNew.trunks,
-        text: colorNew.bulma,
-        icon: colorNew.trunks,
-        placeholder: colorNew.trunks,
-        borderDefault: colorNew.beerus,
-        borderHover: color.goku[40],
-        background: colorNew.gohan,
-        disabled: color.goku[80],
-      };
-
-      return themedColor[key];
+  ({ color, colorNew }: Theme) => {
+    const themedColor: InputColors = {
+      label: colorNew.trunks,
+      text: colorNew.bulma,
+      icon: colorNew.trunks,
+      placeholder: colorNew.trunks,
+      borderDefault: colorNew.beerus,
+      borderHover: color.goku[40],
+      background: colorNew.gohan,
+      disabled: color.goku[80],
     };
+
+    return themedColor[key];
+  };
 
 const RadioButtonCaption = styled.span(({ theme }) => ({
   color: inputColors('text')(theme),
-  fontSize: theme.fontSize.body
+  fontSize: theme.fontSize.body,
 }));
 
 export default RadioButtonCaption;

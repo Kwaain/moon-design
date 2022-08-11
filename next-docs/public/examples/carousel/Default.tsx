@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const ExampleContent = styled.div({
   width: rem(320),
   height: rem(192),
-  borderRadius: "0.5rem",
+  borderRadius: '0.5rem',
   background: 'darkgray',
   display: 'flex',
   alignItems: 'center',

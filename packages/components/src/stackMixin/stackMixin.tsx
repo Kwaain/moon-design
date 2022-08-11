@@ -1,7 +1,6 @@
 import { CSSObject } from 'styled-components';
 import listItemStyleTypeNone from '../listItemStyleTypeNone/listItemStyleTypeNone';
 
-
 type StackSpace = CSSObject['marginTop'] | CSSObject['gridGap'];
 
 const stackMixin = (space: StackSpace): CSSObject => ({

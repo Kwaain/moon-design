@@ -37,7 +37,7 @@ const Container = styled.a<Props>(({ theme, size, isTop }) => [
       backgroundColor: theme.colorNew.piccolo,
       opacity: 0,
       transition: `all ${theme.newTokens.transition.slow}s`,
-    }
+    },
   },
   isTop && {
     '&::after': {
