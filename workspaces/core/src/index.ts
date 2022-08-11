@@ -22,6 +22,8 @@ export { default as setSpacing } from './label/utils/setSpacing';
 export * from './label/utils/setSpacing';
 export { default as Loader } from './loader/Loader';
 export * from './loader/Loader';
+export { default as Table } from './table/Table';
+export * from './table/Table';
 export { default as RadioButton } from './radioButton/RadioButton';
 export * from './radioButton/RadioButton';
 export { default as TextInput } from './textInput/TextInput';
