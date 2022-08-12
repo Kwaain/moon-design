@@ -1,6 +1,6 @@
 import { Table } from '@heathmont/moon-core-tw';
 import { ArrowsUp, OtherFrame } from '@heathmont/moon-icons-tw';
-import React, { useState } from 'react';
+import React from 'react';
 
 const Example = () => {
 const deleteRow = () => {
@@ -64,7 +64,7 @@ const onIconClick = () => {
     <Table
       data={dataTable}
       column={column}
-      deleteRow={deleteRow}
+      onDelete={deleteRow}
       onIconClick={onIconClick}
     />
   );
