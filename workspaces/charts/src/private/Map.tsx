@@ -4,9 +4,12 @@ import { useTheme } from '@heathmont/moon-themes';
 import { themed } from '@heathmont/moon-utils';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import { MapData, MapProps } from '../types/MapProps';
-import classNames from './classNames';
 import { TooltipWrapper, Item, ColorPreview } from './Tooltip';
 import worldMap from './World110m';
+
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+}
 
 const Container: React.FC = ({ children }) => {
   return (

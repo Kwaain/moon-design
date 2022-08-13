@@ -1,8 +1,11 @@
 import React, { useRef } from 'react';
 import { Transition } from 'react-transition-group';
-import classNames from './classNames';
+import { Props } from '../types/VerticalBarProps';
 import { Cell, Count, Table, TableItem, Value } from './Table';
-import { Props } from './types/VerticalBarProps';
+
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+}
 
 export const Container: React.FC = ({ children }) => {
   return <div className={classNames('w-full h-full')}>{children}</div>;
@@ -85,7 +88,7 @@ export const VerticalBar: React.FC<Props> = ({ data, axisPosition }) => {
                   {axisPosition === 'center' && <Center />}
                   <Bar isNegative={isNegative} axisPosition={axisPosition}>
                     <Transition nodeRef={lineRef} in appear timeout={0}>
-                      {(state) => (
+                      {(state: any) => (
                         <Line
                           ref={lineRef}
                           style={{

@@ -1,6 +1,9 @@
 import React from 'react';
-import classNames from './classNames';
-import { Props, ColorPreviewProps } from './types/TooltipProps';
+import { Props, ColorPreviewProps } from '../types/TooltipProps';
+
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+}
 
 export const TooltipWrapper: React.FC = ({ children }) => {
   return (

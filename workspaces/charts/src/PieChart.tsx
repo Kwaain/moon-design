@@ -15,7 +15,7 @@ import { Header } from './private/Header';
 import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
 import { Tooltip } from './private/Tooltip';
-import { Props } from './private/types/PieChartProps';
+import { Props } from './types/PieChartProps';
 
 // const ResponsiveContainerCustomized = ({children}) => {
 //   return (
@@ -123,7 +123,7 @@ const PieChart: React.FC<Props> = ({
           fill={fill}
           style={{ filter: 'url(#shadow)' }}
           cornerRadius={100}
-          onMouseOver={(e) => {
+          onMouseOver={(e : any) => {
             if (!e || !e.currentTarget) return;
             const sector = e.currentTarget.closest('.recharts-pie-sector');
             if (!sector || !sector.parentElement) return;

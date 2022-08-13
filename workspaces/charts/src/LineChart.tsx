@@ -17,7 +17,7 @@ import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
 import { Selector } from './private/Selector';
 import { Tooltip } from './private/Tooltip';
-import { Props } from './private/types/LineChartProps';
+import { Props } from './types/LineChartProps';
 
 // const ResponsiveContainerCustomized: React.FC = ({ children }) => {
 //   return <ResponsiveContainer className={classNames('h-full flex grow')}>{children}</ResponsiveContainer>;
@@ -106,7 +106,7 @@ const LineChart: React.FC<Props> = ({
                   axisLine={false}
                   interval={interval}
                   domain={['auto', 'auto']}
-                  tickFormatter={(value) =>
+                  tickFormatter={(value : any) =>
                     formatFn({ value, key: 'dateAxis' })
                   }
                 />
@@ -117,7 +117,7 @@ const LineChart: React.FC<Props> = ({
                   axisLine
                   stroke={bgColor}
                   width={axisWidth}
-                  tickFormatter={(value) =>
+                  tickFormatter={(value : any) =>
                     formatFn({ value, key: 'leftAxis' })
                   }
                 />
@@ -129,7 +129,7 @@ const LineChart: React.FC<Props> = ({
                   axisLine
                   stroke={bgColor}
                   width={axisWidth}
-                  tickFormatter={(value) =>
+                  tickFormatter={(value : any) =>
                     formatFn({ value, key: 'rightAxis' })
                   }
                 />

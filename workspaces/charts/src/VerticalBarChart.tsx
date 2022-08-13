@@ -2,13 +2,17 @@ import React from 'react';
 import { useTheme } from '@heathmont/moon-themes';
 import { themed } from '@heathmont/moon-utils';
 import ChartIcons from './ChartIcons';
-import classNames from './private/classNames';
 import { Header } from './private/Header';
 import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
-import { Props } from './private/types/VerticalBarChartProps';
 import { getAxisPosition, getBarChartData } from './private/utils';
 import { VerticalBar } from './private/VerticalBar';
+import { Props } from './types/VerticalBarChartProps';
+
+
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+}
 
 const Container: React.FC = ({ children }: any) => {
   return (

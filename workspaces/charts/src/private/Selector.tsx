@@ -1,7 +1,10 @@
 import React from 'react';
 import { themed } from '@heathmont/moon-utils';
-import classNames from "./classNames"
-import { ButtonProps, Props, ColorPreviewProps } from './types/SelectorProps';
+import { ButtonProps, Props, ColorPreviewProps } from '../types/SelectorProps';
+
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+}
 
 const Container: React.FC = ({ children }) => {
   return (

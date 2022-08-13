@@ -1,7 +1,10 @@
-// @ts-nocheck
+//ts-nocheck
 import React from 'react';
 import styled from 'styled-components';
-import classNames from './classNames';
+
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+}
 
 export type CellProps = {
   wide?: boolean;
@@ -41,7 +44,7 @@ export const Table = styled.div<{ withAdditionalCell?: boolean }>(
     alignItems: 'center',
     ...(withAdditionalCell
       ? {
-          [Cell]: {
+          [Cell as any]:  {
             '&:nth-child(4n  + 1)': {
               paddingLeft: 0,
             },
@@ -56,7 +59,7 @@ export const Table = styled.div<{ withAdditionalCell?: boolean }>(
           },
         }
       : {
-          [Cell]: {
+          [Cell as any]: {
             '&:nth-child(3n  + 1)': {
               paddingLeft: 0,
             },

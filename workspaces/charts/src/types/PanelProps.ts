@@ -13,12 +13,12 @@ export type ButtonProps = {
   hasUpdates?: boolean;
   theme?: object;
   isActive?: boolean;
-  onClick?: void;
+  onClick?: any;
 };
 
 export type ContainerProps = {
   hasUpdates?: boolean;
   theme?: object;
   isActive?: boolean;
-  height?: number | null;
+  height?: number;
 };

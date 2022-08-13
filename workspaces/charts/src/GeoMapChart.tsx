@@ -1,16 +1,18 @@
-//@ts-nocheck
 import React from 'react';
 import { useTheme } from '@heathmont/moon-themes';
 import { themed } from '@heathmont/moon-utils';
-import { Header } from '../private/Header';
-import { Loader } from '../private/Loader';
-import { Map } from '../private/Map';
-import { Panel } from '../private/Panel';
-import { Props } from '../private/types/GeoMapChartTypes';
-import { getAxisPosition, getBarChartData } from '../private/utils';
-import { VerticalBar } from '../private/VerticalBar';
 import ChartIcons from './ChartIcons';
-import classNames from "./private/classNames"
+import { Header } from './private/Header';
+import { Loader } from './private/Loader';
+import { Map } from './private/Map';
+import { Panel } from './private/Panel';
+import { getAxisPosition, getBarChartData } from './private/utils';
+import { VerticalBar } from './private/VerticalBar';
+import { Props } from './types/GeoMapChartTypes';
+
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+}
 
 const Container: React.FC = ({ children }) => {
   return (
@@ -43,7 +45,7 @@ const GeoMapChart: React.FC<Props> = ({
   loaderText = 'No data',
 }) => {
   const theme = useTheme();
-  const isLoading = !data.length;
+  const isLoading  = !data.length;
 
   const chartData = getBarChartData({
     data,

@@ -3,14 +3,14 @@ import { ColorProps } from '@heathmont/moon-themes';
 
 export type Props = {
   title: string;
-  data:
+  data: any 
     | {
         label: string | React.ReactNode;
         code: string;
         dataKey: string;
         value: number;
       }[]
-    | ReactNode;
+    ;
   onUpdate?: () => void;
   onShare?: () => void;
   onExpand?: () => void;

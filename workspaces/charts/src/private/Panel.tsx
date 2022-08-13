@@ -1,4 +1,4 @@
-// @ts-nocheck
+//ts-nocheck
 import React from 'react';
 import { Loader } from '@heathmont/moon-core-tw';
 import {
@@ -6,8 +6,11 @@ import {
   ControlsDiagonalsOutsight,
 } from '@heathmont/moon-icons';
 import { rem } from '@heathmont/moon-themes';
-import classNames from "./private/classNames"
-import { ContainerProps, ButtonProps, Props } from './types/PanelProps';
+import { ContainerProps, ButtonProps, Props } from '../types/PanelProps';
+
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+}
 
 const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
   return (
@@ -79,7 +82,7 @@ export const Panel: React.FC<Props> = ({
           {isUpdating ? (
             <Loader size="twoxsmall" color="piccolo.100" />
           ) : (
-            <IconRefreshStyled />
+            <IconRefreshStyled ArrowsUpdate={undefined} children={undefined} />
           )}
         </Button>
       )}

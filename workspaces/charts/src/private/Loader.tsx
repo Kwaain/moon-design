@@ -1,6 +1,9 @@
 import React from 'react';
-import classNames from "./classNames"
-import { Props } from './types/LoaderProps';
+import { Props } from '../types/LoaderProps';
+
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+}
 
 const Title: React.FC = ({ children }) => {
   return (

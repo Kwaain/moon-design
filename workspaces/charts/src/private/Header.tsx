@@ -1,6 +1,9 @@
 import React from 'react';
-import classNames from "./classNames"
-import { Props, TitleProps, FilterWrapperProps } from './types/HeaderProps';
+import { Props, TitleProps, FilterWrapperProps } from '../types/HeaderProps';
+
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+}
 
 const Title: React.FC<TitleProps> = ({ children }) => {
   return <p className={classNames(`text-bulma text-xl`)}>{children}</p>;

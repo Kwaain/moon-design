@@ -1,15 +1,15 @@
 import BarChartLoading from '@heathmont/moon-icons';
-import Countries from './icons/CountriesIcon';
-import Devices from './icons/DevicesIcon';
-import GeoMapChartLoading from './icons/GeoMapChartLoadingIcon';
-import LineChartLoading from './icons/LineChartLoadingIcon';
-import Line from './icons/LineIcon';
-import PieChartLoading from './icons/PieChartLoadingIcon';
-import Time from './icons/TimeIcon';
-import TimeInverted from './icons/TimeInvertedIcon';
-import TopGames from './icons/TopGamesIcon';
-import TopPlayers from './icons/TopPlayersIcon';
-import TopSuppliers from './icons/TopSuppliersIcon';
+import Countries from './private/icons/CountriesIcon';
+import Devices from './private/icons/DevicesIcon';
+import GeoMapChartLoading from './private/icons/GeoMapChartLoadingIcon';
+import LineChartLoading from './private/icons/LineChartLoadingIcon';
+import Line from './private/icons/LineIcon';
+import PieChartLoading from './private/icons/PieChartLoadingIcon';
+import Time from './private/icons/TimeIcon';
+import TimeInverted from './private/icons/TimeInvertedIcon';
+import TopGames from './private/icons/TopGamesIcon';
+import TopPlayers from './private/icons/TopPlayersIcon';
+import TopSuppliers from './private/icons/TopSuppliersIcon';
 
 export default {
   TopGames,

@@ -2,18 +2,21 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FilterDropdown } from '@heathmont/moon-components';
 import { ControlsChevronDown } from '@heathmont/moon-icons';
 import { useClickAway, useKey } from 'react-use';
-import classNames from "./private/classNames"
 import {
   ContainerProps,
   DropdownWrapperProps,
   Props,
   ToggleProps,
-} from './private/types/FilterProps';
+} from './types/FilterProps';
 //check z-index on 35 line
 
 // const Title = styled(Text)(({ theme }) => ({
 //   color: theme.colorNew.trunks,
 // }));
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ');
+}
 
 const Toggle: React.FC<ToggleProps> = ({ isOpen, theme, children }) => {
   return (
