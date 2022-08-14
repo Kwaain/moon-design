@@ -1,4 +1,3 @@
-//ts-nocheck
 import React from 'react';
 import { Filter, LineChart } from '@heathmont/moon-charts-tw';
 import { CheckboxMultiselect } from '@heathmont/moon-components';

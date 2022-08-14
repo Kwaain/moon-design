@@ -5,7 +5,7 @@ export type ChildrenProps = {
 export type Props = {
   forceOpen?: boolean;
   title: string;
-  children: (props: ChildrenProps) => React.ReactNode;
+  children: React.ReactNode;
 };
 
 export type ToggleProps = {

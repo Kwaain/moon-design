@@ -5,14 +5,14 @@ export type Props = {
   data: {
     date: string;
     [key: string]: string | number;
-  }[];
+  }[] ;
   options: {
     label: string;
     dataKey: string;
-    value: number;
-    color: ColorProps;
-    yAxisId: string;
-    isActive?: boolean;
+    value:  string | number;
+    color?: ColorProps;
+    yAxisId?: string;
+    isActive?: boolean ;
   }[];
   onUpdate?: () => void;
   onShare?: () => void;

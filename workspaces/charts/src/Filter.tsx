@@ -25,8 +25,8 @@ const Toggle: React.FC<ToggleProps> = ({ isOpen, theme, children }) => {
         'flex items-center text-xs rounded-moon-s-sm h-max flex flex-col items-center',
         'bg-none border-none p-0 m-0 cursor-pointer',
         isOpen
-          ? `text-${theme.colorNew.piccolo}`
-          : `text-${theme.colorNre.trunks}`,
+          ? `text-piccolo`
+          : `text-trunks`,
         'first:mr-2'
       )}
     >
@@ -75,7 +75,7 @@ const Filter: React.FC<Props> = ({ forceOpen = false, title, children }) => {
       </Toggle>
       {isOpen && (
         <DropdownWrapper>
-          <FilterDropdown>{children({ setIsOpen })}</FilterDropdown>
+          <FilterDropdown>{ setIsOpen }</FilterDropdown>
         </DropdownWrapper>
       )}
     </Container>

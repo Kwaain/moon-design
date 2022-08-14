@@ -5,10 +5,10 @@ export type Props = {
   activeOptions: string[];
   formatFn: (props: { value: string | number; key: string }) => any;
   options: {
-    label: any;
-    dataKey: string;
-    value: string | number;
-    color: ColorProps;
+    label: string;
+    dataKey?: string;
+    value?: string | number;
+    color?: string | ColorProps;
   }[];
 };
 

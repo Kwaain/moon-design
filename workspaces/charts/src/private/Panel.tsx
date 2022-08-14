@@ -1,11 +1,10 @@
-//ts-nocheck
 import React from 'react';
 import { Loader } from '@heathmont/moon-core-tw';
 import {
   GenericDownload,
   ControlsDiagonalsOutsight,
+  ArrowsUpdate,
 } from '@heathmont/moon-icons';
-import { rem } from '@heathmont/moon-themes';
 import { ContainerProps, ButtonProps, Props } from '../types/PanelProps';
 
 const classNames = (...classes: string[]) => {
@@ -46,7 +45,7 @@ const Container: React.FC<ContainerProps> = ({ isActive, children }) => {
   );
 };
 
-const Header = ({ children }) => {
+const Header = ({ children  } : any) => {
   return (
     <div
       className={classNames(`grid gap-4 shrink-0  grid-cols-4 min-h-[24px]`)}
@@ -56,9 +55,9 @@ const Header = ({ children }) => {
   );
 };
 
-const IconRefreshStyled = ({ ArrowsUpdate, children }) => {
+const IconRefreshStyled = () => {
   return (
-    <ArrowsUpdate className={classNames(`rotate-90`)}>{children}</ArrowsUpdate>
+    <ArrowsUpdate className={classNames(`rotate-90`)}/>
   );
 };
 
@@ -72,7 +71,7 @@ export const Panel: React.FC<Props> = ({
   isUpdating,
   isActive = false,
 }) => (
-  <Container isActive={isActive} height={{ height }}>
+  <Container isActive={isActive}>
     <Header>
       {onUpdate && (
         <Button
@@ -80,21 +79,21 @@ export const Panel: React.FC<Props> = ({
           onClick={() => onUpdate()}
         >
           {isUpdating ? (
-            <Loader size="twoxsmall" color="piccolo.100" />
+            <Loader size="2xs" color="piccolo.100" />
           ) : (
-            <IconRefreshStyled ArrowsUpdate={undefined} children={undefined} />
+            <IconRefreshStyled/>
           )}
         </Button>
       )}
       <div />
       {onShare && (
         <Button onClick={() => onShare()}>
-          <GenericDownload fontSize={rem(24)} />
+          <GenericDownload fontSize={24} />
         </Button>
       )}
       {onExpand && (
         <Button onClick={() => onExpand()}>
-          <ControlsDiagonalsOutsight fontSize={rem(24)} />
+          <ControlsDiagonalsOutsight fontSize={24} />
         </Button>
       )}
     </Header>

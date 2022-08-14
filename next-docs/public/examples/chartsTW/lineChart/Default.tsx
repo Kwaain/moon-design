@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from 'react';
 import { CheckboxMultiselect } from '@heathmont/moon-components';
 import { Filter, LineChart } from '@heathmont/moon-core-tw';
@@ -45,7 +44,7 @@ const Example = () => {
     },
   ];
 
-  const formatFn = ({ value, key }) => {
+  const formatFn = ({ value, key } : any) => {
     return key === 'date' ? 'Fri ' + value : value;
   };
 
