@@ -1,25 +1,18 @@
 import React, { useRef } from 'react';
+import { rem } from '@heathmont/moon-utils';
 import { Transition } from 'react-transition-group';
-import { Props } from '../types/VerticalBarProps';
+import styled from 'styled-components';
 import { Cell, Count, Table, TableItem, Value } from './Table';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
+};
 
 export const Container: React.FC = ({ children }) => {
   return <div className={classNames('w-full h-full')}>{children}</div>;
 };
-export type BarProps = {
-  isNegative: boolean;
-  axisPosition: 'left' | 'center' | 'right';
-};
 
-export const Bar: React.FC<BarProps> = ({
-  isNegative,
-  axisPosition,
-  children,
-}) => {
+export const Bar: React.FC<any> = ({ isNegative, axisPosition, children }) => {
   return (
     <div
       className={classNames(
@@ -37,11 +30,44 @@ export const Bar: React.FC<BarProps> = ({
   );
 };
 
-export const Line: any = ({ children }: any) => {
+const Line = styled.div(({ theme }) => ({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  height: '100%',
+  width: 0,
+  borderRadius: `0 ${rem(4)} ${rem(4)} 0`,
+  willChange: 'width',
+  transition: `width ${theme.newTokens.transition.slow}`,
+}));
+
+// export const Line: any = ({ children }: any) => {
+//   return (
+//     <div
+//       className={classNames(
+//         'absolute top-0 bg-trunks left-0 h-full w-0 rounded-[0_1rem_1rem_0] will-change-[width] transition-[width] ease-in-out duration-600'
+//       )}
+//     >
+//       {children}
+//     </div>
+//   );
+// };
+
+// const Center = styled.div(({ theme }) => ({
+//   position: 'absolute',
+//   top: 0,
+//   left: '50%',
+//   transform: 'translateX(-50%)',
+//   height: '100%',
+//   width: rem(1),
+//   background: theme.colorNew.beerus,
+// }));
+
+export const Center: React.FC = ({ children }) => {
   return (
     <div
       className={classNames(
-        'absolute top-0 left-0 h-full w-0 rounded-[0 1rem 1rem 0] will-change-[width] transition-[width] ease-in-out duration-600'
+        'absolute top-0 left-1/2 -translate-x-1/2	h-full w-4 bg-beerus'
       )}
     >
       {children}
@@ -49,16 +75,16 @@ export const Line: any = ({ children }: any) => {
   );
 };
 
-export const Center: React.FC = ({ children }) => {
-  return (
-    <div
-      className={classNames(
-        'absolute top-0 left-1/2 -translate-x-1/2	h-full w-px bg-beerus'
-      )}
-    >
-      {children}
-    </div>
-  );
+type Props = {
+  data: {
+    label: string | React.ReactNode;
+    value: number;
+    opacity: number;
+    percent: number;
+    isNegative: boolean;
+    color: string;
+  }[];
+  axisPosition: 'left' | 'center' | 'right';
 };
 
 export const VerticalBar: React.FC<Props> = ({ data, axisPosition }) => {
@@ -70,9 +96,9 @@ export const VerticalBar: React.FC<Props> = ({ data, axisPosition }) => {
       <Table withAdditionalCell>
         {data.map(
           (
-            { label, value, opacity, percent, isNegative, color } ,
+            { label, value, opacity, percent, isNegative, color },
             index: number
-          ) : any => {
+          ) => {
             const percentWidth = percent < minWidth ? minWidth : percent;
 
             return (
@@ -88,7 +114,7 @@ export const VerticalBar: React.FC<Props> = ({ data, axisPosition }) => {
                   {axisPosition === 'center' && <Center />}
                   <Bar isNegative={isNegative} axisPosition={axisPosition}>
                     <Transition nodeRef={lineRef} in appear timeout={0}>
-                      {(state: any) => (
+                      {(state) => (
                         <Line
                           ref={lineRef}
                           style={{

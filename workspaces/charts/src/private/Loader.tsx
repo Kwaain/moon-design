@@ -3,11 +3,11 @@ import { Props } from '../types/LoaderProps';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
+};
 
 const Title: React.FC = ({ children }) => {
   return (
-    <p className={classNames(`text-trunks.100 text-sm mt-4`)}>{children}</p>
+    <p className={classNames(`text-trunks.100 text-[14px]`)}>{children}</p>
   );
 };
 

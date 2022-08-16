@@ -1,38 +1,41 @@
-// @ts-nocheck
-import React, { useRef } from 'react';
+import React, { ReactChildren, useRef } from 'react';
 import { Transition } from 'react-transition-group';
-import styled from 'styled-components';
 import ChartIcons from './ChartIcons';
-import classNames from './private/classNames';
 import { Header } from './private/Header';
 import { Loader } from './private/Loader';
 import { Panel } from './private/Panel';
 import { Count, Table, Cell, TableItem, Value } from './private/Table';
 import { Props } from './types/TableChartProps';
 
-const CustomLoader = styled(Loader)({});
+const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+};
 
-const Container: React.FC = ({ children }) => {
+const Container: React.FC<any> = ({
+  isActive,
+  children,
+}: {
+  isActive?: boolean;
+  children: ReactChildren;
+}) => {
   return (
-    <div className={classNames('flex grow h-full overflow-auto')}>
+    <div
+      className={classNames(
+        'flex flex-grow h-full overflow-auto',
+        isActive ? '[tr>*]:text-goten' : ''
+      )}
+    >
       {children}
     </div>
   );
 };
 
 // const Container = styled.div<{ isActive: boolean }>(({ theme, isActive }) => ({
-//   display: 'flex',
-//   flexGrow: 1,
-//   height: '100%',
-//   overflow: 'auto',
 //   ...(isActive && {
 //     'tr *': {
 //       color: theme.colorNew.goten,
 //     },
 //     [`${CustomLoader} p`]: {
-//       color: theme.colorNew.goten,
-//     },
-//     [`${Count}`]: {
 //       color: theme.colorNew.goten,
 //     },
 //   }),
@@ -68,7 +71,7 @@ const TableChart: React.FC<Props> = ({
       <>
         <Header isActive={isActive} icon={icon} title={title} filter={filter} />
         {isLoading ? (
-          <CustomLoader
+          <Loader
             icon={<ChartIcons.BarChartLoading />}
             title={loaderText}
             color={isActive ? 'gohan.100' : 'trunks.100'}
@@ -77,7 +80,6 @@ const TableChart: React.FC<Props> = ({
           <Container isActive={isActive}>
             <Table>
               {data.map((item, index) => (
-                // eslint-disable-next-line
                 <Transition
                   nodeRef={firstCellRef}
                   key={index}
@@ -91,6 +93,7 @@ const TableChart: React.FC<Props> = ({
                         ref={firstCellRef}
                         opacity={state === 'entered' ? 1 : 0}
                       >
+                        {/* dodaj na cout text-trunks */}
                         <Count>{index + 1}</Count>
                       </Cell>
                       <Cell wide opacity={state === 'entered' ? 1 : 0}>

@@ -9,12 +9,11 @@ import { getAxisPosition, getBarChartData } from './private/utils';
 import { VerticalBar } from './private/VerticalBar';
 import { Props } from './types/VerticalBarChartProps';
 
-
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
+};
 
-const Container: React.FC = ({ children }: any) => {
+const Container: React.FC = ({ children }) => {
   return (
     <div className={classNames('flex grow h-full overflow-hidden')}>
       {children}
@@ -35,7 +34,7 @@ const VerticalBarChart: React.FC<Props> = ({
   icon = <ChartIcons.Countries />,
   positiveColor = 'krillin.100',
   negativeColor = 'chiChi.100',
-  formatFn = ({ value } : any) => value,
+  formatFn = ({ value }) => value,
   loaderText = 'No data',
 }) => {
   const theme = useTheme();
@@ -61,7 +60,7 @@ const VerticalBarChart: React.FC<Props> = ({
         <Header icon={icon} title={title} filter={filter} />
         <Container>
           {isLoading ? (
-            <Loader icon={ChartIcons} title={loaderText} />
+            <Loader icon={<ChartIcons.BarChartLoading />} title={loaderText} />
           ) : (
             <VerticalBar
               axisPosition={getAxisPosition(data)}

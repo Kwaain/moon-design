@@ -1,27 +1,42 @@
-//@ts-nocheck
 import React, { useRef, useState } from 'react';
 import { useTheme } from '@heathmont/moon-themes';
 import { themed } from '@heathmont/moon-utils';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-import { MapData, MapProps } from '../types/MapProps';
 import { TooltipWrapper, Item, ColorPreview } from './Tooltip';
 import worldMap from './World110m';
+import styled from 'styled-components';
+import { MapData, MapProps } from '../types/MapProps';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
-
-const Container: React.FC = ({ children }) => {
-  return (
-    <div
-      className={classNames(
-        'relative w-3/5 h-full flex flex-col items-center justify-center'
-      )}
-    >
-      {children}
-    </div>
-  );
 };
+
+const Text: React.FC = ({ children }) => {
+  return <p className={classNames(`text-goku.80 text-[12px]`)}>{children}</p>;
+};
+
+// const Container: React.FC = ({ children }) => {
+//   return (
+//     <div
+//       className={classNames(
+//         'relative w-3/5 h-full flex flex-col items-center justify-center'
+//       )}
+//     >
+//       {children}
+//     </div>
+//   );
+// };
+
+//NECE DA RADI WIDTH KOD TAILWIND -> RADI SAMO W-FULL
+const Container = styled.div({
+  position: 'relative',
+  width: '60%',
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+});
 
 export const Map: React.FC<MapProps> = ({ data }) => {
   const theme = useTheme();
@@ -60,9 +75,7 @@ export const Map: React.FC<MapProps> = ({ data }) => {
                   opacity: hoveredItem.opacity,
                 }}
               />
-              {/* <Text size={12} as="span"> */}
-              {hoveredItem.label}
-              {/* </Text> */}• {hoveredItem.value}
+              <Text>{hoveredItem.label}</Text> • {hoveredItem.value}
             </>
           </Item>
         )}

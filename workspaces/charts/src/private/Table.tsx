@@ -1,16 +1,17 @@
-//ts-nocheck
 import React from 'react';
 import styled from 'styled-components';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
+};
 
 export type CellProps = {
+  ref?: React.RefObject<HTMLInputElement>;
   wide?: boolean;
   align?: 'left' | 'center' | 'right';
   opacity?: number;
 };
+
 export const Cell: React.FC<CellProps> = ({
   wide,
   align,
@@ -31,6 +32,7 @@ export const Cell: React.FC<CellProps> = ({
     </div>
   );
 };
+
 export const Table = styled.div<{ withAdditionalCell?: boolean }>(
   ({ withAdditionalCell }) => ({
     width: '100%',
@@ -42,35 +44,36 @@ export const Table = styled.div<{ withAdditionalCell?: boolean }>(
     gridTemplateRows: 'repeat(5, 1fr)',
     justifyItems: 'stretch',
     alignItems: 'center',
-    ...(withAdditionalCell
-      ? {
-          [Cell as any]:  {
-            '&:nth-child(4n  + 1)': {
-              paddingLeft: 0,
-            },
-            '&:nth-child(4n)': {
-              paddingRight: 0,
-            },
-            '&:nth-child(4n + 3)': {
-              alignSelf: 'stretch',
-              display: 'flex',
-              alignItems: 'center',
-            },
-          },
-        }
-      : {
-          [Cell as any]: {
-            '&:nth-child(3n  + 1)': {
-              paddingLeft: 0,
-            },
-            '&:nth-child(3n)': {
-              paddingRight: 0,
-            },
-          },
-        }),
+    // ...(withAdditionalCell
+    //   ? {
+    //       [Cell]: {
+    //         '&:nth-child(4n  + 1)': {
+    //           paddingLeft: 0,
+    //         },
+    //         '&:nth-child(4n)': {
+    //           paddingRight: 0,
+    //         },
+    //         '&:nth-child(4n + 3)': {
+    //           alignSelf: 'stretch',
+    //           display: 'flex',
+    //           alignItems: 'center',
+    //         },
+    //       },
+    //     }
+    //   : {
+    //       [Cell]: {
+    //         '&:nth-child(3n  + 1)': {
+    //           paddingLeft: 0,
+    //         },
+    //         '&:nth-child(3n)': {
+    //           paddingRight: 0,
+    //         },
+    //       },
+    //     }),
   })
 );
 
+// popravi margin left
 export const TableItem: React.FC = ({ children }) => {
   return (
     <div

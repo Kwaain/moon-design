@@ -1,10 +1,10 @@
 import React from 'react';
-import { themed } from '@heathmont/moon-utils';
-import { ButtonProps, Props, ColorPreviewProps } from '../types/SelectorProps';
+import { ColorProps } from '@heathmont/moon-themes';
+import { ColorPreviewProps, ButtonProps } from '../types/SelectorProps';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
+};
 
 const Container: React.FC = ({ children }) => {
   return (
@@ -30,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({ isActive, children }) => {
   return (
     <button
       className={classNames(
-        'flex flex-col shrink-0 relative my-0 mx-2 py-2 pl-8 pr-4 cursor-pointer',
+        'flex flex-col shrink-0 relative my-0 mx-2 pt-2 pr-4 pl-2 pb-8 cursor-pointer',
         'rounded-lg border-none will-change-[background] transition-[background] ease-in-out duration-400 min-w-[124px]',
         'hover:bg-goku-80',
         'active:bg-goku-40',
@@ -41,17 +41,12 @@ const Button: React.FC<ButtonProps> = ({ isActive, children }) => {
     </button>
   );
 };
-
-const ColorPreview: React.FC<ColorPreviewProps> = ({
-  color,
-  theme,
-  children,
-}) => {
+const ColorPreview: React.FC<ColorPreviewProps> = ({ color, children }) => {
   return (
     <div
       className={classNames(
         'w-2 h-2 rounded-[50%] absolute top-3.5 left-3.5',
-        color ? themed('bg-', color)(theme) : 'bg-piccolo'
+        color ? `bg-${color}` : 'bg-piccolo'
       )}
     >
       {children}
@@ -73,6 +68,18 @@ const Value: React.FC = ({ children }) => {
   );
 };
 
+type Props = {
+  onChange: (key: string, isActive: boolean) => void;
+  activeOptions: string[];
+  formatFn: (props: { value: string | number; key: string }) => any;
+  options: {
+    label: any;
+    dataKey: string;
+    value: string | number;
+    color?: ColorProps | string;
+  }[];
+};
+
 export const Selector: React.FC<Props> = ({
   options,
   activeOptions,
@@ -81,7 +88,7 @@ export const Selector: React.FC<Props> = ({
 }) => (
   <Container>
     <List>
-      {options.map((option:any) => {
+      {options.map((option) => {
         const isActive = activeOptions.includes(option.dataKey);
         const value = formatFn({ value: option.value, key: option.dataKey });
 

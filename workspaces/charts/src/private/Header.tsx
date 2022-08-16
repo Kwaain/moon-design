@@ -1,22 +1,28 @@
 import React from 'react';
-import { Props, TitleProps, FilterWrapperProps } from '../types/HeaderProps';
+import { Props, TitleProps } from '../types/HeaderProps';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
+};
 
-const Title: React.FC<TitleProps> = ({ children }) => {
-  return <p className={classNames(`text-bulma text-xl`)}>{children}</p>;
+const Title: React.FC<TitleProps> = ({ children, isActive }) => {
+  return (
+    <p
+      className={classNames(
+        `text-bulma text-[20px]`,
+        isActive ? 'text-goten' : ''
+      )}
+    >
+      {children}
+    </p>
+  );
 };
 
 const IconWrapper = ({ children }: any) => {
   return <div className={classNames('h-10')}>{children}</div>;
 };
 
-const FilterWrapper: React.FC<FilterWrapperProps> = ({
-  isActive,
-  children,
-}) => {
+const FilterWrapper: React.FC<any> = ({ isActive, children }) => {
   return (
     <div className={classNames(isActive ? `color-goten` : ``)}>{children}</div>
   );
@@ -40,9 +46,9 @@ export const Header: React.FC<Props> = ({
   title,
   isActive = false,
 }) => (
-  <Container>
+  <Container isActive={isActive}>
     <IconWrapper>{icon}</IconWrapper>
-    <Title isActive={isActive}>{title}</Title>
-    <FilterWrapper isActive={isActive}>{filter}</FilterWrapper>
+    <Title>{title}</Title>
+    <FilterWrapper>{filter}</FilterWrapper>
   </Container>
 );

@@ -1,17 +1,19 @@
 import React from 'react';
 import { Loader } from '@heathmont/moon-core-tw';
 import {
+  ArrowsUpdate,
   GenericDownload,
   ControlsDiagonalsOutsight,
-  ArrowsUpdate,
 } from '@heathmont/moon-icons';
-import { ContainerProps, ButtonProps, Props } from '../types/PanelProps';
+import { rem } from '@heathmont/moon-utils';
+import styled from 'styled-components';
+import { Props } from '../types/PanelProps';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
+};
 
-const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
+const Button: React.FC<any> = ({ hasUpdates, children, isActive }) => {
   return (
     <button
       className={classNames(
@@ -30,35 +32,36 @@ const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
   );
 };
 
-const Container: React.FC<ContainerProps> = ({ isActive, children }) => {
-  return (
-    <button
-      className={classNames(
-        `flex flex-col p-4`,
-        isActive
-          ? 'color-goten bg-piccolo'
-          : 'color-bulma bg-gohan rounded-2xl w-full'
-      )}
-    >
-      {children}
-    </button>
-  );
-};
-
-const Header = ({ children  } : any) => {
+const Container: React.FC<any> = ({ isActive, children }) => {
   return (
     <div
-      className={classNames(`grid gap-4 shrink-0  grid-cols-4 min-h-[24px]`)}
+      className={classNames(
+        `flex flex-col p-4 rounded-xl w-full`,
+        isActive ? 'color-goten bg-piccolo' : 'color-bulma bg-gohan'
+      )}
     >
       {children}
     </div>
   );
 };
+// const Header = ({ children }: any) => {
+//   return (
+//     <div className="grid overflow-hidden grid-cols-3 grid-rows-1 gap-2">
+//       {children}
+//     </div>
+//   );
+// }; ne radi
+
+const Header = styled.div({
+  display: 'grid',
+  flexShrink: 0,
+  gridTemplateColumns: 'auto 1fr auto auto',
+  gridColumnGap: rem(16),
+  minHeight: rem(24),
+});
 
 const IconRefreshStyled = () => {
-  return (
-    <ArrowsUpdate className={classNames(`rotate-90`)}/>
-  );
+  return <ArrowsUpdate className={classNames(`rotate-90`)} />;
 };
 
 export const Panel: React.FC<Props> = ({
@@ -71,7 +74,7 @@ export const Panel: React.FC<Props> = ({
   isUpdating,
   isActive = false,
 }) => (
-  <Container isActive={isActive}>
+  <Container isActive={isActive} style={{ height }}>
     <Header>
       {onUpdate && (
         <Button
@@ -81,19 +84,19 @@ export const Panel: React.FC<Props> = ({
           {isUpdating ? (
             <Loader size="2xs" color="piccolo.100" />
           ) : (
-            <IconRefreshStyled/>
+            <IconRefreshStyled />
           )}
         </Button>
       )}
       <div />
       {onShare && (
         <Button onClick={() => onShare()}>
-          <GenericDownload fontSize={24} />
+          <GenericDownload fontSize={rem(24)} />
         </Button>
       )}
       {onExpand && (
         <Button onClick={() => onExpand()}>
-          <ControlsDiagonalsOutsight fontSize={24} />
+          <ControlsDiagonalsOutsight fontSize={rem(24)} />
         </Button>
       )}
     </Header>

@@ -13,8 +13,7 @@ export type Props = {
 };
 
 export type ColorPreviewProps = {
-  color: string;
-  theme?: any;
+  color: any;
 };
 
 export type ButtonProps = {

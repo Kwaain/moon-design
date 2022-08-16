@@ -17,4 +17,11 @@ export type Props = {
 
 export type ColorPreviewProps = {
   background?: string;
+  style?: any;
+};
+
+export type TooltipWrapperProps = {
+  ref?: React.RefObject<HTMLDivElement>
+  background?: string;
+  style?: any;
 };

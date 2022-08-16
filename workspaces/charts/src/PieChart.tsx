@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useTheme } from '@heathmont/moon-themes';
+import { ColorProps, useTheme } from '@heathmont/moon-themes';
 import { rem, themed } from '@heathmont/moon-utils';
 import {
   Pie,
@@ -17,13 +17,6 @@ import { Panel } from './private/Panel';
 import { Tooltip } from './private/Tooltip';
 import { Props } from './types/PieChartProps';
 
-// const ResponsiveContainerCustomized = ({children}) => {
-//   return (
-//     <ResponsiveContainer className={classNames('h-full flex grow')}>
-// {children}
-//     </ResponsiveContainer>
-//   )
-// }
 const ResponsiveContainerCustomized = styled(ResponsiveContainer)(
   ({ theme }) => ({
     height: '100%',
@@ -51,7 +44,7 @@ const PieChart: React.FC<Props> = ({
   filter,
   height = 446,
   icon = <ChartIcons.Devices />,
-  formatFn = ({ value } : any) => value,
+  formatFn = ({ value }) => value,
   loaderText = 'No data',
 }) => {
   const theme = useTheme();
@@ -123,7 +116,7 @@ const PieChart: React.FC<Props> = ({
           fill={fill}
           style={{ filter: 'url(#shadow)' }}
           cornerRadius={100}
-          onMouseOver={(e : any) => {
+          onMouseOver={(e) => {
             if (!e || !e.currentTarget) return;
             const sector = e.currentTarget.closest('.recharts-pie-sector');
             if (!sector || !sector.parentElement) return;
@@ -153,7 +146,7 @@ const PieChart: React.FC<Props> = ({
         {isLoading ? (
           <Loader icon={<ChartIcons.PieChartLoading />} title={loaderText} />
         ) : (
-          <ResponsiveContainerCustomized>
+          <ResponsiveContainerCustomized className={'flex grow h-full'}>
             <RechartPieChart>
               <RechartTooltip
                 coordinate={{
@@ -176,9 +169,8 @@ const PieChart: React.FC<Props> = ({
                 cornerRadius="100%"
                 onMouseEnter={onMouseEnter}
               >
-                {data.map((item: any, index: number)  => (
+                {data.map((item, index) => (
                   <Cell
-                    // eslint-disable-next-line
                     key={`${index}-${item.value}`}
                     stroke="none"
                     data-index={index}

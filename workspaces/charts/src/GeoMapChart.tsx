@@ -12,7 +12,7 @@ import { Props } from './types/GeoMapChartTypes';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
+};
 
 const Container: React.FC = ({ children }) => {
   return (
@@ -45,7 +45,7 @@ const GeoMapChart: React.FC<Props> = ({
   loaderText = 'No data',
 }) => {
   const theme = useTheme();
-  const isLoading  = !data.length;
+  const isLoading = !data.length;
 
   const chartData = getBarChartData({
     data,

@@ -1,4 +1,4 @@
-import BarChartLoading from '@heathmont/moon-icons';
+import BarChartLoading from './private/icons/BarChartLoadingIcon';
 import Countries from './private/icons/CountriesIcon';
 import Devices from './private/icons/DevicesIcon';
 import GeoMapChartLoading from './private/icons/GeoMapChartLoadingIcon';

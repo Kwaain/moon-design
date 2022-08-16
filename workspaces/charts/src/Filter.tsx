@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FilterDropdown } from '@heathmont/moon-components';
 import { ControlsChevronDown } from '@heathmont/moon-icons';
+import { rem } from '@heathmont/moon-utils';
 import { useClickAway, useKey } from 'react-use';
 import {
   ContainerProps,
@@ -8,26 +9,23 @@ import {
   Props,
   ToggleProps,
 } from './types/FilterProps';
-//check z-index on 35 line
 
-// const Title = styled(Text)(({ theme }) => ({
-//   color: theme.colorNew.trunks,
-// }));
+const Title: React.FC = ({ children }) => {
+  return <p className={classNames(`text-trunks text-sm mr-2`)}>{children}</p>;
+};
 
-function classNames(...classes: string[]) {
+const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
+};
 
-const Toggle: React.FC<ToggleProps> = ({ isOpen, theme, children }) => {
+const Toggle: React.FC<ToggleProps> = ({ isOpen, children }) => {
   return (
+    // rounded-moon-s-sm h-max flex flex-col items-center
     <button
       className={classNames(
-        'flex items-center text-xs rounded-moon-s-sm h-max flex flex-col items-center',
+        'flex items-center text-xs',
         'bg-none border-none p-0 m-0 cursor-pointer',
-        isOpen
-          ? `text-piccolo`
-          : `text-trunks`,
-        'first:mr-2'
+        isOpen ? `text-piccolo` : `text-trunks`
       )}
     >
       {children}
@@ -36,18 +34,15 @@ const Toggle: React.FC<ToggleProps> = ({ isOpen, theme, children }) => {
 };
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
-  return <div className={classNames('inline-block relative')}>{children}</div>;
+  return <div className={classNames('relative inline-block')}>{children}</div>;
 };
 
-const DropdownWrapper: React.FC<DropdownWrapperProps> = ({
-  theme,
-  children,
-}) => {
+const DropdownWrapper: React.FC<DropdownWrapperProps> = ({ children }) => {
   return (
     <div
       className={classNames(
         'absolute top-full left-1/2	-translate-x-1/2	pt-2 ',
-        `text-${theme.colorNew.bulma} z-${theme.newTokens.zIndex.toggle}`
+        `text-bulma z-1`
       )}
     >
       {children}
@@ -68,14 +63,13 @@ const Filter: React.FC<Props> = ({ forceOpen = false, title, children }) => {
   return (
     <Container ref={ref}>
       <Toggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
-        {/* <Title size={14}> */}
-        {title}
-        {/* </Title> */}
-        <ControlsChevronDown fontSize={24} />
+        <Title>{title}</Title>
+        <ControlsChevronDown fontSize={rem(24)} />
       </Toggle>
       {isOpen && (
         <DropdownWrapper>
-          <FilterDropdown>{ setIsOpen }</FilterDropdown>
+          {/* ovdje je bilo nesto children kao prefix */}
+          <FilterDropdown>{{ setIsOpen }}</FilterDropdown>
         </DropdownWrapper>
       )}
     </Container>
