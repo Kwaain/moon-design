@@ -39,7 +39,7 @@ const GeoMapChart: React.FC<Props> = ({
   filter,
   height = 446,
   icon = <ChartIcons.Countries />,
-  positiveColor = 'krillin.100',
+  positiveColor = 'piccolo.100',
   negativeColor = 'chiChi.100',
   formatFn = ({ value }) => value,
   loaderText = 'No data',

@@ -2,17 +2,17 @@ import React, { useRef, useState } from 'react';
 import { useTheme } from '@heathmont/moon-themes';
 import { themed } from '@heathmont/moon-utils';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-import { TooltipWrapper, Item, ColorPreview } from './Tooltip';
-import worldMap from './World110m';
 import styled from 'styled-components';
 import { MapData, MapProps } from '../types/MapProps';
+import { TooltipWrapper, Item, ColorPreview } from './Tooltip';
+import worldMap from './World110m';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };
 
 const Text: React.FC = ({ children }) => {
-  return <p className={classNames(`text-goku.80 text-[12px]`)}>{children}</p>;
+  return <p className={classNames(`text-goku.80 text-xs`)}>{children}</p>;
 };
 
 // const Container: React.FC = ({ children }) => {

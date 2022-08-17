@@ -4,6 +4,7 @@ import { Transition } from 'react-transition-group';
 import styled from 'styled-components';
 import { Cell, Count, Table, TableItem, Value } from './Table';
 
+//ne radi kako treba
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { rem } from '@heathmont/moon-utils';
 import styled from 'styled-components';
 
 const classNames = (...classes: string[]) => {
@@ -12,26 +13,40 @@ export type CellProps = {
   opacity?: number;
 };
 
-export const Cell: React.FC<CellProps> = ({
-  wide,
-  align,
+//cell treba prikazati lijepo
+// export const Cell: React.FC<CellProps> = ({
+//   wide,
+//   align,
+//   opacity,
+//   children,
+// }) => {
+//   return (
+//     <div
+//       className={classNames(
+//         'py-1 px-2 relative opacity-100',
+//         'transition-[opacity] ease-in-out duration-600',
+//         opacity ? `opacity-${opacity}` : 'opacity-100',
+//         align ? `text-${align}` : 'text-left',
+//         wide ? `w-full` : 'w-auto'
+//       )}
+//     >
+//       {children}
+//     </div>
+//   );
+// };
+
+export const Cell = styled.div<{
+  wide?: boolean;
+  align?: 'left' | 'center' | 'right';
+  opacity?: number;
+}>(({ wide, align, theme, opacity = 1 }) => ({
+  padding: `${rem(4)} ${rem(8)}`,
+  width: wide ? '100%' : 'auto',
+  textAlign: align || 'left',
+  position: 'relative',
   opacity,
-  children,
-}) => {
-  return (
-    <div
-      className={classNames(
-        'py-1 px-2 relative opacity-100',
-        'transition-[opacity] ease-in-out duration-600',
-        opacity ? `opacity-${opacity}` : 'opacity-100',
-        align ? `text-${align}` : 'text-left',
-        wide ? `w-full` : 'w-auto'
-      )}
-    >
-      {children}
-    </div>
-  );
-};
+  transition: `opacity ${theme.newTokens.transition.slow}`,
+}));
 
 export const Table = styled.div<{ withAdditionalCell?: boolean }>(
   ({ withAdditionalCell }) => ({

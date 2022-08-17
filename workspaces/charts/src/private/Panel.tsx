@@ -7,13 +7,13 @@ import {
 } from '@heathmont/moon-icons';
 import { rem } from '@heathmont/moon-utils';
 import styled from 'styled-components';
-import { Props } from '../types/PanelProps';
+import { Props, ButtonProps, ContainerProps } from '../types/PanelProps';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };
 
-const Button: React.FC<any> = ({ hasUpdates, children, isActive }) => {
+const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
   return (
     <button
       className={classNames(
@@ -32,7 +32,7 @@ const Button: React.FC<any> = ({ hasUpdates, children, isActive }) => {
   );
 };
 
-const Container: React.FC<any> = ({ isActive, children }) => {
+const Container: React.FC<ContainerProps> = ({ isActive, children }) => {
   return (
     <div
       className={classNames(
@@ -44,13 +44,14 @@ const Container: React.FC<any> = ({ isActive, children }) => {
     </div>
   );
 };
+
 // const Header = ({ children }: any) => {
 //   return (
-//     <div className="grid overflow-hidden grid-cols-3 grid-rows-1 gap-2">
+//     <div className="grid shrink-0 grid-cols-[auto,1fr,auto,auto] gap-4 min-h-6">
 //       {children}
 //     </div>
 //   );
-// }; ne radi
+// };
 
 const Header = styled.div({
   display: 'grid',
@@ -74,7 +75,7 @@ export const Panel: React.FC<Props> = ({
   isUpdating,
   isActive = false,
 }) => (
-  <Container isActive={isActive} style={{ height }}>
+  <Container isActive={isActive}>
     <Header>
       {onUpdate && (
         <Button

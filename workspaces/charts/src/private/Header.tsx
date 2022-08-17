@@ -8,10 +8,7 @@ const classNames = (...classes: string[]) => {
 const Title: React.FC<TitleProps> = ({ children, isActive }) => {
   return (
     <p
-      className={classNames(
-        `text-bulma text-[20px]`,
-        isActive ? 'text-goten' : ''
-      )}
+      className={classNames(`text-bulma text-xl`, isActive ? 'text-goten' : '')}
     >
       {children}
     </p>

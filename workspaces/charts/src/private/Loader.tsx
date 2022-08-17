@@ -6,9 +6,7 @@ const classNames = (...classes: string[]) => {
 };
 
 const Title: React.FC = ({ children }) => {
-  return (
-    <p className={classNames(`text-trunks.100 text-[14px]`)}>{children}</p>
-  );
+  return <p className={classNames(`text-trunks.100 text-sm`)}>{children}</p>;
 };
 
 const Container: React.FC = ({ children }) => {

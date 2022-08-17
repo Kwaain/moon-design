@@ -7,6 +7,7 @@ export type Props = {
   isActive?: boolean;
   height?: string | number;
   children?: React.ReactNode;
+  style?: any;
 };
 
 export type ButtonProps = {
