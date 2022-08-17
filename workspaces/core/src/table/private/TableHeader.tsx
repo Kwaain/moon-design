@@ -1,4 +1,4 @@
-import React, { ReactElement} from 'react';
+import React from 'react';
 import Checkbox from '../../checkbox/Checkbox';
 import { TableHeaderProp } from './TableItemProp';
 
@@ -12,7 +12,7 @@ export const TableHeader = ({
   onIconClick,
 }: TableHeaderProp) => {
   return (
-    <div className=" flex items-center p-1">
+    <div className=" flex relative items-center ">
       {isCheckbox && index === 0 && (
         <Checkbox
           id={'selectAll'}
@@ -26,7 +26,9 @@ export const TableHeader = ({
         <p className="text-moon-12 leading-4 text-gray-600 ">{item.subname}</p>
       </div>
       <div
-        className="flex items-center justify-end relative cursor-pointer "
+        className={`flex items-center justify-end cursor-pointer ${
+          index === 0 && 'absolute left-[100%] ml-4'
+        }`}
         onClick={onIconClick}
         id={item.id}
       >

@@ -24,8 +24,8 @@ const Table = ({
   }, [data]);
 
   return (
-    <div className="w-full h-full flex flex-col justify-between items-center min-w-[600px] overflow-hidden">
-      <div className="w-full h-full flex p-4 justify-between items-center  min-w-[600px]">
+    <div className="w-full h-full flex flex-col justify-between items-center ">
+      <div className="w-full h-full flex p-4 justify-between items-center ">
         {column.map((item: any, index: number) => (
           <TableHeader
             item={item}
@@ -37,7 +37,7 @@ const Table = ({
           />
         ))}
       </div>
-      <div className="w-full h-full min-w-[600px]">
+      <div className="w-full h-full ">
         {data.map((item: any) => (
           <TableRow
             item={item}

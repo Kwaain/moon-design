@@ -15,7 +15,6 @@ const onIconClick = () => {
     {
       name: 'Name',
       iconRight: <ArrowsUp height={20} width={20} />,
-      id: 0,
       value: 'name',
     },
     {

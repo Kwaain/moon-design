@@ -1,5 +1,5 @@
 import { Table } from '@heathmont/moon-core-tw';
-import { OtherFrame } from '@heathmont/moon-icons-tw';
+import { ArrowsUp, OtherFrame } from '@heathmont/moon-icons-tw';
 import React, { useState } from 'react';
 
 interface TableItem {
@@ -40,6 +40,7 @@ const Example = () => {
   const column = [
     {
       name: 'Name',
+      iconRight: <ArrowsUp height={20} width={20} />,
       value: 'name',
     },
     {

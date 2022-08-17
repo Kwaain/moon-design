@@ -1,5 +1,5 @@
-import { GenericDelete } from "@heathmont/moon-icons-tw";
 import React, { useEffect, useState } from "react";
+import { GenericDelete } from "@heathmont/moon-icons-tw";
 import Checkbox from "../../checkbox/Checkbox";
 import { TableRowProp } from "./TableItemProp";
 import TriangleIcon from "./triangleIcon";
@@ -22,7 +22,7 @@ export const TableRow = ({
 
   return (
     <div
-      className={`w-full flex items-center p-4 mb-1 justify-between rounded-lg bg-gohan hover:bg-[#4841a5]/[.12] min-w-[600px] ${
+      className={`w-full flex items-center mb-1 justify-between rounded-lg bg-gohan hover:bg-[#4841a5]/[.12] min-w-[600px] ${
         isChecked && 'bg-[#4841a5]/[.12]'
       }`}
       onMouseOver={() => setHoveredIcon(true)}
@@ -30,7 +30,10 @@ export const TableRow = ({
     >
       {column.map((columnItem: any, index: number) => {
         return (
-          <div className={`p-1 flex items-center `} key={item.index}>
+          <div
+            className={`p-4 flex items-center `}
+            key={item.index}
+          >
             {isCheckbox && index === 0 && (
               <Checkbox
                 id={item.id}
@@ -44,7 +47,7 @@ export const TableRow = ({
             <div className="flex items-center relative ">
               {!isCheckbox && hoveredIcon && columnItem.value === 'iconRight' && (
                 <div
-                  className="bg-[#4841a5] rounded-[4px] p-1 absolute items-center -translate-x-1/4"
+                  className="bg-[#4841a5] p-1 rounded-[4px] absolute items-center -translate-x-1/4"
                   onMouseOver={() => setShowPopup(true)}
                   onMouseOut={() => setShowPopup(false)}
                   onClick={onDelete}
@@ -70,8 +73,8 @@ export const TableRow = ({
               <div className="flex items-center">
                 {item[`${columnItem.iconLeft}`]}
               </div>
-              <div className=" flex flex-col py-1 ">
-                <p className="text-moon-14 leading-6 ">
+              <div className={`flex flex-col`}>
+                <p className="text-moon-14 leading-6 w-full ">
                   {item[`${columnItem.value}`]}
                 </p>
                 <p className="text-moon-12 leading-4 text-gray-600 ">
