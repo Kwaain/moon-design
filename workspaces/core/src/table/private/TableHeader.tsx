@@ -12,7 +12,7 @@ export const TableHeader = ({
   onIconClick,
 }: TableHeaderProp) => {
   return (
-    <div className=" flex relative items-center ">
+    <div className=" flex relative items-center max-w-[200px] ">
       {isCheckbox && index === 0 && (
         <Checkbox
           id={'selectAll'}
@@ -22,7 +22,7 @@ export const TableHeader = ({
       )}
       <div className="flex items-center">{item.iconLeft}</div>
       <div className=" flex flex-col py-1 ">
-        <p className="text-moon-14 leading-6 ">{item.name} </p>
+        <p className="text-moon-14 leading-flex-wrap">{item.name} </p>
         <p className="text-moon-12 leading-4 text-gray-600 ">{item.subname}</p>
       </div>
       <div

@@ -31,7 +31,7 @@ export const TableRow = ({
       {column.map((columnItem: any, index: number) => {
         return (
           <div
-            className={`p-4 flex items-center `}
+            className={`p-4 flex items-center max-w-[200px] min-w-[150px]`}
             key={item.index}
           >
             {isCheckbox && index === 0 && (
@@ -73,11 +73,11 @@ export const TableRow = ({
               <div className="flex items-center">
                 {item[`${columnItem.iconLeft}`]}
               </div>
-              <div className={`flex flex-col`}>
+              <div className={`flex flex-col flex-wrap  ${!item.iconRight && 'w-[150px]'}`}>
                 <p className="text-moon-14 leading-6 w-full ">
                   {item[`${columnItem.value}`]}
                 </p>
-                <p className="text-moon-12 leading-4 text-gray-600 ">
+                <p className="text-moon-12 leading-4 text-gray-600 w-full">
                   {item[`${columnItem.subname}`]}
                 </p>
               </div>
