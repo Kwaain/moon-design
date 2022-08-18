@@ -1,6 +1,7 @@
 import React from 'react';
 import { Props } from '../types/LoaderProps';
 
+//aktiviraj loader i provjeri ga
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };

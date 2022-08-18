@@ -23,5 +23,5 @@ export type ColorPreviewProps = {
 export type TooltipWrapperProps = {
   ref?: React.RefObject<HTMLDivElement>
   background?: string;
-  style?: any;
+  passStyle?: any;
 };

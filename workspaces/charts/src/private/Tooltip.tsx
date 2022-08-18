@@ -15,16 +15,16 @@ const Text: React.FC = ({ children }) => {
   );
 };
 
-//mozda ne radi style
 export const TooltipWrapper: React.FC<TooltipWrapperProps> = ({
   children,
-  style,
+  passStyle,
 }) => {
   return (
     <div
       className={classNames(
         'inline-block text-goten bg-gohan text-xs leading-4 p-3 rounded relative shadow-lg pointer-events-none'
       )}
+      style={passStyle}
     >
       {children}
     </div>
@@ -33,7 +33,14 @@ export const TooltipWrapper: React.FC<TooltipWrapperProps> = ({
 
 export const Item: React.FC = ({ children }) => {
   return (
-    <div className={classNames('relative py-0.5 pr-0 pl-4 text-trunks')}>
+    <div
+      className={classNames('relative pl-4 text-trunks')}
+      style={{
+        paddingTop: '0.125rem',
+        paddingBottom: '0.125rem',
+        paddingRight: '0',
+      }}
+    >
       {children}
     </div>
   );
@@ -53,10 +60,12 @@ export const ColorPreview: React.FC<ColorPreviewProps> = ({
 }) => {
   return (
     <div
-      className={classNames(
-        'w-2 h-2 rounded-2/4 absolute top-2/4 left-0 -translate-x-1/2',
-        background ? `bg-${background}` : ''
-      )}
+      className={classNames('w-2 h-2 absolute top-2/4 left-0')}
+      style={{
+        background: 'rgb(var(--goten))',
+        borderRadius: '50%',
+        transform: 'translateY(-50%)',
+      }}
     >
       {children}
     </div>

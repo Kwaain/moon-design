@@ -12,31 +12,25 @@ const classNames = (...classes: string[]) => {
 };
 
 const Text: React.FC = ({ children }) => {
-  return <p className={classNames(`text-goku.80 text-xs`)}>{children}</p>;
+  return (
+    <p className={classNames(`text-xs`)} style={{ color: '#000000' }}>
+      {children}
+    </p>
+  );
 };
 
-// const Container: React.FC = ({ children }) => {
-//   return (
-//     <div
-//       className={classNames(
-//         'relative w-3/5 h-full flex flex-col items-center justify-center'
-//       )}
-//     >
-//       {children}
-//     </div>
-//   );
-// };
-
-//NECE DA RADI WIDTH KOD TAILWIND -> RADI SAMO W-FULL
-const Container = styled.div({
-  position: 'relative',
-  width: '60%',
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-});
+const Container: React.FC = ({ children }) => {
+  return (
+    <div
+      className={classNames(
+        'relative h-full flex flex-col items-center justify-center'
+      )}
+      style={{ width: '60%' }}
+    >
+      {children}
+    </div>
+  );
+};
 
 export const Map: React.FC<MapProps> = ({ data }) => {
   const theme = useTheme();
@@ -58,12 +52,14 @@ export const Map: React.FC<MapProps> = ({ data }) => {
     <Container>
       <TooltipWrapper
         ref={tooltipRef}
-        style={{
+        passStyle={{
           visibility: hoveredItem ? 'visible' : 'hidden',
           position: 'absolute',
           left: 0,
           top: 0,
           transition: 'transform 0.4s ease',
+          boxShadow:
+            '0 8px 24px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)',
         }}
       >
         {!!hoveredItem && (

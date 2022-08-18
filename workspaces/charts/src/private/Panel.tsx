@@ -13,6 +13,7 @@ const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };
 
+//ne radi before, after, adaptiraj sve
 const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
   return (
     <button
@@ -26,18 +27,24 @@ const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
           : '',
         isActive ? `color-goten after:bg-goten ` : ``
       )}
+      style={{
+        background: 'none',
+        fontSize: '1rem',
+        color: 'rgb(var(--trunks))',
+      }}
     >
       {children}
     </button>
   );
 };
 
+//provjeri isActive text-goten i drugi dio ternarnog
 const Container: React.FC<ContainerProps> = ({ isActive, children }) => {
   return (
     <div
       className={classNames(
         `flex flex-col p-4 rounded-xl w-full`,
-        isActive ? 'color-goten bg-piccolo' : 'color-bulma bg-gohan'
+        isActive ? 'text-goten bg-piccolo' : 'text-bulma bg-gohan'
       )}
     >
       {children}
@@ -45,21 +52,20 @@ const Container: React.FC<ContainerProps> = ({ isActive, children }) => {
   );
 };
 
-// const Header = ({ children }: any) => {
-//   return (
-//     <div className="grid shrink-0 grid-cols-[auto,1fr,auto,auto] gap-4 min-h-6">
-//       {children}
-//     </div>
-//   );
-// };
-
-const Header = styled.div({
-  display: 'grid',
-  flexShrink: 0,
-  gridTemplateColumns: 'auto 1fr auto auto',
-  gridColumnGap: rem(16),
-  minHeight: rem(24),
-});
+const Header = ({ children }: any) => {
+  return (
+    <div
+      className="grid gap-4"
+      style={{
+        flexShrink: 0,
+        gridTemplateColumns: 'auto 1fr auto auto',
+        minHeight: '1.5rem',
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
 const IconRefreshStyled = () => {
   return <ArrowsUpdate className={classNames(`rotate-90`)} />;

@@ -24,7 +24,12 @@ const Container: React.FC = ({ children }) => {
 
 const BarChartContainer: React.FC = ({ children }) => {
   return (
-    <div className={classNames('flex-1 h-full overflow-auto')}>{children}</div>
+    <div
+      className={classNames('flex-1 h-full overflow-auto')}
+      style={{ overflow: 'auto' }}
+    >
+      {children}
+    </div>
   );
 };
 
