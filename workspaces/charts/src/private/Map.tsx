@@ -1,9 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { useTheme } from '@heathmont/moon-themes';
-import { themed } from '@heathmont/moon-utils';
+import { rem, themed } from '@heathmont/moon-utils';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-import styled from 'styled-components';
-import { MapData, MapProps } from '../types/MapProps';
+import { MapData, MapProps, TextProps } from '../types/MapProps';
 import { TooltipWrapper, Item, ColorPreview } from './Tooltip';
 import worldMap from './World110m';
 
@@ -11,9 +10,12 @@ const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };
 
-const Text: React.FC = ({ children }) => {
+const Text: React.FC<TextProps> = ({ children, size }) => {
   return (
-    <p className={classNames(`text-xs`)} style={{ color: '#000000' }}>
+    <p
+      className={classNames(`text-xs`)}
+      style={{ fontSize: rem(size), color: '#000000' }}
+    >
       {children}
     </p>
   );
@@ -22,10 +24,8 @@ const Text: React.FC = ({ children }) => {
 const Container: React.FC = ({ children }) => {
   return (
     <div
-      className={classNames(
-        'relative h-full flex flex-col items-center justify-center'
-      )}
-      style={{ width: '60%' }}
+      className={classNames('relative h-full flex flex-col items-center')}
+      style={{ width: '60%', justifyContent: 'center' }}
     >
       {children}
     </div>
@@ -71,7 +71,7 @@ export const Map: React.FC<MapProps> = ({ data }) => {
                   opacity: hoveredItem.opacity,
                 }}
               />
-              <Text>{hoveredItem.label}</Text> • {hoveredItem.value}
+              <Text size={12}>{hoveredItem.label}</Text> • {hoveredItem.value}
             </>
           </Item>
         )}

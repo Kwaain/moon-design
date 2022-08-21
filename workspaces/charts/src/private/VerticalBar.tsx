@@ -1,10 +1,8 @@
 import React, { useRef } from 'react';
 import { rem } from '@heathmont/moon-utils';
 import { Transition } from 'react-transition-group';
-import styled from 'styled-components';
 import { Cell, Count, Table, TableItem, Value } from './Table';
 
-//ne radi kako treba
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };
@@ -19,40 +17,52 @@ export const Bar: React.FC<any> = ({ isNegative, axisPosition, children }) => {
       className={classNames(
         'relative h-5 block',
         axisPosition === 'left' ? 'w-full' : '',
-        axisPosition === 'center' ? `w-1/2` : '',
+        // axisPosition === 'center' ? `w-[50%]` : '',
         axisPosition === 'center' && isNegative
           ? 'rotate-180'
           : 'translate-x-full',
         axisPosition === 'right' ? 'w-full rotate-180' : ''
       )}
+      style={
+        axisPosition === 'center'
+          ? { width: '50%' }
+          : axisPosition === 'right'
+          ? { width: '100%', transform: 'rotate(180deg)' }
+          : axisPosition === 'center' && isNegative
+          ? { transform: 'rotate(180deg)' }
+          : { transform: 'translateX(100%)' }
+      }
     >
       {children}
     </div>
   );
 };
 
-const Line = styled.div(({ theme }) => ({
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  height: '100%',
-  width: 0,
-  borderRadius: `0 ${rem(4)} ${rem(4)} 0`,
-  willChange: 'width',
-  transition: `width ${theme.newTokens.transition.slow}`,
-}));
+// const Line = styled.div(({ theme }) => ({
+//   position: 'absolute',
+//   top: 0,
+//   left: 0,
+//   height: '100%',
+//   width: 0,
+//   borderRadius: `0 ${rem(4)} ${rem(4)} 0`,
+//   willChange: 'width',
+//   transition: `width ${theme.newTokens.transition.slow}`,
+// }));
 
-// export const Line: any = ({ children }: any) => {
-//   return (
-//     <div
-//       className={classNames(
-//         'absolute top-0 bg-trunks left-0 h-full w-0 rounded-[0_1rem_1rem_0] will-change-[width] transition-[width] ease-in-out duration-600'
-//       )}
-//     >
-//       {children}
-//     </div>
-//   );
-// };
+export const Line: any = ({ children }: any) => {
+  return (
+    <div
+      className={classNames('absolute top-0 bg-trunks left-0 h-full w-0')}
+      style={{
+        borderRadius: `0 ${rem(4)} ${rem(4)} 0`,
+        willChange: 'width',
+        transition: `width 0.4s ease-in-out`,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
 // const Center = styled.div(({ theme }) => ({
 //   position: 'absolute',
@@ -67,9 +77,8 @@ const Line = styled.div(({ theme }) => ({
 export const Center: React.FC = ({ children }) => {
   return (
     <div
-      className={classNames(
-        'absolute top-0 left-1/2 -translate-x-1/2	h-full w-4 bg-beerus'
-      )}
+      className={classNames('absolute top-0 left-1/2 h-full w-4 bg-beerus')}
+      style={{ transform: 'translateX(-50%)' }}
     >
       {children}
     </div>
@@ -103,7 +112,6 @@ export const VerticalBar: React.FC<Props> = ({ data, axisPosition }) => {
             const percentWidth = percent < minWidth ? minWidth : percent;
 
             return (
-              // eslint-disable-next-line
               <React.Fragment key={`${index}-${value}`}>
                 <Cell>
                   <Count>{index + 1}</Count>

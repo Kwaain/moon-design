@@ -18,6 +18,7 @@ export type ButtonProps = {
 };
 
 export type ContainerProps = {
+  style: React.ReactNode;
   hasUpdates?: boolean;
   theme?: object;
   isActive?: boolean;

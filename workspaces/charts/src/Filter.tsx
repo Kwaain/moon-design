@@ -20,13 +20,13 @@ const classNames = (...classes: string[]) => {
 
 const Toggle: React.FC<ToggleProps> = ({ isOpen, children }) => {
   return (
-    // rounded-moon-s-sm h-max flex flex-col items-center
     <button
       className={classNames(
         'flex items-center text-xs',
-        'bg-none border-none p-0 m-0 cursor-pointer',
+        'border-none p-0 m-0 cursor-pointer',
         isOpen ? `text-piccolo` : `text-trunks`
       )}
+      style={{ background: 'none' }}
     >
       {children}
     </button>
@@ -41,9 +41,10 @@ const DropdownWrapper: React.FC<DropdownWrapperProps> = ({ children }) => {
   return (
     <div
       className={classNames(
-        'absolute top-full left-1/2	-translate-x-1/2	pt-2 ',
+        'absolute top-full left-1/2	pt-2 ',
         `text-bulma z-1`
       )}
+      style={{ transform: 'translateX(-50%)' }}
     >
       {children}
     </div>

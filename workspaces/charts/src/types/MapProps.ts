@@ -19,3 +19,7 @@ export interface MapData {
 export interface MapProps {
   data: MapData[];
 }
+
+export type TextProps = {
+  size: number;
+}

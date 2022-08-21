@@ -1,30 +1,38 @@
 import React from 'react';
-import { Props } from '../types/LoaderProps';
+import { rem } from '@heathmont/moon-utils';
+import { Props, TitleProps } from '../types/LoaderProps';
 
-//aktiviraj loader i provjeri ga
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };
 
-const Title: React.FC = ({ children }) => {
-  return <p className={classNames(`text-trunks.100 text-sm`)}>{children}</p>;
+const Title: React.FC<TitleProps> = ({ children, size, color }) => {
+  return (
+    <p
+      className={classNames(`text-trunks.100 `)}
+      style={{ fontSize: rem(size) }}
+    >
+      {children}
+    </p>
+  );
 };
 
 const Container: React.FC = ({ children }) => {
   return (
     <div
-      className={classNames(
-        'flex flex-col items-center justify-center w-full h-full'
-      )}
+      className={classNames('flex flex-col items-center w-full h-full')}
+      style={{ justifyContent: 'center' }}
     >
       {children}
     </div>
   );
 };
 
-export const Loader: React.FC<Props> = ({ icon, title }) => (
+export const Loader: React.FC<Props> = ({ icon, title, color }) => (
   <Container>
     {icon}
-    <Title>{title}</Title>
+    <Title size={14} color={color}>
+      {title}
+    </Title>
   </Container>
 );

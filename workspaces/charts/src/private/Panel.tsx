@@ -6,7 +6,6 @@ import {
   ControlsDiagonalsOutsight,
 } from '@heathmont/moon-icons';
 import { rem } from '@heathmont/moon-utils';
-import styled from 'styled-components';
 import { Props, ButtonProps, ContainerProps } from '../types/PanelProps';
 
 const classNames = (...classes: string[]) => {
@@ -18,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
   return (
     <button
       className={classNames(
-        `border-none bg-none outline-none cursor-pointer flex text-center justify-center relative w-8 h-8 p-2 text-base color-trunks`,
+        `border-none outline-none cursor-pointer flex text-center relative w-8 h-8 p-2 color-trunks`,
         `before:content-[''] before:absolute before:w-full before:h-full before:top-0 before:left-0`,
         `before:ease-in-out before:duration-200 before:bg-piccolo before:rounded-md before:opacity-0 before:scale-0 before:transition-transform before:transition-opacity`,
         `hover:color-piccolo focus:color-piccolo before:scale-100 before:opacity-10`,
@@ -29,6 +28,7 @@ const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
       )}
       style={{
         background: 'none',
+        justifyContent: 'center',
         fontSize: '1rem',
         color: 'rgb(var(--trunks))',
       }}
@@ -38,14 +38,23 @@ const Button: React.FC<ButtonProps> = ({ hasUpdates, children, isActive }) => {
   );
 };
 
-//provjeri isActive text-goten i drugi dio ternarnog
-const Container: React.FC<ContainerProps> = ({ isActive, children }) => {
+//bg ne radi, moras sredit
+const Container: React.FC<ContainerProps> = ({
+  isActive,
+  height,
+  children,
+}) => {
   return (
     <div
       className={classNames(
         `flex flex-col p-4 rounded-xl w-full`,
-        isActive ? 'text-goten bg-piccolo' : 'text-bulma bg-gohan'
+        isActive ? 'text-goten' : 'text-bulma'
       )}
+      style={
+        isActive
+          ? { background: 'rgb(var(--piccolo))' }
+          : { background: 'rgb(var(--gohan))' }
+      }
     >
       {children}
     </div>
@@ -81,7 +90,7 @@ export const Panel: React.FC<Props> = ({
   isUpdating,
   isActive = false,
 }) => (
-  <Container isActive={isActive}>
+  <Container isActive={isActive} style={{ height }}>
     <Header>
       {onUpdate && (
         <Button

@@ -19,7 +19,6 @@ const IconWrapper = ({ children }: any) => {
   return <div className={classNames('h-10')}>{children}</div>;
 };
 
-//mislim da ne radi
 const FilterWrapper: React.FC<any> = ({ isActive, children }) => {
   return (
     <div className={classNames(isActive ? `color-goten` : ``)}>{children}</div>
@@ -29,10 +28,8 @@ const FilterWrapper: React.FC<any> = ({ isActive, children }) => {
 const Container = ({ children }: any) => {
   return (
     <div
-      className={classNames(
-        'flex shrink-0 flex-col items-center justify-content mb-4'
-      )}
-      style={{ flexShrink: '0', justifyContent: 'center' }}
+      className={classNames('flex flex-col items-center mb-4')}
+      style={{ flexShrink: 0, justifyContent: 'center' }}
     >
       {children}
     </div>
@@ -48,6 +45,6 @@ export const Header: React.FC<Props> = ({
   <Container isActive={isActive}>
     <IconWrapper>{icon}</IconWrapper>
     <Title>{title}</Title>
-    <FilterWrapper>{filter}</FilterWrapper>
+    <FilterWrapper isActive={isActive}>{filter}</FilterWrapper>
   </Container>
 );

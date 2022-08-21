@@ -1,4 +1,4 @@
-import { ColorProps } from '@heathmont/moon-themes';
+import { ColorProps } from "@heathmont/moon-themes";
 
 export type Props = {
   title: string;
