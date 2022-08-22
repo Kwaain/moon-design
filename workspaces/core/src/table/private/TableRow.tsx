@@ -26,13 +26,8 @@ export const TableRow = ({
       onMouseOver={() => setHoveredIcon(true)}
       onMouseOut={() => setHoveredIcon(false)}
       onClick={() => {
-        console.log('item clicked', item);
-        console.log('isCheckbox', isCheckbox);
-        console.log('onSelectItem', onSelectItem);
-        if (!isCheckbox && onSelectItem) {
-          onSelectItem(item, !isChecked);
-          setIsChecked(!isChecked);
-        }
+        if (onSelectItem) onSelectItem(item, !isChecked);
+        setIsChecked(!isChecked);
       }}
     >
       {column.map((columnItem: any, index: number) => {
@@ -45,10 +40,6 @@ export const TableRow = ({
               <Checkbox
                 id={item.id}
                 checked={isChecked}
-                onClick={() => {
-                  if (onSelectItem) onSelectItem(item, !isChecked);
-                  setIsChecked(!isChecked);
-                }}
               />
             )}
             <div className="flex items-center relative ">

@@ -1,6 +1,7 @@
 import React from 'react';
 import Preview from '../../components/codePreview/Preview';
 import ComponentPageDescription from '../../components/ComponentPageDescription';
+import Checkbox from "../../public/examples/tableTW/Checkbox";
 import Default from '../../public/examples/tableTW/Default';
 import Selectable from "../../public/examples/tableTW/Selectable";
 import Sortable from "../../public/examples/tableTW/Sortable";
@@ -37,6 +38,11 @@ export default function PageTable() {
         title="Selectable"
         preview={<Selectable />}
         code={examples ? examples.Selectable : 'Loading'}
+      />
+      <Preview
+        title="With Checkbox"
+        preview={<Checkbox />}
+        code={examples ? examples.Checkbox : 'Loading'}
       />
     </>
   );
