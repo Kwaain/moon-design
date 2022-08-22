@@ -1,5 +1,5 @@
 import { Table } from '@heathmont/moon-core-tw';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 interface TableItem {
   id: string;
@@ -54,6 +54,7 @@ const Example = () => {
     <Table
       data={tableData}
       column={column}
+      onSelectItem={(item: TableItem, selected: boolean) => console.log('Selected row item', item)}
     />
   );
 };

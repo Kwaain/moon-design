@@ -1,9 +1,9 @@
 import React from 'react';
 import Preview from '../../components/codePreview/Preview';
 import ComponentPageDescription from '../../components/ComponentPageDescription';
-import PropsTable from '../../components/PropsTable';
 import Default from '../../public/examples/tableTW/Default';
-import HoverActions from '../../public/examples/tableTW/HoverActions';
+import Selectable from "../../public/examples/tableTW/Selectable";
+import Sortable from "../../public/examples/tableTW/Sortable";
 import useExamples from '../../utils/useExamples';
 
 export default function PageTable() {
@@ -18,7 +18,7 @@ export default function PageTable() {
           and find what they need to make informed decisions.
           <br />
           <br /> While tables present a clear structure, they are not good for
-          designing layouts. Use them only when data you are presenting calls
+          designing layouts. Use them only when data you are presenting cells
           for a tabular structure, for example prices for various travel dates
           or multiple options for baggage.
         </p>
@@ -29,9 +29,14 @@ export default function PageTable() {
         code={examples ? examples.Default : 'Loading'}
       />
       <Preview
-        title="Table with hover actions"
-        preview={<HoverActions />}
-        code={examples ? examples.Default : 'Loading'}
+        title="Sortable"
+        preview={<Sortable />}
+        code={examples ? examples.Sortable : 'Loading'}
+      />
+      <Preview
+        title="Selectable"
+        preview={<Selectable />}
+        code={examples ? examples.Selectable : 'Loading'}
       />
     </>
   );

@@ -6,11 +6,11 @@ import { ReactElement } from "react";
   iconRight?: ReactElement;
   isCheckbox?: boolean;
   index?: number;
-  onIconClick?: () => void;
 }
 
 export interface TableHeaderProp extends TableItemProp {
   selectAllChecked?: boolean;
+  onColumnClick?: (item: Object) => void;
   onSelectAll: (selected?: boolean) => void;
 }
 

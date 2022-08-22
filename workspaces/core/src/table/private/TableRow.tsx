@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { GenericDelete } from "@heathmont/moon-icons-tw";
 import Checkbox from "../../checkbox/Checkbox";
 import { TableRowProp } from "./TableItemProp";
-import TriangleIcon from "./triangleIcon";
 
 export const TableRow = ({
   item,
   column,
   isCheckbox,
   onSelectItem,
-  onDelete,
 }: TableRowProp) => {
   const [hoveredIcon, setHoveredIcon] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
@@ -24,9 +20,20 @@ export const TableRow = ({
     <div
       className={`w-full flex items-center mb-1 justify-between rounded-lg bg-gohan hover:bg-[#4841a5]/[.12] min-w-[600px] ${
         isChecked && 'bg-[#4841a5]/[.12]'
+      } ${
+        !isCheckbox && onSelectItem ? 'cursor-pointer' : ''
       }`}
       onMouseOver={() => setHoveredIcon(true)}
       onMouseOut={() => setHoveredIcon(false)}
+      onClick={() => {
+        console.log('item clicked', item);
+        console.log('isCheckbox', isCheckbox);
+        console.log('onSelectItem', onSelectItem);
+        if (!isCheckbox && onSelectItem) {
+          onSelectItem(item, !isChecked);
+          setIsChecked(!isChecked);
+        }
+      }}
     >
       {column.map((columnItem: any, index: number) => {
         return (
@@ -45,48 +52,20 @@ export const TableRow = ({
               />
             )}
             <div className="flex items-center relative ">
-              {!isCheckbox && hoveredIcon && columnItem.value === 'iconRight' && (
-                <div
-                  className="bg-[#4841a5] p-1 rounded-[4px] absolute items-center -translate-x-1/4"
-                  onMouseOver={() => setShowPopup(true)}
-                  onMouseOut={() => setShowPopup(false)}
-                  onClick={onDelete}
-                >
-                  <GenericDelete color="white" width={20} height={20} />
-                </div>
-              )}
-
-              {columnItem.value === 'iconRight' && showPopup && (
-                <div className=" flex items-center absolute -translate-x-full p-1">
-                  <div className="bg-gohan rounded ">
-                    <p className="p-3 text-moon-12 leading-4">Delete</p>
-                  </div>
-                  <TriangleIcon
-                    color="white"
-                    fill="white"
-                    height={30}
-                    width={30}
-                  />
-                </div>
-              )}
-
-              <div className="flex items-center">
-                {item[`${columnItem.iconLeft}`]}
-              </div>
-              <div className={`flex flex-col flex-wrap  ${!item.iconRight && 'w-[150px]'}`}>
+              <div className={`flex flex-col flex-wrap ${!item.iconRight ? 'w-[150px]' : ''}`}>
                 <p className="text-moon-14 leading-6 w-full ">
-                  {item[`${columnItem.value}`]}
+                  {item[columnItem.value]}
                 </p>
                 <p className="text-moon-12 leading-4 text-gray-600 w-full">
-                  {item[`${columnItem.subname}`]}
+                  {item[columnItem.subname]}
                 </p>
               </div>
-              <div
+              {!!columnItem.iconRight && (<div
                 className="flex items-center justify-end relative cursor-pointer"
                 id={item.id}
               >
-                {item[`${columnItem.iconRight}`]}
-              </div>
+                {item[columnItem.iconRight]}
+              </div>)}
             </div>
           </div>
         );

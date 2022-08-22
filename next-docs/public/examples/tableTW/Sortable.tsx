@@ -1,4 +1,5 @@
 import { Table } from '@heathmont/moon-core-tw';
+import { ArrowsUp, OtherFrame } from '@heathmont/moon-icons-tw';
 import React, { useState } from 'react';
 
 interface TableItem {
@@ -27,10 +28,15 @@ const Example = () => {
       id: 'visits',
     },
   ]);
+
+  const onHeaderColumnClick = (item: Object) => {
+    console.log('Clicked header column icon...', item);
+  };
   const column = [
     {
       name: 'First name',
       value: 'name',
+      iconRight: <ArrowsUp height={20} width={20} />,
     },
     {
       name: 'Last name',
@@ -54,6 +60,7 @@ const Example = () => {
     <Table
       data={tableData}
       column={column}
+      onHeaderColumnClick={onHeaderColumnClick}
     />
   );
 };

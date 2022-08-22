@@ -9,10 +9,10 @@ export const TableHeader = ({
   index,
   selectAllChecked,
   onSelectAll,
-  onIconClick,
+  onColumnClick,
 }: TableHeaderProp) => {
   return (
-    <div className=" flex relative items-center max-w-[200px] ">
+    <div className=" flex relative items-center max-w-[200px]">
       {isCheckbox && index === 0 && (
         <Checkbox
           id={'selectAll'}
@@ -29,7 +29,9 @@ export const TableHeader = ({
         className={`flex items-center justify-end cursor-pointer ${
           index === 0 && 'absolute left-[100%] ml-4'
         }`}
-        onClick={onIconClick}
+        onClick={() => {
+          if (onColumnClick) onColumnClick(item);
+        }}
         id={item.id}
       >
         {item.iconRight}

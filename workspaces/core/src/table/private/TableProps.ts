@@ -7,7 +7,7 @@ export type TableProps = {
   isCheckbox?: boolean;
   index?: number;
   onDelete?: () => void;
-  onIconClick?: () => void;
+  onHeaderColumnClick?: () => void;
   onSelectAll?: (items: Object[], selected?: boolean) => void;
   onSelectItem?: (item: Object, selected?: boolean) => void;
 };

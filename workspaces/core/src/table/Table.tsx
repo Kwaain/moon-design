@@ -8,7 +8,7 @@ const Table = ({
   column,
   isCheckbox,
   onDelete,
-  onIconClick,
+  onHeaderColumnClick,
   onSelectAll,
   onSelectItem,
 }: TableProps) => {
@@ -19,10 +19,6 @@ const Table = ({
     setIsSelectAll(!!selected);
   };
 
-  useEffect(() => {
-    console.log('data', data);
-  }, [data]);
-
   return (
     <div className="w-full h-full flex flex-col justify-between items-center min-w-[600px]">
       <div className="w-full flex p-4 justify-between items-center ">
@@ -32,7 +28,7 @@ const Table = ({
             index={index}
             isCheckbox={isCheckbox}
             selectAllChecked={iseSelectAll}
-            onIconClick={onIconClick}
+            onColumnClick={onHeaderColumnClick}
             onSelectAll={handleSelectAll}
           />
         ))}
@@ -42,7 +38,7 @@ const Table = ({
           <TableRow
             item={item}
             column={column}
-            onSelectItem={(item: Object, selected?: boolean) => {
+            onSelectItem={!onSelectItem && !onSelectAll ? undefined : (item: Object, selected?: boolean) => {
               if (onSelectItem) onSelectItem(item, !!selected);
               if (!selected) setIsSelectAll(false);
             }}
