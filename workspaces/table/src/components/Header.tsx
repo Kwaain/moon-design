@@ -1,23 +1,31 @@
-import { rem, themed } from '@heathmont/moon-utils';
-import styled from 'styled-components';
+import React from 'react';
+import { rem } from '@heathmont/moon-utils';
 
-const Header = styled.div<{
+const Header: React.FC<HeaderProps> = ({
+  headerBackgroundColor,
+  selectable,
+  children,
+}) => {
+  return (
+    <div
+      className={'sticky z-1 t-0'}
+      style={
+        selectable
+          ? {
+              paddingLeft: rem(46),
+              backgroundColor: `rgb(var(--${headerBackgroundColor}))`,
+            }
+          : {}
+      }
+    >
+      {children}
+    </div>
+  );
+};
+
+type HeaderProps = {
   headerBackgroundColor: string;
   selectable?: boolean;
-}>(
-  {
-    position: 'sticky',
-    zIndex: 1,
-    top: 0,
-  },
-  ({ selectable, headerBackgroundColor, theme }) => ({
-    ...(selectable
-      ? {
-          paddingLeft: rem(46),
-          backgroundColor: themed('color', headerBackgroundColor)(theme),
-        }
-      : {}),
-  })
-);
+};
 
 export default Header;

@@ -1,37 +1,42 @@
+import React from 'react';
 import { rem } from '@heathmont/moon-utils';
-import styled from 'styled-components';
 
-const TD = styled.div<{ selectable?: boolean }>(({ theme, selectable }) => ({
-  padding: rem(12),
-  paddingLeft: selectable ? rem(12) : rem(4),
-  paddingRight: rem(4),
-  color: theme.colorNew.bulma,
-  position: 'relative',
-  borderTop: `${rem(4)} solid transparent`,
-  borderBottom: `${rem(4)} solid transparent`,
-  boxSizing: 'border-box',
-  '&:first-child': {
-    borderLeft: `${rem(4)} solid transparent`,
-    borderTopLeftRadius: theme.newTokens.borderRadius.surface.small,
-    borderBottomLeftRadius: theme.newTokens.borderRadius.surface.small,
-  },
-  '&:last-child': {
-    borderRight: `${rem(4)} solid transparent`,
-    borderTopRightRadius: theme.newTokens.borderRadius.surface.small,
-    borderBottomRightRadius: theme.newTokens.borderRadius.surface.small,
-    '&::after': {
-      width: 0,
-    },
-  },
-  '&::after': {
-    content: '""',
-    position: 'absolute',
-    width: '1px',
-    backgroundColor: theme.colorNew.beerus,
-    height: '60%',
-    bottom: '20%',
-    right: 0,
-  },
-}));
+export const classNames = (...classes: string[]) => {
+  return classes.filter(Boolean).join(' ');
+};
+
+const TD: React.FC<TDProps> = ({ selectable, children }) => {
+  return (
+    <div
+      className={classNames(
+        'p-3 pr-1 relative box-border',
+        'first:border-l-[4px] first:border-solid first:border-transparent first:rounded-tl-[4px] first:rounded-bl-[4px]',
+        'last:border-r-[4px] last:border-solid last:border-transparent last:rounded-tr-[4px] last:rounded-br-[4px]', //chain::afer:w-0
+        `after:content-[""] after:absolute after:w-[1px] after:bg-beerus after:h-3/5 after:b-[20%] after:r-0`
+      )}
+      style={
+        selectable
+          ? {
+              paddingLeft: rem(12),
+              color: 'rgb(var(--bulma))',
+              borderTop: `${rem(4)} solid transparent`,
+              borderBottom: `${rem(4)} solid transparent`,
+            }
+          : {
+              paddingLeft: rem(4),
+              color: 'rgb(var(--bulma))',
+              borderTop: `${rem(4)} solid transparent`,
+              borderBottom: `${rem(4)} solid transparent`,
+            }
+      }
+    >
+      {children}
+    </div>
+  );
+};
+
+type TDProps = {
+  selectable?: boolean;
+};
 
 export default TD;
