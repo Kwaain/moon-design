@@ -1,5 +1,32 @@
 # @heathmont/moon-core-tw
 
+## 9.4.2
+
+### Patch Changes
+
+- Trigger release
+- Updated dependencies [undefined]
+  - @heathmont/moon-icons-tw@9.4.2
+
+## 9.4.1
+
+### Patch Changes
+
+- Add images and video to Getting started page
+- Updated dependencies [undefined]
+  - @heathmont/moon-icons-tw@9.4.1
+
+## 9.4.0
+
+### Minor Changes
+
+- Update all packages
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @heathmont/moon-icons-tw@9.4.0
+
 ## 9.3.1
 
 ### Patch Changes

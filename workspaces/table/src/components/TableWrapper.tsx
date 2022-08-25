@@ -77,29 +77,29 @@ const TableWrapper = styled.div<{
     },
     ...(variant === 'calendar'
       ? {
-          [TH]: {
-            '&:first-child': {
-              '&::after': {
-                display: 'none',
-              },
-            },
-          },
+          // [TH]: {
+          //   '&:first-child': {
+          //     '&::after': {
+          //       display: 'none',
+          //     },
+          //   },
+          // },
           [BodyTR]: {
-            [TD]: {
-              '&:first-child': {
-                backgroundColor: themed('color', headerBackgroundColor)(theme),
-                borderRadius: 0,
-                '&::after': {
-                  display: 'none',
-                },
-                '& + div': {
-                  borderTopLeftRadius:
-                    theme.newTokens.borderRadius.surface.small,
-                  borderBottomLeftRadius:
-                    theme.newTokens.borderRadius.surface.small,
-                },
-              },
-            },
+            // [TD]: {
+            //   '&:first-child': {
+            //     backgroundColor: themed('color', headerBackgroundColor)(theme),
+            //     borderRadius: 0,
+            //     '&::after': {
+            //       display: 'none',
+            //     },
+            //     '& + div': {
+            //       borderTopLeftRadius:
+            //         theme.newTokens.borderRadius.surface.small,
+            //       borderBottomLeftRadius:
+            //         theme.newTokens.borderRadius.surface.small,
+            //     },
+            //   },
+            // },
           },
         }
       : {}),

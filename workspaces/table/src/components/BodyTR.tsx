@@ -19,19 +19,19 @@ const BodyTR = styled.div<{
   fontColor?: ColorNames;
 }>(
   ({ theme, isSelected, backgroundColor, customBackground, fontColor }) => ({
-    [TD]: {
-      color: isSelected
-        ? themed('color', 'popo.100')(theme)
-        : themed('color', fontColor ?? 'popo.100')(theme),
-      backgroundColor:
-        isSelected && !customBackground
-          ? tint(0.88, theme.colorNew.piccolo)
-          : themed('color', backgroundColor)(theme),
-      borderColor:
-        isSelected && !customBackground
-          ? tint(0.88, theme.colorNew.piccolo)
-          : themed('color', backgroundColor)(theme),
-    },
+    // [TD]: {
+    //   color: isSelected
+    //     ? themed('color', 'popo.100')(theme)
+    //     : themed('color', fontColor ?? 'popo.100')(theme),
+    //   backgroundColor:
+    //     isSelected && !customBackground
+    //       ? tint(0.88, theme.colorNew.piccolo)
+    //       : themed('color', backgroundColor)(theme),
+    //   borderColor:
+    //     isSelected && !customBackground
+    //       ? tint(0.88, theme.colorNew.piccolo)
+    //       : themed('color', backgroundColor)(theme),
+    // },
   }),
   ({
     theme,
@@ -53,46 +53,46 @@ const BodyTR = styled.div<{
     },
     '&:focus-visible': {
       outline: 'none',
-      [TD]: {
-        borderTop: `${rem(4)} solid ${tint(0.88, theme.colorNew.piccolo)}`,
-        borderBottom: `${rem(4)} solid ${tint(0.88, theme.colorNew.piccolo)}`,
-        boxSizing: 'border-box',
-        '&:first-child': {
-          borderLeft: `${rem(4)} solid ${tint(0.88, theme.colorNew.piccolo)}`,
-        },
-        '&:last-child': {
-          borderRight: `${rem(4)} solid ${tint(0.88, theme.colorNew.piccolo)}`,
-        },
-      },
+      // [TD]: {
+      //   borderTop: `${rem(4)} solid ${tint(0.88, theme.colorNew.piccolo)}`,
+      //   borderBottom: `${rem(4)} solid ${tint(0.88, theme.colorNew.piccolo)}`,
+      //   boxSizing: 'border-box',
+      //   '&:first-child': {
+      //     borderLeft: `${rem(4)} solid ${tint(0.88, theme.colorNew.piccolo)}`,
+      //   },
+      //   '&:last-child': {
+      //     borderRight: `${rem(4)} solid ${tint(0.88, theme.colorNew.piccolo)}`,
+      //   },
+      // },
     },
     ...(onClick
       ? {
           '&:hover': {
             cursor: 'pointer',
-            [TD]: {
-              backgroundColor: tint(0.88, theme.colorNew.piccolo),
-              borderTop: `${rem(4)} solid ${tint(
-                0.88,
-                theme.colorNew.piccolo
-              )}`,
-              borderBottom: `${rem(4)} solid ${tint(
-                0.88,
-                theme.colorNew.piccolo
-              )}`,
-              boxSizing: 'border-box',
-              '&:first-child': {
-                borderLeft: `${rem(4)} solid ${tint(
-                  0.88,
-                  theme.colorNew.piccolo
-                )}`,
-              },
-              '&:last-child': {
-                borderRight: `${rem(4)} solid ${tint(
-                  0.88,
-                  theme.colorNew.piccolo
-                )}`,
-              },
-            },
+            // [TD]: {
+            //   backgroundColor: tint(0.88, theme.colorNew.piccolo),
+            //   borderTop: `${rem(4)} solid ${tint(
+            //     0.88,
+            //     theme.colorNew.piccolo
+            //   )}`,
+            //   borderBottom: `${rem(4)} solid ${tint(
+            //     0.88,
+            //     theme.colorNew.piccolo
+            //   )}`,
+            //   boxSizing: 'border-box',
+            //   '&:first-child': {
+            //     borderLeft: `${rem(4)} solid ${tint(
+            //       0.88,
+            //       theme.colorNew.piccolo
+            //     )}`,
+            //   },
+            //   '&:last-child': {
+            //     borderRight: `${rem(4)} solid ${tint(
+            //       0.88,
+            //       theme.colorNew.piccolo
+            //     )}`,
+            //   },
+            // },
           },
         }
       : {}),
@@ -112,29 +112,29 @@ const BodyTR = styled.div<{
       : {}),
     ...(isExpanded
       ? {
-          [TD]: {
-            '&:first-child': {
-              borderBottomLeftRadius: 0,
-            },
-            '&:last-child': {
-              borderBottomRightRadius: 0,
-            },
-          },
+          // [TD]: {
+          //   '&:first-child': {
+          //     borderBottomLeftRadius: 0,
+          //   },
+          //   '&:last-child': {
+          //     borderBottomRightRadius: 0,
+          //   },
+          // },
         }
       : {}),
     ...(hasParent
       ? {
           marginTop: 0,
-          [TD]: {
-            '&:first-child': {
-              borderTopLeftRadius: 0,
-              borderBottomLeftRadius: 0,
-            },
-            '&:last-child': {
-              borderTopRightRadius: 0,
-              borderBottomRightRadius: 0,
-            },
-          },
+          // [TD]: {
+          //   '&:first-child': {
+          //     borderTopLeftRadius: 0,
+          //     borderBottomLeftRadius: 0,
+          //   },
+          //   '&:last-child': {
+          //     borderTopRightRadius: 0,
+          //     borderBottomRightRadius: 0,
+          //   },
+          // },
         }
       : {}),
     ...(isLastRow
@@ -146,28 +146,28 @@ const BodyTR = styled.div<{
       : {}),
     ...(isLastRow && !isExpanded
       ? {
-          [TD]: {
-            '&:first-child': {
-              borderBottomLeftRadius:
-                theme.newTokens.borderRadius.surface.small,
-            },
-            '&:last-child': {
-              borderBottomRightRadius:
-                theme.newTokens.borderRadius.surface.small,
-            },
-          },
+          // [TD]: {
+          //   '&:first-child': {
+          //     borderBottomLeftRadius:
+          //       theme.newTokens.borderRadius.surface.small,
+          //   },
+          //   '&:last-child': {
+          //     borderBottomRightRadius:
+          //       theme.newTokens.borderRadius.surface.small,
+          //   },
+          // },
         }
       : {}),
     ...(isLastRow && hasParent
       ? {
-          [TD]: {
-            '&:first-child': {
-              borderTopLeftRadius: 0,
-            },
-            '&:last-child': {
-              borderTopRightRadius: 0,
-            },
-          },
+          // [TD]: {
+          //   '&:first-child': {
+          //     borderTopLeftRadius: 0,
+          //   },
+          //   '&:last-child': {
+          //     borderTopRightRadius: 0,
+          //   },
+          // },
         }
       : {}),
   })
