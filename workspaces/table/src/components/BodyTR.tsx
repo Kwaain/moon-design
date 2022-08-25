@@ -1,8 +1,6 @@
 import { ColorNames } from '@heathmont/moon-themes';
-import { rem, themed } from '@heathmont/moon-utils';
-import tint from 'polished/lib/color/tint';
+import { rem } from '@heathmont/moon-utils';
 import styled from 'styled-components';
-import TD from './TD';
 
 const BodyTR = styled.div<{
   onClick?: () => void;
@@ -18,21 +16,6 @@ const BodyTR = styled.div<{
   backgroundColor?: ColorNames;
   fontColor?: ColorNames;
 }>(
-  ({ theme, isSelected, backgroundColor, customBackground, fontColor }) => ({
-    // [TD]: {
-    //   color: isSelected
-    //     ? themed('color', 'popo.100')(theme)
-    //     : themed('color', fontColor ?? 'popo.100')(theme),
-    //   backgroundColor:
-    //     isSelected && !customBackground
-    //       ? tint(0.88, theme.colorNew.piccolo)
-    //       : themed('color', backgroundColor)(theme),
-    //   borderColor:
-    //     isSelected && !customBackground
-    //       ? tint(0.88, theme.colorNew.piccolo)
-    //       : themed('color', backgroundColor)(theme),
-    // },
-  }),
   ({
     theme,
     onClick,
@@ -42,8 +25,6 @@ const BodyTR = styled.div<{
     hasParent,
     isLastNestedRow,
     isLastRow,
-    isSelected,
-    backgroundColor,
     depth = 0,
   }) => ({
     marginTop: withOffset ? rem(8) : rem(2),
@@ -110,31 +91,10 @@ const BodyTR = styled.div<{
           },
         }
       : {}),
-    ...(isExpanded
-      ? {
-          // [TD]: {
-          //   '&:first-child': {
-          //     borderBottomLeftRadius: 0,
-          //   },
-          //   '&:last-child': {
-          //     borderBottomRightRadius: 0,
-          //   },
-          // },
-        }
-      : {}),
+
     ...(hasParent
       ? {
           marginTop: 0,
-          // [TD]: {
-          //   '&:first-child': {
-          //     borderTopLeftRadius: 0,
-          //     borderBottomLeftRadius: 0,
-          //   },
-          //   '&:last-child': {
-          //     borderTopRightRadius: 0,
-          //     borderBottomRightRadius: 0,
-          //   },
-          // },
         }
       : {}),
     ...(isLastRow
@@ -142,32 +102,6 @@ const BodyTR = styled.div<{
           '&:after': {
             display: 'none',
           },
-        }
-      : {}),
-    ...(isLastRow && !isExpanded
-      ? {
-          // [TD]: {
-          //   '&:first-child': {
-          //     borderBottomLeftRadius:
-          //       theme.newTokens.borderRadius.surface.small,
-          //   },
-          //   '&:last-child': {
-          //     borderBottomRightRadius:
-          //       theme.newTokens.borderRadius.surface.small,
-          //   },
-          // },
-        }
-      : {}),
-    ...(isLastRow && hasParent
-      ? {
-          // [TD]: {
-          //   '&:first-child': {
-          //     borderTopLeftRadius: 0,
-          //   },
-          //   '&:last-child': {
-          //     borderTopRightRadius: 0,
-          //   },
-          // },
         }
       : {}),
   })

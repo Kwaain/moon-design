@@ -101,7 +101,16 @@ const renderRows = ({
             }
           >
             {useCheckbox && (
-              <TD selectable={true}>
+              <TD
+                selectable={true}
+                isExpanded={expandedRow.isExpanded}
+                isLastRow={isLastRow}
+                hasParent={!!expandedRow.depth}
+                backgroundColor={backgroundColor}
+                fontColor={fontColor}
+                customBackground={!!row.original?.backgroundColor}
+                isSelected={isSelected}
+              >
                 <CheckboxTD>
                   <Checkbox
                     id={row.id}

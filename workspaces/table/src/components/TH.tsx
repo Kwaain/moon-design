@@ -25,28 +25,11 @@ const TH: React.FC<THProps> = ({ headerBackgroundColor, children }) => {
   );
 };
 
-// '.resizer': {
-//   display: 'inline-block',
-//   width: rem(8),
-//   height: '100%',
-//   position: 'absolute',
-//   right: 0,
-//   top: 0,
-//   zIndex: 1,
-//   '&::after': {
-//     content: '""',
-//     position: 'absolute',
-//     width: '1px',
-//     height: '70%',
-//     bottom: '15%',
-//     right: 0,
-//   },
-//   '&.isResizing': {
-//     '&::after': {
-//       background: colorNew.piccolo,
-//     },
-//   },
-// },
+//privremeno dodato u table-mobule
+// inline-block w-2 h-full absolute right-0 top-0 z-1
+// after:content['""'] after:absolute after:w-px after:right-0 after:height-[70%] after:b-[15%]
+// .isResizing :
+// after: bg-piccolo
 
 type THProps = {
   headerBackgroundColor?: ColorNames;

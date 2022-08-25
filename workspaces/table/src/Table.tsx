@@ -29,6 +29,7 @@ import useRowSpan, { RowSpanHeader } from './hooks/useRowSpan';
 import useScrollState from './hooks/useScrollState';
 import renderRows from './utils/renderRows';
 import renderSpanRows from './utils/renderSpanRows';
+import './table-module.css';
 
 export type TableLayout = 'block';
 
