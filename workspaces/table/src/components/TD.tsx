@@ -2,7 +2,7 @@ import React from 'react';
 import { ColorNames } from '@heathmont/moon-themes';
 import { rem } from '@heathmont/moon-utils';
 
-export const classNames = (...classes: string[]) => {
+const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };
 

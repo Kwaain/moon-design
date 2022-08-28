@@ -28,6 +28,7 @@
     "@heathmont/moon-select": "workspace:^9.4.2",
     "@heathmont/moon-sidebar": "workspace:^9.4.2",
     "@heathmont/moon-table": "workspace:^9.4.2",
+    "@heathmont/moon-table-tw": "workspace:^9.4.2",
     "@heathmont/moon-themes": "workspace:^9.4.2",
     "@heathmont/moon-themes-tw": "workspace:^9.4.2",
     "@heathmont/moon-utils": "workspace:^9.4.2",

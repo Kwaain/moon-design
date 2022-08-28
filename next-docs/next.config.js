@@ -9,6 +9,7 @@ const withTM = require('next-transpile-modules')([
   '@heathmont/moon-pagination',
   '@heathmont/moon-popover',
   '@heathmont/moon-table',
+  '@heathmont/moon-table-tw',
   '@heathmont/moon-themes',
   '@heathmont/moon-utils',
   '@heathmont/moon-core-tw',

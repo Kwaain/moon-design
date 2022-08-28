@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 import { rem } from '@heathmont/moon-utils';
 
-export const classNames = (...classes: string[]) => {
+const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };
 
