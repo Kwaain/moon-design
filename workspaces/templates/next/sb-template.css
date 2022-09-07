@@ -2095,6 +2095,11 @@ video {
   background-color: rgb(var(--chichi) / var(--tw-bg-opacity));
 }
 
+.bg-bardock {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--bardock) / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -3978,6 +3983,7 @@ body {
   --nappa: 114 85 80;
   --nappa-60: 133 106 102;
   --nappa-10: 161 134 129;
+  --bardock: 247 147 26;
   --radius-i-xs: 624.938rem;
   --radius-i-sm: 624.938rem;
   --radius-i-md: 624.938rem;
@@ -4001,6 +4007,7 @@ body {
   --trunks: 134 151 162;
   --goten: 255 255 255;
   --popo: 0 0 0;
+  --bardock: 247 147 26;
   --radius-i-xs: 624.938rem;
   --radius-i-sm: 624.938rem;
   --radius-i-md: 624.938rem;
@@ -4044,6 +4051,7 @@ body {
   --nappa: 114 85 80;
   --nappa-60: 133 106 102;
   --nappa-10: 161 134 129;
+  --bardock: 247 147 26;
   --radius-i-xs: 0.25rem;
   --radius-i-sm: 0.5rem;
   --radius-i-md: 0.75rem;
@@ -4067,4 +4075,5 @@ body {
   --trunks: 151 162 174;
   --goten: 255 255 255;
   --popo: 0 0 0;
+  --bardock: 247 147 26;
 }

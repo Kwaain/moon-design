@@ -30,8 +30,8 @@ const ExploreCarouselItem = ({
 
   return (
     <div className="w-full h-full flex p-6">
-      <div className="w-[160px] me-4 flex flex-col items-stretch lg:w-[272px]">
-        <div className="h-16" />
+      <div className="w-[160px] me-4 grid pt-16 flex-col items-stretch lg:w-[272px]">
+        {/* <div className="h-16"/> */}
         <div className="w-[160px] h-[180px] grow-1 mb-4 relative rounded-lg lg:w-[272px] lg:h-[316px]">
           <Image
             src={items[0]?.image}
@@ -86,7 +86,7 @@ const ExploreCarouselItem = ({
             </p>
           </div>
         </div>
-        <div className="h-16" />
+        {/* <div className="h-16" /> */}
       </div>
     </div>
   );

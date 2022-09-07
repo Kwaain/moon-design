@@ -249,6 +249,9 @@ module.exports = {
           60: withOpacityValue('--nappa-60'),
           10: withOpacityValue('--nappa-10'),
         },
+         bardock:{
+          DEFAULT: withOpacityValue('--bardock')
+         },
       },
     },
   },

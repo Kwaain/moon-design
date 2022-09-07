@@ -1688,6 +1688,11 @@ video {
   background-color: rgb(var(--chichi) / var(--tw-bg-opacity));
 }
 
+.bg-bardock{
+  --tw-bg-opacity: 1;
+    background-color: rgb(var(--bardock) / var(--tw-bg-opacity));
+}
+
 .bg-contain {
   background-size: contain;
 }
@@ -2373,6 +2378,8 @@ video {
   /* #856a66 */
   --nappa-10: 161 134 129;
   /* #a18681 */
+  --bardock: 247 147 26;
+    /* #f7931a */
   /* border-radius */
   --radius-i-xs: 624.938rem;
   /* 9999px */

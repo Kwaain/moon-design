@@ -2109,6 +2109,10 @@ video {
   --tw-gradient-to: #ec4899;
 }
 
+.bg-bardock {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--bardock) / var(--tw-bg-opacity));
+}
 .bg-contain {
   background-size: contain;
 }
@@ -3939,7 +3943,7 @@ body {
   }
 }
 
-.theme-sb-light,
+/* .theme-sb-light,
 :root,
 :root.theme-sb-light {
   --piccolo: 12 207 97;
@@ -4004,7 +4008,7 @@ body {
   --radius-i-xs: 624.938rem;
   --radius-i-sm: 624.938rem;
   --radius-i-md: 624.938rem;
-}
+} */
 .theme-bitcasino-light,
 :root,
 :root.theme-bitcasino-light {
@@ -4044,6 +4048,7 @@ body {
   --nappa: 114 85 80;
   --nappa-60: 133 106 102;
   --nappa-10: 161 134 129;
+  --bardock: 247 147 26;
   --radius-i-xs: 0.25rem;
   --radius-i-sm: 0.5rem;
   --radius-i-md: 0.75rem;
@@ -4107,6 +4112,7 @@ body {
   --nappa: 114 85 80;
   --nappa-60: 133 106 102;
   --nappa-10: 161 134 129;
+  --bardock: 247 147 26;
   --radius-i-xs: 0.25rem;
   --radius-i-sm: 0.5rem;
   --radius-i-md: 0.75rem;
@@ -4130,6 +4136,7 @@ body {
   --trunks: 151 162 174;
   --goten: 255 255 255;
   --popo: 0 0 0;
+  --bardock: 247 147 26;
 }
 .theme-livecasino-light,
 :root,
@@ -4170,6 +4177,7 @@ body {
   --nappa: 114 85 80;
   --nappa-60: 133 106 102;
   --nappa-10: 161 134 129;
+  --bardock: 247 147 26;
   --radius-i-xs: 0.25rem;
   --radius-i-sm: 0.5rem;
   --radius-i-md: 0.75rem;
@@ -4193,4 +4201,5 @@ body {
   --bulma: 255 255 255;
   --trunks: 134 151 162;
   --popo: 0 0 0;
+  --bardock: 247 147 26;
 }

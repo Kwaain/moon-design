@@ -2095,6 +2095,11 @@ video {
   background-color: rgb(var(--chichi) / var(--tw-bg-opacity));
 }
 
+.bg-bardock {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--bardock) / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
