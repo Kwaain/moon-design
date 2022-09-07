@@ -2426,6 +2426,8 @@ video {
   /* #ffffff */
   --popo: 0 0 0;
   /* #000000 */
+  --bardock: 247 147 26;
+    /* #f7931a */
   --radius-i-xs: 624.938rem;
   /* 9999px */
   --radius-i-sm: 624.938rem;
@@ -2510,6 +2512,8 @@ video {
   /* #856a66 */
   --nappa-10: 161 134 129;
   /* #a18681 */
+  --bardock: 247 147 26;
+    /* #f7931a */
   /* border-radius */
   --radius-i-xs: 0.25rem;
   /* 4px */
@@ -2556,6 +2560,8 @@ video {
   /* #ffffff */
   --popo: 0 0 0;
   /* #000000 */
+  --bardock: 247 147 26;
+    /* #f7931a */
 }
 
 .placeholder\:text-trunks::-moz-placeholder {

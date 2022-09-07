@@ -54,7 +54,7 @@ return (
       </div>
       <div className="grow-3 hidden lg:block lg:mr-4">
         <ul>
-          <h2 className="text-goten text-sm font-bold mb-5">Sports</h2>
+          <li className="text-goten text-sm font-bold mb-5">Sports</li>
           <li className="mb-3 text-trunks text-xs">Promotions</li>
           <li className="mb-3 text-trunks text-xs">In play</li>
           <li className="mb-3 text-trunks text-xs">Upcoming</li>
@@ -62,7 +62,7 @@ return (
       </div>
       <div className="grow-3 hidden lg:block lg:mr-4">
         <ul>
-          <h2 className="text-goten text-sm font-bold mb-5">Casino</h2>
+          <li className="text-goten text-sm font-bold mb-5">Casino</li>
           <li className="mb-3 text-trunks text-xs">Casino</li>
           <li className="mb-3 text-trunks text-xs">Live Casino</li>
           <li className="mb-3 text-trunks text-xs">Bombay club</li>
@@ -70,7 +70,7 @@ return (
       </div>
       <div className="grow-3 hidden lg:block lg:mr-4">
         <ul>
-          <h2 className="text-goten text-sm font-bold mb-5">Support</h2>
+          <li className="text-goten text-sm font-bold mb-5">Support</li>
           <li className="mb-3 text-trunks text-xs">Affiliate FAQ</li>
           <li className="mb-3 text-trunks text-xs">General Betting Rules</li>
           <li className="mb-3 text-trunks text-xs">Help Centre</li>
@@ -87,7 +87,7 @@ return (
       </div>
       <div className="grow-3 hidden lg:block lg:mr-4">
         <ul>
-          <h2 className="text-goten text-sm font-bold mb-5">About</h2>
+          <li className="text-goten text-sm font-bold mb-5">About</li>
           <li className="mb-3 text-trunks text-xs">Sportsbet app</li>
           <li className="mb-3 text-trunks text-xs">Affiliates</li>
           <li className="mb-3 text-trunks text-xs">

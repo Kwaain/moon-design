@@ -250,7 +250,7 @@ module.exports = {
           10: withOpacityValue('--nappa-10'),
         },
          bardock:{
-          DEFAULT: withOpacityValue('--bardock')
+          DEFAULT: withOpacityValue('--bardock'),
          },
       },
     },

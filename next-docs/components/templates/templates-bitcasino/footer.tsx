@@ -49,7 +49,7 @@ return (
       </div>
       <div className="hidden grow-3 lg:mr-0 md:block ">
         <ul>
-          <h2 className="text-bulma text-sm font-bold mb-5">Games</h2>
+          <li className="text-bulma text-sm font-bold mb-5">Games</li>
           <li className="mb-3 text-trunks text-xs">Slots</li>
           <li className="mb-3 text-trunks text-xs">Roulette</li>
           <li className="mb-3 text-trunks text-xs">Live Baccarat</li>
@@ -99,7 +99,9 @@ return (
           <Accordion title={'Games'} isContentInside={true}>
             <li className="mb-0.5 text-trunks text-s leading-6">Slots</li>
             <li className="mb-0.5 text-trunks text-s leading-6">Roulette</li>
-            <li className="mb-0.5 text-trunks text-s leading-6">Live Baccarat</li>
+            <li className="mb-0.5 text-trunks text-s leading-6">
+              Live Baccarat
+            </li>
             <li className="mb-0.5 text-trunks text-s leading-6">Blackjack</li>
             <li className="mb-0.5 text-trunks text-s leading-6">Live Casino</li>
             <li className="mb-0.5 text-trunks text-s leading-6">Sportsbook</li>
@@ -108,13 +110,17 @@ return (
             <li className="mb-0.5 text-trunks text-s leading-6">
               Live Game Shows
             </li>
-            <li className="mb-0.5 text-trunks text-s leading-6">Casual Games</li>
+            <li className="mb-0.5 text-trunks text-s leading-6">
+              Casual Games
+            </li>
             <li className="mb-0.5 text-trunks text-s leading-6">Multiplayer</li>
           </Accordion>
         </ul>
         <ul className="mb-2">
           <Accordion title={'About'} isContentInside={true}>
-            <li className="mb-0.5 text-trunks text-s leading-6">Loyalty Club</li>
+            <li className="mb-0.5 text-trunks text-s leading-6">
+              Loyalty Club
+            </li>
             <li className="mb-0.5 text-trunks text-s leading-6">VIP</li>
             <li className="mb-0.5 text-trunks text-s leading-6">Rewards</li>
             <li className="mb-0.5 text-trunks text-s leading-6">Blog</li>
@@ -150,7 +156,9 @@ return (
       </div>
       <div className="grow-4 flex justify-center mt-6 sm:mt-0 sm:block ">
         <ul className="hidden mb-4 justify-between items-center md:w-[65%] md:flex  ">
-          <li className="leading-4 text-[10px] font-semibold text-trunks">AM</li>
+          <li className="leading-4 text-[10px] font-semibold text-trunks">
+            AM
+          </li>
           <Switch
             id="test-switch-3"
             checked={state}
@@ -159,7 +167,9 @@ return (
             }
             colorScheme={true}
           />
-          <li className="leading-4 text-[10px] font-semibold text-trunks">PM</li>
+          <li className="leading-4 text-[10px] font-semibold text-trunks">
+            PM
+          </li>
         </ul>
         <div className="hidden rounded-[100px] flex-col bg-gohan mb-4 lg:flex">
           <div className="flex items-center justify-between my-[6px] ml-3 mr-[17px]">
@@ -220,7 +230,7 @@ return (
           <div className="bg-[#FF0000] rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
             <Youtube />
           </div>
-          <div className="bg-[#F7931A] rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-bardock rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
             <Bitcasino />
           </div>
           <div className="bg-[#1DA1F2] rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
