@@ -2109,10 +2109,6 @@ video {
   --tw-gradient-to: #ec4899;
 }
 
-.bg-bardock {
-  --tw-bg-opacity: 1;
-  background-color: rgb(var(--bardock) / var(--tw-bg-opacity));
-}
 .bg-contain {
   background-size: contain;
 }

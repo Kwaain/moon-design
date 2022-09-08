@@ -30,7 +30,7 @@ const Footer = () => {
   const [state, setState] = useState(true);
 
 return (
-  <div className="p-0 mx-6 md:mr-auto lg:p-5 lg:mx-auto md:w-full xxl:w-[1262px] ">
+  <div className="p-0 mx-6 md:mr-auto lg:p-5 lg:mx-auto md:w-full xxl:w-[1262px]">
     <div className="py-4 flex flex-row justify-start items-center border border-x-0 border-y-beerus">
       <Image src={bitcasinoLogo} alt="Logo" />
       <ControlsChevronRight className="mx-3" />
@@ -154,8 +154,8 @@ return (
           </Accordion>
         </ul>
       </div>
-      <div className="grow-4 flex justify-center mt-6 sm:mt-0 sm:block ">
-        <ul className="hidden mb-4 justify-between items-center md:w-[65%] md:flex  ">
+      <div className="grow-4 flex justify-center mt-6 sm:mt-0 sm:block">
+        <ul className="hidden mb-4 justify-between items-center md:w-[65%] md:flex">
           <li className="leading-4 text-[10px] font-semibold text-trunks">
             AM
           </li>
@@ -193,30 +193,30 @@ return (
       <div className="mb-7 lg:mb-0">
         <h2 className="text-bulma text-sm font-bold mb-5">Payment methods</h2>
         <div className="flex flex-row lg:flex-nowrap sm:flex-wrap">
-          <div className="bg-bardock rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-bardock rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <Bitcasino />
           </div>
-          <div className="bg-[#345D9D] rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
-            <div className="bg-white rounded-full">
+          <div className="bg-marron rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
+            <div className="bg-goten rounded-full">
               <LtchLogo />
             </div>
           </div>
-          <div className="bg-[#EC0928] rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-bulla rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <TronLogo />
           </div>
-          <div className="bg-[#7748FA] rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-videl rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <EthereumIc />
           </div>
-          <div className="bg-[#2ABB92] rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-broly rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <UsdIc />
           </div>
-          <div className="bg-[#02A6F0] rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-puar rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <XAbove />
           </div>
-          <div className="bg-[#0033AD] rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-korin rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <Cardano />
           </div>
-          <div className="bg-[#C2A633] rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-oolong rounded-full flex items-center justify-center mr-2 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <DogeCoin />
           </div>
         </div>
@@ -224,22 +224,22 @@ return (
       <div className="mb-7 lg:mb-0 lg:ml-3 lg:mr-3">
         <h2 className="text-bulma text-sm font-bold mb-5">Follow us</h2>
         <div className="flex flex-row lg:flex-nowrap sm:flex-wrap">
-          <div className="bg-[#27A4DB] rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-pan rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <Telegram />
           </div>
-          <div className="bg-[#FF0000] rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-kami rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <Youtube />
           </div>
-          <div className="bg-bardock rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-bardock rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <Bitcasino />
           </div>
-          <div className="bg-[#1DA1F2] rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-launch rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <Twitter />
           </div>
-          <div className="rounded-full mr-2 flex items-center justify-center bg-gradient-to-r from-yellow-500 to-pink-500 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="rounded-full mr-2 flex items-center justify-center bg-gradient-to-r from-yellow-500 to-pink-500 w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <Instagram />
           </div>
-          <div className="bg-popo rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px] ">
+          <div className="bg-popo rounded-full mr-2 flex items-center justify-center w-[35px] h-[35px] lg:w-[36px] lg:h-[36px]">
             <Tiktok />
           </div>
         </div>

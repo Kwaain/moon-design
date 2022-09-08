@@ -249,9 +249,61 @@ module.exports = {
           60: withOpacityValue('--nappa-60'),
           10: withOpacityValue('--nappa-10'),
         },
-         bardock:{
-          DEFAULT: withOpacityValue('--bardock'),
-         },
+        bulla: {
+          DEFAULT: withOpacityValue('--bulla')
+        },
+        bardock: {
+          DEFAULT: withOpacityValue ('--bardock')
+        },
+        launch: {
+          DEFAULT: withOpacityValue('--launch')
+        },
+        kami: {
+          DEFAULT: withOpacityValue('--kami')
+        },
+        pan: {
+          DEFAULT: withOpacityValue('--pan')
+        },
+        marron: {
+          DEFAULT: withOpacityValue('--marron')
+        },
+        videl: {
+          DEFAULT: withOpacityValue('--videl')
+        },
+        broly: {
+          DEFAULT: withOpacityValue('--broly')
+        },
+        puar: {
+          DEFAULT: withOpacityValue('--puar')
+        },
+        korin: {
+          DEFAULT: withOpacityValue('--korin')
+        },
+        oolong: {
+          DEFAULT: withOpacityValue('--oolong')
+        },
+        zeno: {
+          DEFAULT: withOpacityValue('--zeno')
+        },
+        chiaotzu: {
+          DEFAULT: withOpacityValue('--chiaotzu')
+        },
+        pikkon: {
+          DEFAULT: withOpacityValue('--pikkon')
+        },
+        jaco: {
+          DEFAULT: withOpacityValue('--jaco')
+        },
+        shenron: {
+          DEFAULT: withOpacityValue('--shenron')
+        },
+        vegeta: {
+          DEFAULT: withOpacityValue('--vegeta')
+        },
+        namekians: {
+          DEFAULT: withOpacityValue('--namekians')
+        }
+
       },
     },
   },
