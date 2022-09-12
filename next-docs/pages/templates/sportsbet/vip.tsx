@@ -221,8 +221,6 @@ const Vip = () => {
             }
             carouselItems={exploreItems}
             carouselItemBackground="gohan"
-            tabTitle={'Past events'}
-            tabTitleSecond={'Upcoming events'}
           />
         </div>
         <Family

@@ -210,8 +210,6 @@ const Vip = () => {
               />
             }
             carouselItems={exploreItems}
-            tabTitle={'Past events'}
-            tabTitleSecond={'Upcoming events'}
           />
         </div>
         <Family

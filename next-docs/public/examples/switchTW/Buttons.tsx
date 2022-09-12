@@ -4,8 +4,8 @@ import { useState } from 'react';
 const Example = () => {
   const [value, setValue] = useState(false);
 
-  const onChange = (val: boolean) => {
-    setValue(val);
+  const onChange = (value: boolean) => {
+    setValue(value);
   };
   return (
     <>

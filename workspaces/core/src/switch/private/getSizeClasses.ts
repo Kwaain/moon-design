@@ -37,14 +37,14 @@ const getSizeClasses = ({
   } else {
     if (size === 'lg') {
       classes +=
-        'w-[122px] h-[48px] after:w-[57px] after:h-[40px] after:z-0 peer-checked:after:z-0 after:top-1 after:left-1 after:px-2 after:py-1 after:rounded-[8px] rounded-[12px] p-1 gap-1';
+        'w-[122px] h-[48px] top-[191px] left-[577px] after:w-[57px] after:h-[40px] after:z-0 peer-checked:after:z-0 after:top-1 after:left-1 after:px-2 after:py-1 after:rounded-[8px] rounded-[12px] p-1 gap-1';
     } else if (size === 'md') {
       classes +=
-        'w-[106px] h-[40px] after:w-[49px] after:h-[32px] after:z-0 peer-checked:after:z-0 after:top-1 after:left-1 after:px-1 after:py-1 after:rounded-[8px] rounded-[12px] p-1 gap-1';
+        'w-[106px] h-[40px] top-[195px] left-[161px] after:w-[49px] after:h-[32px] after:z-0 peer-checked:after:z-0 after:top-1 after:left-1 after:px-1 after:py-1 after:rounded-[8px] rounded-[12px] p-1 gap-1';
     } else if (size === 'fullWidth') {
-      classes += 'w-full h-[40px] after:w-1/2 after:h-full after:z-0 peer-checked:after:z-0 after:top-1 after:left-1 after:px-1 after:py-1 after:rounded-[8px] rounded-[12px] p-1 gap-1'
+      classes +=
+        'w-full h-[40px] top-[195px] left-[161px] after:w-1/2 after:h-full after:z-0 peer-checked:after:z-0 after:top-1 after:left-1 after:px-1 after:py-1 after:rounded-[8px] rounded-[12px] p-1 gap-1';
     }
-
     classes += isRTL
       ? 'after:translate-x-full peer-checked:after:translate-x-0'
       : 'peer-checked:after:translate-x-full';
@@ -54,3 +54,5 @@ const getSizeClasses = ({
 };
 
 export default getSizeClasses;
+
+
