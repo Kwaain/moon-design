@@ -17,6 +17,7 @@ const Switch: React.FC<SwitchProps> = ({
   size,
   customOnIcon,
   customOffIcon,
+  isTemplatesSwitcher,
 }) => {
   return (
     <>
@@ -53,6 +54,8 @@ const Switch: React.FC<SwitchProps> = ({
             getSizeClasses({ button: !!button, size, isRTL }),
             isThemeSwitcher &&
               'bg-beerus peer-checked:bg-black after:z-1 peer-checked:cursor-pointer after:cursor-pointer',
+            isTemplatesSwitcher &&
+              'bg-transparent peer-checked:bg-transparent after:bg-gohan border border-gohan',
             disabled
               ? 'cursor-not-allowed peer-checked:cursor-not-allowed after:cursor-not-allowed'
               : 'cursor-pointer peer-checked:cursor-pointer after:cursor-pointer'
@@ -73,13 +76,17 @@ const Switch: React.FC<SwitchProps> = ({
                   size === 'lg' ? 'top-2 left-3' : '',
                   checked && 'text-white'
                 )}
-              >{button.offLabel}</p>
+              >
+                {button.offLabel}
+              </p>
               <p
                 className={classNames(
                   'flex items-center justify-center w-1/2 h-full px-1 text-moon-14 leading-6 text-center',
                   size === 'lg' ? 'top-2 left-3' : ''
                 )}
-              >{button.onLabel}</p>
+              >
+                {button.onLabel}
+              </p>
             </div>
           )}
 

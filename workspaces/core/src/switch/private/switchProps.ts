@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-type SizeProps = '2xs' | 'xs' | 'sm' | 'md' | 'lg';
+type SizeProps = '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'fullWidth';
 
 type SwitchProps = {
   checked: boolean;
@@ -15,6 +15,7 @@ type SwitchProps = {
   isRTL?: boolean;
   isThemeSwitcher?: boolean;
   size: SizeProps;
+  isTemplatesSwitcher?: boolean
 };
 
 export default SwitchProps;

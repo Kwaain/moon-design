@@ -4,6 +4,7 @@ import ChevronLeft from "../../pages/templates/icons/ChevronLeft";
 import ChevronRight from "../../pages/templates/icons/ChevronRight";
 import ExploreCarouselItem from "./explore-carousel-item";
 import { Tabs, TabLinkFill } from '@heathmont/moon-core';
+import { Switch } from "@heathmont/moon-core-tw";
 
 interface Props {
   title: ReactElement;
@@ -22,18 +23,26 @@ const Explore = ({
  tabTitle,
  tabTitleSecond
 }: Props) => {
+  const [value, setValue] = useState(false);
+
+  const onChange = (val: boolean) => {
+    setValue(val);
+  };
   return (
     <div className="flex flex-col items-center sm:flex-row-reverse sm:flex-wrap sm:justify-center">
       <div className="flex flex-col justify-center w-[380px] sm:self-stretch sm:w-[100%] sm:mb-[12] lg:mb-20 lg:pl-9 lg:ml-16 lg:px-0 xl:w-[30%] 2xl:ml-24">
-        <Tabs
-          isContainer
-          isSegmented={true}
-          items={[
-            <TabLinkFill href="#2">{tabTitle}</TabLinkFill>,
-            <TabLinkFill href="#3">{tabTitleSecond}</TabLinkFill>,
-          ]}
-          
-        />
+        <div className="w-full sm:w-[250px]">
+          <Switch
+            onChange={onChange}
+            checked={value}
+            button={{
+              onLabel: 'Upcoming events',
+              offLabel: 'Past events',
+            }}
+            size="fullWidth"
+            isTemplatesSwitcher={true}
+          />
+        </div>
         {title}
         {subtitle}
       </div>
