@@ -13,7 +13,10 @@ const Extended: React.FC<BreadcrumbProps> = ({ breadcrumbs }) => (
             className="flex items-center gap-2 text-trunks"
           >
             {index !== 0 && (
-              <ArrowsRight className="rtl:rotate-180 text-moon-16" />
+              <ArrowsRight
+                role="presentation"
+                className="rtl:rotate-180 text-moon-16"
+              />
             )}
             <span
               className={classNames(

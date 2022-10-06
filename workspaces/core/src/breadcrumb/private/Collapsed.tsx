@@ -20,10 +20,7 @@ const Collapsed: React.FC<BreadcrumbProps> = ({ breadcrumbs }) => {
     })
     .filter((crumd) => crumd);
 
-  const clickHandle = () => {
-    console.log('isOpen', isOpen);
-    toggleDropdown(!isOpen);
-  };
+  const clickHandle = () => toggleDropdown(!isOpen);
 
   React.useEffect(() => {
     if (hasClickedOutside) {
@@ -38,12 +35,15 @@ const Collapsed: React.FC<BreadcrumbProps> = ({ breadcrumbs }) => {
           <span className="text-trunks transition-colors duration-200 hover:text-bulma">
             {collapseBreadcrumbs && collapseBreadcrumbs[0]}
           </span>
-          <ArrowsRight className="rtl:rotate-180" />
+          <ArrowsRight role="presentation" className="rtl:rotate-180" />
         </li>
         {restBreadcrumbs?.length !== 0 && (
           <li key={'crumb' + 1} ref={ref} className="relative">
             <Button variant="ghost" size="sm" iconOnly onClick={clickHandle}>
-              <Other3DotsHorizontal className="text-moon-16" />
+              <Other3DotsHorizontal
+                aria-hidden="true"
+                className="text-moon-16"
+              />
             </Button>
             {isOpen && (
               <ol className="absolute ltr:left-0 rtl:right-0 top-full bg-gohan p-1 mt-3 flex flex-col gap-2 shadow-moon-lg rounded-moon-s-md z-10000 min-w-[8.5rem]">
@@ -68,7 +68,7 @@ const Collapsed: React.FC<BreadcrumbProps> = ({ breadcrumbs }) => {
                 key={'crumb' + index + 1}
                 className="flex items-center gap-2 text-trunks"
               >
-                <ArrowsRight className="rtl:rotate-180" />
+                <ArrowsRight role="presentation" className="rtl:rotate-180" />
                 <span
                   className={classNames(
                     'text-trunks transition-colors duration-200 hover:text-bulma',
